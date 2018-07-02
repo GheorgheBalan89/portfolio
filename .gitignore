@@ -1,0 +1,9 @@
+packages/
+Portfolio.Web/App_Data/
+Portfolio.Core/obj/
+Portfolio.Web/Umbraco/lib/angular/angular-ui-sortable.js
+Portfolio.Web/Umbraco/
+Portfolio.Web/Umbraco_Client/
+Portfolio.Web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Portfolio.Web/obj/
+.vs/
