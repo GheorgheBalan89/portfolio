@@ -1,0 +1,28 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "Custom rangeslider",
+      "name": "Rangeslider",
+      "editor": {
+        "view": "~/App_Plugins/Rangeslider/RangesliderEditor.html",
+        "valueType": "JSON"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Value",
+            "description": "",
+            "key": "sliderValue",
+            "view": "textstring"
+          }
+        ]
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/Rangeslider/Rangeslidereditor.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/Rangeslider/styles.css"
+  ]
+}

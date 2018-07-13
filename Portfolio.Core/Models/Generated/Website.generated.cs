@@ -46,12 +46,30 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// Layout
+		/// About text
 		///</summary>
-		[ImplementPropertyType("layout")]
-		public Newtonsoft.Json.Linq.JToken Layout
+		[ImplementPropertyType("aboutText")]
+		public IHtmlString AboutText
 		{
-			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("layout"); }
+			get { return this.GetPropertyValue<IHtmlString>("aboutText"); }
+		}
+
+		///<summary>
+		/// file
+		///</summary>
+		[ImplementPropertyType("file")]
+		public string File
+		{
+			get { return this.GetPropertyValue<string>("file"); }
+		}
+
+		///<summary>
+		/// ProfilePicture
+		///</summary>
+		[ImplementPropertyType("profilePicture")]
+		public IPublishedContent ProfilePicture
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("profilePicture"); }
 		}
 	}
 }

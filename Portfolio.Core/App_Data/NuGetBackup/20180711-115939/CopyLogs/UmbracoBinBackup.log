@@ -1,0 +1,199 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Wednesday, 11 July 2018 11.59.40
+   Source : C:\Personal\Portfolio\Portfolio.Core\bin\
+     Dest : C:\Personal\Portfolio\Portfolio.Core\App_Data\NuGetBackup\20180711-115939\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Personal\Portfolio\Portfolio.Core\bin\
+	  New Dir        131	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\
+	    New File  		   16896	AspNetPaging.dll  0%  100%  
+	    New File  		  110592	businesslogic.dll  0%  100%  
+	    New File  		  115848	businesslogic.xml  0%  100%  
+	    New File  		  454656	cms.dll  0%   28%   57%   86%  100%  
+	    New File  		  298394	cms.xml  0%   43%   87%  100%  
+	    New File  		   50688	controls.dll  0%  100%  
+	    New File  		    9090	controls.xml  0%  100%  
+	    New File  		  120832	Examine.dll  0%  100%  
+	    New File  		  376320	Examine.pdb  0%   34%   69%  100%  
+	    New File  		   18944	Flurl.dll  0%  100%  
+	    New File  		   36352	Flurl.pdb  0%  100%  
+	    New File  		   12686	Flurl.xml  0%  100%  
+	    New File  		  200704	ICSharpCode.SharpZipLib.dll  0%   65%  100%  
+	    New File  		   24576	interfaces.dll  0%  100%  
+	    New File  		   11400	interfaces.xml  0%  100%  
+	    New File  		  276480	log4net.dll  0%   47%   94%  100%  
+	    New File  		  786432	Lucene.Net.dll  0%   33%   66%  100%  
+	    New File  		   1.5 m	Lucene.Net.xml  0%   16%   33%   49%   66%   82%   99%  100%  
+	    New File  		   11264	Microsoft.ApplicationBlocks.Data.dll  0%  100%  
+	    New File  		   37888	Microsoft.AspNetCore.Authorization.dll  0%  100%  
+	    New File  		   51810	Microsoft.AspNetCore.Authorization.xml  0%  100%  
+	    New File  		   19960	Microsoft.AspNetCore.Hosting.Abstractions.dll  0%  100%  
+	    New File  		   16320	Microsoft.AspNetCore.Hosting.Abstractions.xml  0%  100%  
+	    New File  		   14848	Microsoft.AspNetCore.Hosting.Server.Abstractions.dll  0%  100%  
+	    New File  		    2514	Microsoft.AspNetCore.Hosting.Server.Abstractions.xml  0%  100%  
+	    New File  		   60928	Microsoft.AspNetCore.Http.Abstractions.dll  0%  100%  
+	    New File  		   67486	Microsoft.AspNetCore.Http.Abstractions.xml  0%  100%  
+	    New File  		   81920	Microsoft.AspNetCore.Http.dll  0%  100%  
+	    New File  		   37376	Microsoft.AspNetCore.Http.Extensions.dll  0%  100%  
+	    New File  		    6633	Microsoft.AspNetCore.Http.Extensions.xml  0%  100%  
+	    New File  		   30720	Microsoft.AspNetCore.Http.Features.dll  0%  100%  
+	    New File  		   39822	Microsoft.AspNetCore.Http.Features.xml  0%  100%  
+	    New File  		   26411	Microsoft.AspNetCore.Http.xml  0%  100%  
+	    New File  		   45568	Microsoft.AspNetCore.JsonPatch.dll  0%  100%  
+	    New File  		   40126	Microsoft.AspNetCore.JsonPatch.xml  0%  100%  
+	    New File  		   89080	Microsoft.AspNetCore.Mvc.Abstractions.dll  0%  100%  
+	    New File  		  243875	Microsoft.AspNetCore.Mvc.Abstractions.xml  0%   53%  100%  
+	    New File  		  392184	Microsoft.AspNetCore.Mvc.Core.dll  0%   33%   66%  100%  
+	    New File  		  533327	Microsoft.AspNetCore.Mvc.Core.xml  0%   49%   98%  100%  
+	    New File  		   32256	Microsoft.AspNetCore.Mvc.Formatters.Json.dll  0%  100%  
+	    New File  		   21784	Microsoft.AspNetCore.Mvc.Formatters.Json.xml  0%  100%  
+	    New File  		   35832	Microsoft.AspNetCore.Routing.Abstractions.dll  0%  100%  
+	    New File  		   31040	Microsoft.AspNetCore.Routing.Abstractions.xml  0%  100%  
+	    New File  		  104440	Microsoft.AspNetCore.Routing.dll  0%  100%  
+	    New File  		   93085	Microsoft.AspNetCore.Routing.xml  0%  100%  
+	    New File  		   66040	Microsoft.AspNetCore.WebUtilities.dll  0%  100%  
+	    New File  		   16091	Microsoft.AspNetCore.WebUtilities.xml  0%  100%  
+	    New File  		  659120	Microsoft.Data.Edm.dll  0%   39%   79%  100%  
+	    New File  		  654503	Microsoft.Data.Edm.xml  0%   40%   80%  100%  
+	    New File  		   1.4 m	Microsoft.Data.OData.dll  0%   17%   34%   51%   69%   86%  100%  
+	    New File  		   3.5 m	Microsoft.Data.OData.xml  0%   14%   28%   42%   56%   70%   84%   99%  100%  
+	    New File  		   24128	Microsoft.DotNet.InternalAbstractions.dll  0%  100%  
+	    New File  		   19456	Microsoft.Extensions.Configuration.Abstractions.dll  0%  100%  
+	    New File  		   12007	Microsoft.Extensions.Configuration.Abstractions.xml  0%  100%  
+	    New File  		   35840	Microsoft.Extensions.DependencyInjection.Abstractions.dll  0%  100%  
+	    New File  		   51636	Microsoft.Extensions.DependencyInjection.Abstractions.xml  0%  100%  
+	    New File  		   56896	Microsoft.Extensions.DependencyModel.dll  0%  100%  
+	    New File  		   18936	Microsoft.Extensions.FileProviders.Abstractions.dll  0%  100%  
+	    New File  		    7752	Microsoft.Extensions.FileProviders.Abstractions.xml  0%  100%  
+	    New File  		   43512	Microsoft.Extensions.Logging.Abstractions.dll  0%  100%  
+	    New File  		   31924	Microsoft.Extensions.Logging.Abstractions.xml  0%  100%  
+	    New File  		   17912	Microsoft.Extensions.ObjectPool.dll  0%  100%  
+	    New File  		     156	Microsoft.Extensions.ObjectPool.xml  0%  100%  
+	    New File  		   20480	Microsoft.Extensions.Options.dll  0%  100%  
+	    New File  		    8813	Microsoft.Extensions.Options.xml  0%  100%  
+	    New File  		   16384	Microsoft.Extensions.PlatformAbstractions.dll  0%  100%  
+	    New File  		     166	Microsoft.Extensions.PlatformAbstractions.xml  0%  100%  
+	    New File  		   27648	Microsoft.Extensions.Primitives.dll  0%  100%  
+	    New File  		   21014	Microsoft.Extensions.Primitives.xml  0%  100%  
+	    New File  		   63992	Microsoft.Net.Http.Headers.dll  0%  100%  
+	    New File  		    7405	Microsoft.Net.Http.Headers.xml  0%  100%  
+	    New File  		   45416	Microsoft.Web.Infrastructure.dll  0%  100%  
+	    New File  		  424448	MySql.Data.dll  0%   30%   61%   92%  100%  
+	    New File  		  536582	MySql.Data.xml  0%   48%   97%  100%  
+	    New File  		  526336	Newtonsoft.Json.dll  0%   49%   99%  100%  
+	    New File  		  523221	Newtonsoft.Json.xml  0%   25%   50%   75%  100%  
+	    New File  		   16384	Portfolio.Core.dll  0%  100%  
+	    New File  		    3087	Portfolio.Core.dll.config  0%  100%  
+	    New File  		   46592	Portfolio.Core.pdb  0%  100%  
+	    New File  		  298496	RazorEngine.dll  0%   43%   87%  100%  
+	    New File  		  441805	RazorEngine.xml  0%   29%   59%   89%  100%  
+	    New File  		   3.9 m	Swashbuckle.Core.dll  0%   12%   25%   38%   50%   63%   76%   88%  100%  
+	    New File  		   27328	System.Buffers.dll  0%  100%  
+	    New File  		   32504	System.Collections.NonGeneric.dll  0%  100%  
+	    New File  		   28928	System.ComponentModel.Primitives.dll  0%  100%  
+	    New File  		   31664	System.ComponentModel.TypeConverter.dll  0%  100%  
+	    New File  		  470696	System.Data.SqlServerCe.dll  0%   27%   55%   83%  100%  
+	    New File  		   34224	System.Diagnostics.DiagnosticSource.dll  0%  100%  
+	    New File  		   29658	System.Diagnostics.DiagnosticSource.xml  0%  100%  
+	    New File  		   22184	System.IO.dll  0%  100%  
+	    New File  		   24240	System.Linq.dll  0%  100%  
+	    New File  		   23264	System.Linq.Expressions.dll  0%  100%  
+	    New File  		  185032	System.Net.Http.Formatting.dll  0%   70%  100%  
+	    New File  		  192626	System.Net.Http.Formatting.xml  0%   68%  100%  
+	    New File  		   22728	System.Reflection.dll  0%  100%  
+	    New File  		   29880	System.Runtime.dll  0%  100%  
+	    New File  		   33000	System.Runtime.Extensions.dll  0%  100%  
+	    New File  		   25856	System.Runtime.InteropServices.dll  0%  100%  
+	    New File  		   26912	System.Runtime.Serialization.Primitives.dll  0%  100%  
+	    New File  		  116912	System.Spatial.dll  0%  100%  
+	    New File  		  363964	System.Spatial.xml  0%   36%   72%  100%  
+	    New File  		   64232	System.Text.Encodings.Web.dll  0%  100%  
+	    New File  		   88520	System.Text.Encodings.Web.xml  0%  100%  
+	    New File  		  471240	System.Web.Http.dll  0%   27%   55%   83%  100%  
+	    New File  		   82120	System.Web.Http.WebHost.dll  0%  100%  
+	    New File  		   10367	System.Web.Http.WebHost.xml  0%  100%  
+	    New File  		  539657	System.Web.Http.xml  0%   48%   97%  100%  
+	    New File  		  566472	System.Web.Mvc.dll  0%   46%   92%  100%  
+	    New File  		  952428	System.Web.Mvc.xml  0%   27%   55%   82%  100%  
+	    New File  		  271056	System.Web.Razor.dll  0%   48%   96%  100%  
+	    New File  		  521934	System.Web.Razor.xml  0%   25%   50%   75%  100%  
+	    New File  		  192512	TidyNet.dll  0%   68%  100%  
+	    New File  		   2.7 m	Umbraco.Core.dll  0%   17%   35%   53%   71%   89%  100%  
+	    New File  		   2.1 m	Umbraco.Core.xml  0%   23%   46%   69%   92%  100%  
+	    New File  		   43008	umbraco.DataLayer.dll  0%  100%  
+	    New File  		  115002	umbraco.DataLayer.xml  0%  100%  
+	    New File  		   2.2 m	umbraco.dll  0%   22%   44%   66%   88%  100%  
+	    New File  		  368640	umbraco.editorControls.dll  0%   35%   71%  100%  
+	    New File  		  172283	umbraco.editorControls.xml  0%   76%  100%  
+	    New File  		   14848	Umbraco.ModelsBuilder.Api.dll  0%  100%  
+	    New File  		   30208	Umbraco.ModelsBuilder.Api.pdb  0%  100%  
+	    New File  		  105984	Umbraco.ModelsBuilder.dll  0%  100%  
+	    New File  		  220672	Umbraco.ModelsBuilder.pdb  0%   59%  100%  
+	    New File  		   36352	umbraco.providers.dll  0%  100%  
+	    New File  		   51176	umbraco.providers.xml  0%  100%  
+	    New File  		   40960	Umbraco.Web.UI.dll  0%  100%  
+	    New File  		   23001	Umbraco.Web.UI.xml  0%  100%  
+	    New File  		   1.4 m	umbraco.xml  0%   17%   34%   51%   68%   85%  100%  
+	    New File  		   68096	UmbracoExamine.dll  0%  100%  
+	    New File  		   44384	UmbracoExamine.xml  0%  100%  
+	    New File  		   10752	WebActivatorEx.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\de\
+	    New File  		   66224	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  282800	Microsoft.Data.OData.resources.dll  0%   46%   92%  100%  
+	    New File  		   17584	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\es\
+	    New File  		   65712	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  278192	Microsoft.Data.OData.resources.dll  0%   47%   94%  100%  
+	    New File  		   17584	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\fr\
+	    New File  		   67248	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  292016	Microsoft.Data.OData.resources.dll  0%   44%   89%  100%  
+	    New File  		   18096	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\it\
+	    New File  		   65712	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  276656	Microsoft.Data.OData.resources.dll  0%   47%   94%  100%  
+	    New File  		   17584	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\ja\
+	    New File  		   71856	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  315056	Microsoft.Data.OData.resources.dll  0%   41%   83%  100%  
+	    New File  		   18608	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\ko\
+	    New File  		   66736	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  282288	Microsoft.Data.OData.resources.dll  0%   46%   92%  100%  
+	    New File  		   18096	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\ru\
+	    New File  		   80560	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  355504	Microsoft.Data.OData.resources.dll  0%   36%   73%  100%  
+	    New File  		   20144	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\zh-Hans\
+	    New File  		   59056	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  244912	Microsoft.Data.OData.resources.dll  0%   53%  100%  
+	    New File  		   16560	System.Spatial.resources.dll  0%  100%  
+	  New Dir          3	C:\Personal\Portfolio\Portfolio.Core\bin\Debug\zh-Hant\
+	    New File  		   59056	Microsoft.Data.Edm.resources.dll  0%  100%  
+	    New File  		  241328	Microsoft.Data.OData.resources.dll  0%   54%  100%  
+	    New File  		   16560	System.Spatial.resources.dll  0%  100%  
+	  New Dir          0	C:\Personal\Portfolio\Portfolio.Core\bin\Release\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :        12        11         1         0         0         0
+   Files :       158       158         0         0         0         0
+   Bytes :   38.17 m   38.17 m         0         0         0         0
+   Times :   0:00:01   0:00:01                       0:00:00   0:00:00
+
+
+   Speed :            35931013 Bytes/sec.
+   Speed :            2055.989 MegaBytes/min.
+   Ended : Wednesday, 11 July 2018 11.59.41
+
