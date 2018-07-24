@@ -6,6 +6,6 @@ namespace Portfolio.Core.ViewModels.Project
 {
     public class ProjectListViewModel
     {
-        public List<Project> Projects{ get; set; }
+        public List<ProjectViewModel> Projects{ get; set; }
     }
 }

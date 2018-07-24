@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Portfolio.Core.ViewModels.Project
 {
-    public class Project
+    public class ProjectViewModel
     {
         public Guid Udi { get; set; }
         public string Title { get; set; }
@@ -17,5 +17,6 @@ namespace Portfolio.Core.ViewModels.Project
         public string DetailsViewTitle { get; set; }
         public string DetailsViewTitleBackgroundColor { get; set; }
         public bool IsDetailsViewTitleTransparent { get; set; }
+        public string Url { get; set; }
     }
 }

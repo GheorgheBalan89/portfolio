@@ -20,9 +20,47 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Portfolio.Core.Models
 {
+	// Mixin content Type 1051 with alias "Project"
+	/// <summary>Project</summary>
+	public partial interface IProject : IPublishedContent
+	{
+		/// <summary>Description</summary>
+		IHtmlString Description { get; }
+
+		/// <summary>Details title</summary>
+		string DetailsViewTitle { get; }
+
+		/// <summary>FeaturedImage</summary>
+		IPublishedContent FeaturedImage { get; }
+
+		/// <summary>Gallery</summary>
+		IEnumerable<IPublishedContent> Gallery { get; }
+
+		/// <summary>Link background color</summary>
+		string LinkBackgroundColor { get; }
+
+		/// <summary>Link label</summary>
+		string LinkLabel { get; }
+
+		/// <summary>Teaser</summary>
+		string Teaser { get; }
+
+		/// <summary>Title</summary>
+		string Title { get; }
+
+		/// <summary>Title background color</summary>
+		string TitleBackgroundColor { get; }
+
+		/// <summary>Transparent Background</summary>
+		bool TransparentBackground { get; }
+
+		/// <summary>Transparent Background</summary>
+		bool TransparentTitleBackground { get; }
+	}
+
 	/// <summary>Project</summary>
 	[PublishedContentModel("Project")]
-	public partial class Project : PublishedContentModel
+	public partial class Project : PublishedContentModel, IProject
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "Project";
@@ -51,17 +89,23 @@ namespace Portfolio.Core.Models
 		[ImplementPropertyType("description")]
 		public IHtmlString Description
 		{
-			get { return this.GetPropertyValue<IHtmlString>("description"); }
+			get { return GetDescription(this); }
 		}
 
+		/// <summary>Static getter for Description</summary>
+		public static IHtmlString GetDescription(IProject that) { return that.GetPropertyValue<IHtmlString>("description"); }
+
 		///<summary>
-		/// DetailsViewTitle
+		/// Details title
 		///</summary>
 		[ImplementPropertyType("detailsViewTitle")]
 		public string DetailsViewTitle
 		{
-			get { return this.GetPropertyValue<string>("detailsViewTitle"); }
+			get { return GetDetailsViewTitle(this); }
 		}
+
+		/// <summary>Static getter for Details title</summary>
+		public static string GetDetailsViewTitle(IProject that) { return that.GetPropertyValue<string>("detailsViewTitle"); }
 
 		///<summary>
 		/// FeaturedImage
@@ -69,8 +113,11 @@ namespace Portfolio.Core.Models
 		[ImplementPropertyType("featuredImage")]
 		public IPublishedContent FeaturedImage
 		{
-			get { return this.GetPropertyValue<IPublishedContent>("featuredImage"); }
+			get { return GetFeaturedImage(this); }
 		}
+
+		/// <summary>Static getter for FeaturedImage</summary>
+		public static IPublishedContent GetFeaturedImage(IProject that) { return that.GetPropertyValue<IPublishedContent>("featuredImage"); }
 
 		///<summary>
 		/// Gallery
@@ -78,26 +125,35 @@ namespace Portfolio.Core.Models
 		[ImplementPropertyType("gallery")]
 		public IEnumerable<IPublishedContent> Gallery
 		{
-			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("gallery"); }
+			get { return GetGallery(this); }
 		}
 
+		/// <summary>Static getter for Gallery</summary>
+		public static IEnumerable<IPublishedContent> GetGallery(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("gallery"); }
+
 		///<summary>
-		/// LinkBackgroundColor
+		/// Link background color
 		///</summary>
 		[ImplementPropertyType("linkBackgroundColor")]
 		public string LinkBackgroundColor
 		{
-			get { return this.GetPropertyValue<string>("linkBackgroundColor"); }
+			get { return GetLinkBackgroundColor(this); }
 		}
 
+		/// <summary>Static getter for Link background color</summary>
+		public static string GetLinkBackgroundColor(IProject that) { return that.GetPropertyValue<string>("linkBackgroundColor"); }
+
 		///<summary>
-		/// LinkLabel
+		/// Link label
 		///</summary>
 		[ImplementPropertyType("linkLabel")]
 		public string LinkLabel
 		{
-			get { return this.GetPropertyValue<string>("linkLabel"); }
+			get { return GetLinkLabel(this); }
 		}
+
+		/// <summary>Static getter for Link label</summary>
+		public static string GetLinkLabel(IProject that) { return that.GetPropertyValue<string>("linkLabel"); }
 
 		///<summary>
 		/// Teaser
@@ -105,8 +161,11 @@ namespace Portfolio.Core.Models
 		[ImplementPropertyType("teaser")]
 		public string Teaser
 		{
-			get { return this.GetPropertyValue<string>("teaser"); }
+			get { return GetTeaser(this); }
 		}
+
+		/// <summary>Static getter for Teaser</summary>
+		public static string GetTeaser(IProject that) { return that.GetPropertyValue<string>("teaser"); }
 
 		///<summary>
 		/// Title
@@ -114,34 +173,46 @@ namespace Portfolio.Core.Models
 		[ImplementPropertyType("title")]
 		public string Title
 		{
-			get { return this.GetPropertyValue<string>("title"); }
+			get { return GetTitle(this); }
 		}
 
+		/// <summary>Static getter for Title</summary>
+		public static string GetTitle(IProject that) { return that.GetPropertyValue<string>("title"); }
+
 		///<summary>
-		/// titleBackgroundColor
+		/// Title background color
 		///</summary>
 		[ImplementPropertyType("titleBackgroundColor")]
 		public string TitleBackgroundColor
 		{
-			get { return this.GetPropertyValue<string>("titleBackgroundColor"); }
+			get { return GetTitleBackgroundColor(this); }
 		}
 
+		/// <summary>Static getter for Title background color</summary>
+		public static string GetTitleBackgroundColor(IProject that) { return that.GetPropertyValue<string>("titleBackgroundColor"); }
+
 		///<summary>
-		/// TransparentBackground
+		/// Transparent Background
 		///</summary>
 		[ImplementPropertyType("transparentBackground")]
 		public bool TransparentBackground
 		{
-			get { return this.GetPropertyValue<bool>("transparentBackground"); }
+			get { return GetTransparentBackground(this); }
 		}
 
+		/// <summary>Static getter for Transparent Background</summary>
+		public static bool GetTransparentBackground(IProject that) { return that.GetPropertyValue<bool>("transparentBackground"); }
+
 		///<summary>
-		/// transparentTitleBackground
+		/// Transparent Background
 		///</summary>
 		[ImplementPropertyType("transparentTitleBackground")]
 		public bool TransparentTitleBackground
 		{
-			get { return this.GetPropertyValue<bool>("transparentTitleBackground"); }
+			get { return GetTransparentTitleBackground(this); }
 		}
+
+		/// <summary>Static getter for Transparent Background</summary>
+		public static bool GetTransparentTitleBackground(IProject that) { return that.GetPropertyValue<bool>("transparentTitleBackground"); }
 	}
 }
