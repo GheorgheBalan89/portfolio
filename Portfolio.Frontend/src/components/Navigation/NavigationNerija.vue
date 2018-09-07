@@ -1,0 +1,16 @@
+<template>
+    <nav class="hover-underline-menu" data-menu-underline-from-center>
+    <ul class="menu align-center">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+    </ul>
+    </nav>
+</template>
+<script>
+
+export default{
+    name: 'NavigationNerija'
+}
+</script>

@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Portfolio.Core.Models;
 using Portfolio.Core.ViewModels.Mvc;
 using Umbraco.Web.Models;
 
@@ -9,9 +10,11 @@ namespace Portfolio.Core.Controllers.Mvc
         // GET
         public override ActionResult Index(RenderModel model)
         {
-            PageViewModel vm;
-            
-            return View("Pages/FrontPage");
+            PageViewModel vm = new PageViewModel();
+            Website website = new Website(model.Content);
+            vm.SiteName = website.Name;
+
+            return View("Pages/FrontPage", vm);
         }
     }
 }

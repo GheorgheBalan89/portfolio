@@ -4,12 +4,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Nerija's portfolio</title>
+    <title>@Model.SiteName website</title>
+    <link href="~/public/css/app.css" rel="stylesheet" />
 </head>
 <body>
-<p>This is the layout</p>
-<div>
-    @RenderBody()
-</div>
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/public/js/app.js"></script>
+    <script src="~/public/js/manifest.js"></script>
+    <script src="~/public/js/vendor.js"></script>
 </body>
 </html>

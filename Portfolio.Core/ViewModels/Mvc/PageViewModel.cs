@@ -10,5 +10,6 @@ namespace Portfolio.Core.ViewModels.Mvc
             Page = UmbracoContext.Current.PublishedContentRequest.PublishedContent;
         }
         public IPublishedContent Page { get; }
+        public string SiteName { get; set; }
     }
 }
