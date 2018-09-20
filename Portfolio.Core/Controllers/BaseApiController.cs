@@ -49,6 +49,7 @@ namespace Portfolio.Core.Controllers
             return cachedContent;
         }
 
+
         protected JsonResult<T> Json<T>(T content)
         {
             return Json(content, JsonSerializerSettings);

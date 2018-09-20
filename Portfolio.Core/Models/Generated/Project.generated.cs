@@ -31,10 +31,13 @@ namespace Portfolio.Core.Models
 		string DetailsViewTitle { get; }
 
 		/// <summary>FeaturedImage</summary>
-		IPublishedContent FeaturedImage { get; }
+		IEnumerable<IPublishedContent> FeaturedImage { get; }
 
 		/// <summary>Gallery</summary>
 		IEnumerable<IPublishedContent> Gallery { get; }
+
+		/// <summary>HideInNavbar</summary>
+		bool HideInNavbar { get; }
 
 		/// <summary>Link background color</summary>
 		string LinkBackgroundColor { get; }
@@ -111,13 +114,13 @@ namespace Portfolio.Core.Models
 		/// FeaturedImage
 		///</summary>
 		[ImplementPropertyType("featuredImage")]
-		public IPublishedContent FeaturedImage
+		public IEnumerable<IPublishedContent> FeaturedImage
 		{
 			get { return GetFeaturedImage(this); }
 		}
 
 		/// <summary>Static getter for FeaturedImage</summary>
-		public static IPublishedContent GetFeaturedImage(IProject that) { return that.GetPropertyValue<IPublishedContent>("featuredImage"); }
+		public static IEnumerable<IPublishedContent> GetFeaturedImage(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("featuredImage"); }
 
 		///<summary>
 		/// Gallery
@@ -130,6 +133,18 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Gallery</summary>
 		public static IEnumerable<IPublishedContent> GetGallery(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("gallery"); }
+
+		///<summary>
+		/// HideInNavbar
+		///</summary>
+		[ImplementPropertyType("hideInNavbar")]
+		public bool HideInNavbar
+		{
+			get { return GetHideInNavbar(this); }
+		}
+
+		/// <summary>Static getter for HideInNavbar</summary>
+		public static bool GetHideInNavbar(IProject that) { return that.GetPropertyValue<bool>("hideInNavbar"); }
 
 		///<summary>
 		/// Link background color

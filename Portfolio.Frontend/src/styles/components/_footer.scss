@@ -1,0 +1,18 @@
+
+.marketing-site-footer {
+  background: $marketing-site-footer-bg;
+  color: $white;
+  padding: 3rem 0;
+
+  .footer-col p{
+    color: $light-grey;
+    padding: 1rem 0 0.5rem 0;
+  }
+
+  @include breakpoint(small only) {
+    .columns {
+      margin-bottom: 2rem;
+    }
+  }
+}
+

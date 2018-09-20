@@ -1,0 +1,35 @@
+.project-list-content-section {
+    display: flex;
+    flex-wrap: wrap;
+
+  
+    .project-list-content-section-img {
+      align-self: center;
+      flex: 1 0 100%;
+  
+      img {
+        width: 100%;
+      }
+  
+      @media screen and (min-width: 40em) {
+        flex: 1 0 50%;
+      }
+    }
+  
+    .project-list-content-section-block {
+      padding: 1rem;
+      flex: 1 0 100%;
+      align-self: stretch;
+      background: $light-gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+  
+      @media screen and (min-width: 40em) {
+        flex: 1 0 50%;
+        padding: 2rem;
+      }
+    }
+  }
+  

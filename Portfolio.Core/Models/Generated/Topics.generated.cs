@@ -46,6 +46,15 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// HideInNavbar
+		///</summary>
+		[ImplementPropertyType("hideInNavbar")]
+		public bool HideInNavbar
+		{
+			get { return this.GetPropertyValue<bool>("hideInNavbar"); }
+		}
+
+		///<summary>
 		/// List
 		///</summary>
 		[ImplementPropertyType("list")]

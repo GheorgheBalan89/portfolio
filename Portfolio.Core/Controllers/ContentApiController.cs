@@ -6,6 +6,7 @@ using Portfolio.Core.Models;
 using Portfolio.Core.ViewModels.Employment;
 using Portfolio.Core.ViewModels.Intro;
 using Portfolio.Core.ViewModels.Skill;
+using Umbraco.Core.Models;
 using Umbraco.Web;
 
 namespace Portfolio.Core.Controllers
@@ -86,6 +87,41 @@ namespace Portfolio.Core.Controllers
 
 
             return Ok(employments);
+        }
+
+        public IHttpActionResult GetNavigation()
+        {
+            var site = GetIPublishedNodeByAlias(Website.ModelTypeAlias);
+
+            var navigation = GetNavElements(site);
+
+
+            return Ok(navigation);
+        }
+
+        private static List<NavigationItem> GetNavElements(IPublishedContent node)
+        {
+            List<NavigationItem> navigation = new List<NavigationItem>();
+            foreach (var child in node.Children)
+            {
+                var visible = child.GetProperty("hideInNavbar").Value.ToString();
+                
+                var navItem = new NavigationItem()
+                {
+                    Label = child.Name,
+                    IsPublished = child.IsVisible(),
+                    IsHidden = Convert.ToBoolean(visible),
+                    Url = child.Url
+                };
+                
+                if (child.Children.ToList().Count > 0)
+                {
+                    navItem.Children =  GetNavElements(child);
+                }
+                navigation.Add(navItem);
+            }
+
+            return navigation;
         }
     }
 }

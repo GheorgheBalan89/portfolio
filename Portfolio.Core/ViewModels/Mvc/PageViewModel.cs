@@ -11,5 +11,6 @@ namespace Portfolio.Core.ViewModels.Mvc
         }
         public IPublishedContent Page { get; }
         public string SiteName { get; set; }
+        public string ProjectId { get; set; }
     }
 }

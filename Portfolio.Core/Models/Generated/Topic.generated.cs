@@ -67,7 +67,7 @@ namespace Portfolio.Core.Models
 		/// FeaturedImage
 		///</summary>
 		[ImplementPropertyType("featuredImage")]
-		public IPublishedContent FeaturedImage
+		public IEnumerable<IPublishedContent> FeaturedImage
 		{
 			get { return Portfolio.Core.Models.Project.GetFeaturedImage(this); }
 		}
@@ -79,6 +79,15 @@ namespace Portfolio.Core.Models
 		public IEnumerable<IPublishedContent> Gallery
 		{
 			get { return Portfolio.Core.Models.Project.GetGallery(this); }
+		}
+
+		///<summary>
+		/// HideInNavbar
+		///</summary>
+		[ImplementPropertyType("hideInNavbar")]
+		public bool HideInNavbar
+		{
+			get { return Portfolio.Core.Models.Project.GetHideInNavbar(this); }
 		}
 
 		///<summary>

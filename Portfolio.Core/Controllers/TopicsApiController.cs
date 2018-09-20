@@ -29,7 +29,7 @@ namespace Portfolio.Core.Controllers
                             Title = iTopic.Title,
                             Teaser = iTopic.Teaser,
                             Description = iTopic.Description.ToHtmlString(),
-                            FeaturedImage = iTopic.FeaturedImage != null ? iTopic.FeaturedImage.GetCropUrl(300, 300) : "",
+                            FeaturedImage = iTopic.FeaturedImage != null ?  iTopic.FeaturedImage.FirstOrDefault().GetCropUrl(300, 300) : "",
                             Gallery = iTopic.Gallery?.Select(image => image.GetCropUrl(1000, 1000)).ToList(),
                             LinkLabel = iTopic.LinkLabel,
                             LinkBackgroundColor = iTopic.LinkBackgroundColor,

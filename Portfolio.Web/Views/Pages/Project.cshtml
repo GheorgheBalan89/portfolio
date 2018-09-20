@@ -1,0 +1,8 @@
+﻿@inherits UmbracoViewPage<Portfolio.Core.ViewModels.Mvc.PageViewModel>
+@{
+    ViewBag.Title = "Project";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<input type="hidden" id="pid" value="@Model.ProjectId">
+<div id="project"></div>

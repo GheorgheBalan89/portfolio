@@ -345,11 +345,6 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="public\css\app.css" />
-    <Content Include="public\index.html" />
-    <Content Include="public\js\app.js" />
-    <Content Include="public\js\manifest.js" />
-    <Content Include="public\js\vendor.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -397,7 +392,8 @@
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Pages\FrontPage.cshtml" />
     <Content Include="Views\Fallback.cshtml" />
-    <Content Include="public\css\app.css.map" />
+    <Content Include="Views\Pages\Project.cshtml" />
+    <Content Include="Views\Pages\ProjectList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -409,7 +405,9 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="public\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

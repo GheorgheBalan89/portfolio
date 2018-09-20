@@ -10,6 +10,7 @@ namespace Portfolio.Core.Controllers.Mvc
         // GET
         public virtual ActionResult Index(RenderModel model)
         {
+            
             return View(model.Content.DocumentTypeAlias, BuildView());
         }
       

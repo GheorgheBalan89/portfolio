@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import '../node_modules/foundation-sites/scss/foundation';
+@import '../../node_modules/foundation-sites/scss/foundation';
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;
 @include foundation-typography;
@@ -44,4 +44,8 @@
 // @include motion-ui-animations;
 
 @import './settings';
+@import "./components/colours";
 @import "./components/navigation";
+@import "./components/frontpage";
+@import "./components/projects";
+@import "./components/footer";

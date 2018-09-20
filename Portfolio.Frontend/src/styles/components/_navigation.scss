@@ -1,5 +1,5 @@
-$menu-underline-from-center-bg: #2C3840;
-$menu-underline-from-center-border-thickness: 0.125rem;
+
+$menu-underline-from-center-border-thickness: 0.115rem;
 
 .hover-underline-menu {
   width: 100%;
@@ -10,6 +10,7 @@ $menu-underline-from-center-border-thickness: 0.125rem;
     a {
       color: $white;
       padding: 1.2rem 1.5rem;
+      text-transform: uppercase;
     }
 
     .underline-from-center {
@@ -24,7 +25,6 @@ $menu-underline-from-center-border-thickness: 0.125rem;
         right: 50%;
         transition: all 0.5s ease;
       }
-
       &:hover::after {
         left: 0;
         right: 0;

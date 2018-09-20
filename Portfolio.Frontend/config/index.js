@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/umbraco/Api/' :{
+        target : 'http://portfolio.local/',
+        changeOrigin: true
+      },
+      '/media/':{
+        target: 'http://portfolio.local',
+        changeOrigin: true
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
