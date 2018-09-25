@@ -36,7 +36,6 @@ export default{
     mounted(){
         var getUrl = "/umbraco/Api/ProjectsApi/GetProjects";
         axios.get(getUrl).then(response => {
-            // console.log(response.data.Projects);
             this.projects = response.data.Projects
         });
         
