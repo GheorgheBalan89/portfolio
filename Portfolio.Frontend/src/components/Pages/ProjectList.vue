@@ -1,7 +1,7 @@
 <template>
 <div>
     <u-animate-container>
-        <u-animate v-for="(project, projId) in projects" v-if="projId % 2 == 0" name="bounceInRight"  delay="0s" duration="2s" :iteration="1" :offset="0" animateClass="bounceInRight" :begin="false"  >
+        <u-animate v-for="(project, projId) in projects" v-if="projId % 2 == 0" name="bounceInRight" :key="projId"  delay="0s" duration="2s" :iteration="1" :offset="0" animateClass="bounceInRight" :begin="false"  >
             <div  class="project-list-content-section">
                 <div class="project-list-content-section-block small-order-2 medium-order-1">
                     <h3 class="project-list-content-section-block-header">{{project.Title}}</h3>
@@ -13,7 +13,7 @@
                 </div>
             </div>
         </u-animate>
-        <u-animate  v-else name="bounceInLeft"  delay="0s" duration="2s" :iteration="1" :offset="0" animateClass="bounceInLeft" :begin="false">
+        <u-animate  v-else name="bounceInLeft"  delay="0s" duration="2s" :key="projId" :iteration="1" :offset="0" animateClass="bounceInLeft" :begin="false">
             <div class="project-list-content-section wow slideInRight">
                     <div class="project-list-content-section-img small-order-1 medium-order-1">
                         <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" />

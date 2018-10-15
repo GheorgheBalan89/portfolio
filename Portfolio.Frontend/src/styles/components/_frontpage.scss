@@ -1,5 +1,14 @@
 .front-page-featured{
-    width: 60%;
+ padding: 0 !important;
+    .grid-x  {
+        margin: 0;
+    }
+    .grid-margin-x > .cell{
+        margin: 0;
+    }
+    .grid-margin-x > .medium-4{
+        width: calc(33.33333%);
+    }
 }
 .featured-project{
     h3{
