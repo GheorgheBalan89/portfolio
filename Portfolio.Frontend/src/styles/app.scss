@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+
 @import '../../node_modules/foundation-sites/scss/foundation';
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;
@@ -43,6 +44,7 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
+@import "../../node_modules/animate.css/animate.min.css";
 @import './settings';
 @import "./components/colours";
 @import "./components/navigation";

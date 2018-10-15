@@ -394,6 +394,7 @@
     <Content Include="Views\Fallback.cshtml" />
     <Content Include="Views\Pages\Project.cshtml" />
     <Content Include="Views\Pages\ProjectList.cshtml" />
+    <None Include="Properties\PublishProfiles\nerijabalan.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,6 +7,13 @@
                 <div v-html="project.Description"> {{project.Description}}</div>
             </div>
         </div>
+        <div class="grid-x grid-margin-x">
+            <ul>
+                <li v-for="(image, key) in project.Gallery">
+                    <img :src="image" />
+                </li>
+            </ul>
+        </div>
   </div>
 
 </template>
