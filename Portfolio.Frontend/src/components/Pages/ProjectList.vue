@@ -14,7 +14,7 @@
             </div>
         </u-animate>
         <u-animate  v-else name="bounceInLeft"  delay="0s" duration="2s" :key="projId" :iteration="1" :offset="0" animateClass="bounceInLeft" :begin="false">
-            <div class="project-list-content-section wow slideInRight">
+            <div class="project-list-content-section slideInRight">
                     <div class="project-list-content-section-img small-order-1 medium-order-1">
                         <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" />
                     </div>
@@ -30,7 +30,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import axios from "axios"
+import VueWow from 'vue-wow'
+Vue.use(VueWow)
+
 import {UAnimateContainer, UAnimate} from 'vue-wow'
 
 export default{

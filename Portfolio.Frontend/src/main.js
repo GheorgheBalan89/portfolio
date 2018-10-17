@@ -1,13 +1,12 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import VueWow from 'vue-wow'
 import FrontpageApp from './Apps/FrontpageApp'
 import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
 
 Vue.config.productionTip = false
-Vue.use(VueWow)
+
 Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)

@@ -14,6 +14,11 @@ namespace Portfolio.Core.Controllers.Mvc
             Website website = new Website(model.Content);
             vm.SiteName = website.Name;
 
+            if (vm.SiteName.Contains("Gheorghe"))
+            {
+                return View("Pages/FrontPageGheorghe", vm);
+            }
+
             return View("Pages/FrontPage", vm);
         }
     }
