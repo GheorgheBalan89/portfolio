@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Portfolio.Core.Helpers;
+using Portfolio.Core.Models;
 using Portfolio.Core.ViewModels.Project;
 using Umbraco.Core.Models;
 using Umbraco.Web;
@@ -28,41 +29,53 @@ namespace Portfolio.Core.Controllers
             return Ok(pvm);
         }
 
-        public IHttpActionResult GetProjects()
+        public IHttpActionResult GetProjects(string website)
         {
             var response = new ProjectListViewModel {Projects = new List<ProjectViewModel>()};
-            response.Projects = GetProjectsInternal();
+            response.Projects = GetProjectsInternal(website);
 
             return Ok(response);
 
         }
 
-        public IHttpActionResult GetFeaturedProjects()
+        public IHttpActionResult GetFeaturedProjects(string website)
         {
             var response = new ProjectListViewModel()
             {
                 Projects = new List<ProjectViewModel>()
             };
-            response.Projects = GetProjectsInternal(true);
+            response.Projects = GetProjectsInternal(website, true);
             return Ok(response);
         }
 
         
-        private List<ProjectViewModel> GetProjectsInternal(bool onlyFeatured = false)
+        private List<ProjectViewModel> GetProjectsInternal(string website, bool onlyFeatured = false)
         {
             var response = new List<ProjectViewModel>();
-            var projectCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Project.ModelTypeAlias).Compile();
-            var cachedProjects = onlyFeatured ? UHelper.TypedSearch(projectCriteria).Take(4).ToList()
-                                               : UHelper.TypedSearch(projectCriteria).ToList();
-
-            if (cachedProjects.Any())
+            
+            var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(website.ToLower()));
+            
+            if (site != null)
             {
-                foreach (var cachedProject in cachedProjects)
+                var projectListPage = site.Children.FirstOrDefault(x => x.Name.Contains("Projects"));
+                if (projectListPage != null)
                 {
-                    var pvm = IPubishedContentToPvm(cachedProject);
-                    response.Add(pvm);
+                    var projectCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Project.ModelTypeAlias).And().ParentId(projectListPage.Id).Compile();
+                    var cachedProjects = onlyFeatured ? UHelper.TypedSearch(projectCriteria).Take(4).ToList()
+                        : UHelper.TypedSearch(projectCriteria).ToList();
+
+                    if (cachedProjects.Any())
+                    {
+                        foreach (var cachedProject in cachedProjects)
+                        {
+                            var pvm = IPubishedContentToPvm(cachedProject);
+                            response.Add(pvm);
+                        }
+                    }
                 }
+
             }
+      
 
             return response;
         }

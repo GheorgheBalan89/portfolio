@@ -866,7 +866,10 @@ $grid-container-padding: $grid-padding-gutters;
 $grid-container-max: $global-width;
 $xy-block-grid-max: 8;
 
-//wow
-.wow{
+//wow .project-list-content-section
+.wow {
   visibility: hidden;
+}
+.uppercase{
+  text-transform: uppercase;
 }

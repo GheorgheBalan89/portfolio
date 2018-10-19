@@ -1,7 +1,7 @@
 <template>
 <div>
    <u-animate-container>
-    <u-animate name="fadeOutUp" key="nav1"  delay="0s" duration="2s" :iteration="1" :offset="0" animateClass="fadeOutUp" :begin="false"  >
+    <u-animate v-if="this.scrollPosition < 80" name="slideInDown" key="nav1"  delay="0s" duration="1s" :iteration="1" :offset="0" animateClass="slideInDown" :begin="true"  >
       <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul v-if="navData" class="menu align-center">
             <li> <a class="underline-from-center" href="/">Home</a> </li> 
@@ -12,7 +12,7 @@
         </ul>
         </nav>
     </u-animate>
-       <u-animate class="hide" name="fadeInUp"  delay="0s" duration="2s" :iteration="1" :offset="0" animateClass="fadeInUp" :begin="false"  >
+       <u-animate v-else  name="slideInUp" key="nav2"  delay="0s" duration="200ms" :iteration="1" :offset="0" animateClass="slideInUp" :begin="true"  >
        <nav class="underline-menu-reverse" data-menu-underline-from-center>
         <ul v-if="navData" class="menu align-center">
             <li> <a class="underline-from-center" href="/">Home</a> </li> 
@@ -39,11 +39,12 @@ export default{
     data(){
         return {
             navData: "",
+            scrollPosition: "",
             isHovered: false
         };
     },
     mounted(){
-        axios.get("/umbraco/Api/ContentApi/GetNavigation/65ee23").then(response => {
+        axios.get("/umbraco/Api/ContentApi/GetNavigation/65ee23?websiteName=Nerija").then(response => {
             // console.log(response.data);
             this.navData = response.data;
         });
@@ -52,7 +53,16 @@ export default{
     methods: {
         menuHover: function(){
              this.isHovered = true;
+        },
+        updateScroll: function(){
+            this.scrollPosition = Number(window.scrollY);
         }
+    },
+    created(){
+          window.addEventListener('scroll', this.updateScroll);
+    },
+    destroy() {
+         window.removeEventListener('scroll', this.updateScroll)
     }
 }
 </script>

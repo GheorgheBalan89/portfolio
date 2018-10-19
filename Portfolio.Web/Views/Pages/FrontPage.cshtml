@@ -2,7 +2,12 @@
 @{
     ViewBag.Title = "Website";
     Layout = "~/Views/Shared/Layout.cshtml";
-
+    string domainName = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority);
 }
+
 <input type="hidden" id="sitenane" value="@Model.SiteName">
-<div id="app"></div>
+
+@if (domainName != "http://nerijabalan.com")
+{
+      <div id="app"></div>
+}

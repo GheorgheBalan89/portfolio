@@ -89,13 +89,12 @@ namespace Portfolio.Core.Controllers
             return Ok(employments);
         }
 
-        public IHttpActionResult GetNavigation()
+        public IHttpActionResult GetNavigation(string websiteName)
         {
-            var site = GetIPublishedNodeByAlias(Website.ModelTypeAlias);
 
+            var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault( x => x.Name.ToLower().Contains(websiteName.ToLower()));
             var navigation = GetNavElements(site);
-
-
+            
             return Ok(navigation);
         }
 

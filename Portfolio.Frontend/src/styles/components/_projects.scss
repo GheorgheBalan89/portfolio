@@ -1,3 +1,5 @@
+$featured-project-height: 419px;
+
 .project-list-content-section {
     display: flex;
     flex-wrap: wrap;
@@ -33,3 +35,34 @@
     }
   }
   
+.featured-project{
+  height: $featured-project-height;
+}
+
+.zoomIn{
+  transform: scale(1.05);
+  transition: 0.2s;
+  z-index: 2;
+}
+.zoomOut{
+  transform: scale(1);
+  transition: 0.2s;
+}
+.overlay{
+  h3{
+    text-transform: initial;
+    padding-top:calc(50% - 450px/2);
+    color: $orange;
+    font-size: 1.2em;
+  }
+   p{
+    color:$white;
+   }
+    height: 100%;
+    width: 100%;
+    background-color: $black;
+    opacity: 0.8;
+}
+.section-container{
+  padding-top: 5em;
+}

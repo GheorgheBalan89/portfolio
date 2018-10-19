@@ -49,6 +49,13 @@ namespace Portfolio.Core.Controllers
             return cachedContent;
         }
 
+        public List<IPublishedContent> GetIPublishedContentNodes(string nodeTypeAlias)
+        {
+            var contentCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(nodeTypeAlias).Compile();
+            var cachedContent = UHelper.TypedSearch(contentCriteria).ToList();
+
+            return cachedContent;
+        }
 
         protected JsonResult<T> Json<T>(T content)
         {

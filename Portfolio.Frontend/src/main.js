@@ -4,12 +4,14 @@ import Vue from 'vue'
 import FrontpageApp from './Apps/FrontpageApp'
 import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
+import GheorghesApp from './Apps/GheorghesApp'
 
 Vue.config.productionTip = false
 
 Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
+Vue.component("GheorgesApp", GheorghesApp)
 
 /* eslint-disable no-new */
 if(document.getElementById("app")){
@@ -34,5 +36,12 @@ if(document.getElementById("projects")){
       el: '#projects',
       template: '<ProjectListApp/>',
       components: { ProjectListApp }
+  })
+}
+if(document.getElementById("app-gheorghe")){
+  new Vue({
+    el:"#app-gheorghe",
+    template :"<GheorghesApp/>",
+    components: {GheorghesApp}
   })
 }
