@@ -1,6 +1,6 @@
 <template>
     <div>
-         <u-animate-container  class="nav-container">
+         <u-animate-container class="nav-container">
              <u-animate v-if="this.scrollPosition < 80" name="fadeInDown" key="nav1"  delay="0s" duration="100ms" :iteration="1" :offset="0" animateClass="slideOutUp" :begin="true"  >
                   <NavigationGheorghe  />
              </u-animate>
@@ -13,7 +13,6 @@
 </template>
 <script>
 import Vue from 'vue'
-import VueWow from 'vue-wow'
 import NavigationGheorghe from '../components/Navigation/NavigationGheorghe';
 import NavigationInvertedGheorghe from '../components/Navigation/NavigationInvertedGheorghe'
 import FeaturedProjects from '../components/Gheorghe/FeaturedProjects'
@@ -21,8 +20,6 @@ import FeaturedProject from '../components/Shared/FeaturedProject'
 
 Vue.component("FeaturedProject", FeaturedProject)
 
-Vue.use(VueWow)
-import {UAnimateContainer, UAnimate} from 'vue-wow'
 
 export default {
   name: 'GheorghesApp',

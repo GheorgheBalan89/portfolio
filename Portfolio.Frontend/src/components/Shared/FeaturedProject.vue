@@ -1,20 +1,25 @@
 <template>
-    <div v-if="project" class="cell medium-4 text-center featured-project" @mouseover="hoverIn()" @mouseout="hoverOut()"  @click="featuredClick(project.Url)" v-bind:class="hoverClass" v-bind:style='{"background":"url("+project.FeaturedImage+") center center / cover"}'>
-            <div v-if="isHovered" class="overlay">
-            <h3>{{ project.Title }} </h3>
-            <p> {{ project.Teaser }} </p>
-            </div>
+    <div class="cell medium-4 featured-project" v-if="project"  @mouseenter="hoverIn()" @mouseleave="hoverOut()"  @click="featuredClick(project.Url)" :key="project.Udi" >
+        <img :src="project.FeaturedImage" :alt="project.Title" width="100%"/>   
+                <div class="animation-container">
+                <transition-group name="slide" enter-active-class="slideInLeft" leave-active-class="slideOutLeft"  tag="div">    
+                    <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.7s;">
+                            <h3 class="text-center">{{ project.Title }} </h3>
+                            <p class="text-center"> {{ project.Teaser }} </p>
+                    </div>
+                </transition-group>
+            </div>                       
      </div>
 </template>
 <script>
 import Vue from 'vue'
+
 export default{
 name:"FeaturedProject",
 props: ['project'],
     data(){
         return {
-            hoverClass: "",
-            isHovered: ""
+            isHoverIn: "",
         };
     },
     methods: {
@@ -22,17 +27,12 @@ props: ['project'],
             window.location.href = url;
         },
         hoverIn: function(){
-            this.isHovered = true;
-            this.hoverClass = "zoomIn";
-            // console.log("mouse in ");
+            this.isHoverIn = true;             
         },
         hoverOut: function(){
-            this.isHovered = false;
-            this.hoverClass = "zoomOut";
-            // console.log("mouse out");
+            this.isHoverIn = false;        
         }
-    },
-    
+    },   
 
 }
 </script>

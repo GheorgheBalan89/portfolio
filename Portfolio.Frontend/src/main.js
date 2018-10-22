@@ -13,6 +13,8 @@ Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("GheorgesApp", GheorghesApp)
 
+
+
 /* eslint-disable no-new */
 if(document.getElementById("app")){
   new Vue({

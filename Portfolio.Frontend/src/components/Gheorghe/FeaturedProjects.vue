@@ -17,12 +17,10 @@
             </div>            
         </div>
       
-            <template v-for="(project, key) in projects">
-            <div class="grid-x" v-if="key %3 == 0">              
+            <template class="grid-x" v-for="(project, key) in projects">
                 <FeaturedProject :project="projects[key]"/>
-                <FeaturedProject v-if="projects[key +1] != null" :project="projects[key + 1]"/>
-                <FeaturedProject v-if="projects[key +2] != null" :project="projects[key + 2]"/>
-             </div>
+                <!-- <FeaturedProject v-if="projects[key +1] != null" :project="projects[key + 1]"/>
+                <FeaturedProject v-if="projects[key +2] != null" :project="projects[key + 2]"/> -->
             </template>
       
             <div v-for="n in 10">

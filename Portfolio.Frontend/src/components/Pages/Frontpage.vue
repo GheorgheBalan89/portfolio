@@ -1,13 +1,13 @@
 <template>
     <section class="fluid section-container">
          <h1 class="text-center">Lorem ipsum</h1>
-         <template  v-for="(project, key) in projects">
-              <div class="grid-x" v-if="key %3 == 0">              
-                <FeaturedProject :project="projects[key]"/>
-                <FeaturedProject v-if="projects[key +1] != null" :project="projects[key + 1]"/>
-                <FeaturedProject v-if="projects[key +2] != null" :project="projects[key + 2]"/>
-             </div>
-            </template>
+            <div class="grid-container featured-container">
+                <div class="grid-x">
+                 <template v-for="(item, key) in projects">
+                        <FeaturedProject :project="item" v-bind:key="key"/>
+                 </template>
+                </div>
+            </div>
         </section>
 </template>
 
@@ -20,6 +20,7 @@ export default{
     data(){
         return {
             projects: "",
+            show:""
         };
     },
     mounted(){
@@ -34,6 +35,7 @@ export default{
                 console.log(url);
                 window.location.href = url;
         }
+         
     }
 
 }

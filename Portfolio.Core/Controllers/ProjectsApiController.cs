@@ -16,7 +16,6 @@ namespace Portfolio.Core.Controllers
         public IHttpActionResult GetProject(string projectId)
         {
             var pvm = new ProjectViewModel();
-            //Guid uuidProjectId;
             Guid.TryParse(projectId, out Guid uuidProjectId);
 
             var project = UHelper.TypedContent(uuidProjectId);
@@ -91,7 +90,7 @@ namespace Portfolio.Core.Controllers
                 Teaser = iContentProject.Teaser,
                 Description = iContentProject.Description.ToHtmlString(),
                 FeaturedImage = iContentProject.FeaturedImage != null
-                    ? iContentProject.FeaturedImage.FirstOrDefault().GetCropUrl(300, 300)
+                    ? iContentProject.FeaturedImage.FirstOrDefault().GetCropUrl(600, 413)
                     : "",
                 Gallery = iContentProject.Gallery?.Select(image => image.GetCropUrl(1000, 1000)).ToList(),
                 LinkLabel = iContentProject.LinkLabel,

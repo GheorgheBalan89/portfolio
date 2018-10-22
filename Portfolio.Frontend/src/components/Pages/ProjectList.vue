@@ -32,10 +32,7 @@
 <script>
 import Vue from 'vue'
 import axios from "axios"
-import VueWow from 'vue-wow'
-Vue.use(VueWow)
 
-import {UAnimateContainer, UAnimate} from 'vue-wow'
 
 export default{
     name: "ProjectList",

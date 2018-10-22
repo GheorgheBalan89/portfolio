@@ -44,7 +44,7 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-@import "../../node_modules/animate.css/animate.min.css";
+@import "../../node_modules/vue2-animate/dist/vue2-animate.min.css";
 @import './settings';
 @import "./components/colours";
 @import "./components/navigation";
@@ -53,4 +53,4 @@
 @import "./components/footer";
 
 @import "./components/navigationGheorghe";
-@import "./components/featuredProjectsGheorghe";
+@import "./components/featuredProjects";
