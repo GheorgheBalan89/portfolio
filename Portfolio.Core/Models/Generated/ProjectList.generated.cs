@@ -46,6 +46,24 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// Heading1
+		///</summary>
+		[ImplementPropertyType("heading1")]
+		public string Heading1
+		{
+			get { return this.GetPropertyValue<string>("heading1"); }
+		}
+
+		///<summary>
+		/// Heading2
+		///</summary>
+		[ImplementPropertyType("heading2")]
+		public string Heading2
+		{
+			get { return this.GetPropertyValue<string>("heading2"); }
+		}
+
+		///<summary>
 		/// HideInNavbar
 		///</summary>
 		[ImplementPropertyType("hideInNavbar")]

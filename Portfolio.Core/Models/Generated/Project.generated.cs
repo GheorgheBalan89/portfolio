@@ -30,6 +30,9 @@ namespace Portfolio.Core.Models
 		/// <summary>Details title</summary>
 		string DetailsViewTitle { get; }
 
+		/// <summary>Featured</summary>
+		bool Featured { get; }
+
 		/// <summary>FeaturedImage</summary>
 		IEnumerable<IPublishedContent> FeaturedImage { get; }
 
@@ -109,6 +112,18 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Details title</summary>
 		public static string GetDetailsViewTitle(IProject that) { return that.GetPropertyValue<string>("detailsViewTitle"); }
+
+		///<summary>
+		/// Featured
+		///</summary>
+		[ImplementPropertyType("featured")]
+		public bool Featured
+		{
+			get { return GetFeatured(this); }
+		}
+
+		/// <summary>Static getter for Featured</summary>
+		public static bool GetFeatured(IProject that) { return that.GetPropertyValue<bool>("featured"); }
 
 		///<summary>
 		/// FeaturedImage

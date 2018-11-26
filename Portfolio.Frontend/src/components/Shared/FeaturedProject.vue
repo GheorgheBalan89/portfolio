@@ -4,8 +4,8 @@
                 <div class="animation-container">
                 <transition-group name="slide" enter-active-class="slideInLeft" leave-active-class="slideOutLeft"  tag="div">    
                     <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.7s;">
-                            <h3 class="text-center">{{ project.Title }} </h3>
-                            <p class="text-center"> {{ project.Teaser }} </p>
+                        <h3 class="text-center">{{ project.Title }} </h3>
+                        <p class="text-center"> {{ project.Teaser }} </p>
                     </div>
                 </transition-group>
             </div>                       

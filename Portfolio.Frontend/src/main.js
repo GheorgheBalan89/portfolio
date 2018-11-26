@@ -6,13 +6,23 @@ import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
 import GheorghesApp from './Apps/GheorghesApp'
 
-Vue.config.productionTip = false
+//font-awesome icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+import { faUsersCog, faCode, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add([faUsersCog, faCode, faShoppingCart])
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+//--font awesome
 
 Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("GheorgesApp", GheorghesApp)
 
+Vue.config.productionTip = false
 
 
 /* eslint-disable no-new */

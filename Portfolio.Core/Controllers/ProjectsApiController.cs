@@ -33,6 +33,12 @@ namespace Portfolio.Core.Controllers
             var response = new ProjectListViewModel {Projects = new List<ProjectViewModel>()};
             response.Projects = GetProjectsInternal(website);
 
+            var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(website.ToLower()));
+            var iProjectList = new ProjectList(site?.Children.FirstOrDefault(x => x.DocumentTypeAlias.Contains("ProjectList")));
+
+            response.Heading1 = iProjectList.Heading1;
+            response.Heading2 = iProjectList.Heading2;
+
             return Ok(response);
 
         }
@@ -43,7 +49,10 @@ namespace Portfolio.Core.Controllers
             {
                 Projects = new List<ProjectViewModel>()
             };
-            response.Projects = GetProjectsInternal(website, true);
+            var projects = GetProjectsInternal(website, true);
+
+            var featured = projects.Where(x => x.IsFeatured).Take(3);
+            response.Projects = featured.ToList();
             return Ok(response);
         }
 
@@ -51,30 +60,24 @@ namespace Portfolio.Core.Controllers
         private List<ProjectViewModel> GetProjectsInternal(string website, bool onlyFeatured = false)
         {
             var response = new List<ProjectViewModel>();
-            
             var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(website.ToLower()));
-            
-            if (site != null)
-            {
-                var projectListPage = site.Children.FirstOrDefault(x => x.Name.Contains("Projects"));
-                if (projectListPage != null)
-                {
-                    var projectCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Project.ModelTypeAlias).And().ParentId(projectListPage.Id).Compile();
-                    var cachedProjects = onlyFeatured ? UHelper.TypedSearch(projectCriteria).Take(4).ToList()
-                        : UHelper.TypedSearch(projectCriteria).ToList();
 
-                    if (cachedProjects.Any())
+            var projectListPage = site?.Children.FirstOrDefault(x => x.Name.Contains("Projects"));
+            if (projectListPage != null)
+            {
+                var projectCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Project.ModelTypeAlias).And().ParentId(projectListPage.Id).Compile();
+                var cachedProjects = onlyFeatured ? UHelper.TypedSearch(projectCriteria).Take(4).ToList()
+                    : UHelper.TypedSearch(projectCriteria).ToList();
+
+                if (cachedProjects.Any())
+                {
+                    foreach (var cachedProject in cachedProjects)
                     {
-                        foreach (var cachedProject in cachedProjects)
-                        {
-                            var pvm = IPubishedContentToPvm(cachedProject);
-                            response.Add(pvm);
-                        }
+                        var pvm = IPubishedContentToPvm(cachedProject);
+                        response.Add(pvm);
                     }
                 }
-
             }
-      
 
             return response;
         }
@@ -99,7 +102,8 @@ namespace Portfolio.Core.Controllers
                 DetailsViewTitle = iContentProject.DetailsViewTitle,
                 DetailsViewTitleBackgroundColor = iContentProject.TitleBackgroundColor,
                 IsDetailsViewTitleTransparent = iContentProject.TransparentTitleBackground,
-                Url = iContentProject.Url
+                Url = iContentProject.Url,
+                IsFeatured = iContentProject.Featured
             };
             return pvm;
         }

@@ -21,7 +21,7 @@ $menu-border-thickness: 0.225rem;
         content: "";
         position: absolute;
         top: calc(5% - #{$menu-border-thickness});
-        border-top: $menu-border-thickness solid $menu-overline-hover;
+        border-top: $menu-border-thickness solid $orange;
         left: 50%;
         right: 50%;
         transition: all 0.5s ease;
@@ -39,13 +39,16 @@ $menu-border-thickness: 0.225rem;
 .overline-menu-reverse {
   .menu {
     background-color: $menu-overline-reverse-bg;
-
     a {
       color: $menu-overline-bg;
       padding: 1.2rem 1.5rem;
       text-transform: uppercase;
     }
+   }
 
-  }
+  
+  -webkit-box-shadow:0px 0px 4px $light-gray;
+  -moz-box-shadow:0px 0px 4px $light-gray;
+  box-shadow: 0px 0px 4px $light-gray;
 }
 

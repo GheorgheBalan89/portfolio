@@ -2,7 +2,7 @@
     <nav class="overline-menu-reverse"  data-menu-overline-from-center>
         <ul class="menu align-center">
             <li> <a class="overline-from-center" href="/">Home</a> </li> 
-        <li> <a class="overline-from-center" href="/">Projects</a> </li> 
+            <li> <a class="overline-from-center" href="#featured-projects">Projects</a> </li> 
         </ul>
     </nav>
 </template>

@@ -64,6 +64,15 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// Featured
+		///</summary>
+		[ImplementPropertyType("featured")]
+		public bool Featured
+		{
+			get { return Portfolio.Core.Models.Project.GetFeatured(this); }
+		}
+
+		///<summary>
 		/// FeaturedImage
 		///</summary>
 		[ImplementPropertyType("featuredImage")]
