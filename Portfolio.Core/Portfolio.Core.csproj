@@ -378,6 +378,7 @@
     <Compile Include="ViewModels\Employment\EmploymentViewModel.cs" />
     <Compile Include="ViewModels\Intro\IntroViewModel.cs" />
     <Compile Include="ViewModels\Mvc\PageViewModel.cs" />
+    <Compile Include="ViewModels\Project\ProjectDetailsViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectListViewModel.cs" />
     <Compile Include="ViewModels\Skill\SkillViewModel.cs" />

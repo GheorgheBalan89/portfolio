@@ -12,6 +12,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUsersCog, faCode, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+
 library.add([faUsersCog, faCode, faShoppingCart])
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -21,6 +22,7 @@ Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("GheorgesApp", GheorghesApp)
+// Vue.component("Uanimate", Uanimate)
 
 Vue.config.productionTip = false
 

@@ -46,12 +46,12 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// Description
+		/// Detail list
 		///</summary>
-		[ImplementPropertyType("description")]
-		public IHtmlString Description
+		[ImplementPropertyType("detailList")]
+		public Archetype.Models.ArchetypeModel DetailList
 		{
-			get { return Portfolio.Core.Models.Project.GetDescription(this); }
+			get { return Portfolio.Core.Models.Project.GetDetailList(this); }
 		}
 
 		///<summary>
@@ -79,15 +79,6 @@ namespace Portfolio.Core.Models
 		public IEnumerable<IPublishedContent> FeaturedImage
 		{
 			get { return Portfolio.Core.Models.Project.GetFeaturedImage(this); }
-		}
-
-		///<summary>
-		/// Gallery
-		///</summary>
-		[ImplementPropertyType("gallery")]
-		public IEnumerable<IPublishedContent> Gallery
-		{
-			get { return Portfolio.Core.Models.Project.GetGallery(this); }
 		}
 
 		///<summary>

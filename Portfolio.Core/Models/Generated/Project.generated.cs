@@ -24,8 +24,8 @@ namespace Portfolio.Core.Models
 	/// <summary>Project</summary>
 	public partial interface IProject : IPublishedContent
 	{
-		/// <summary>Description</summary>
-		IHtmlString Description { get; }
+		/// <summary>Detail list</summary>
+		Archetype.Models.ArchetypeModel DetailList { get; }
 
 		/// <summary>Details title</summary>
 		string DetailsViewTitle { get; }
@@ -35,9 +35,6 @@ namespace Portfolio.Core.Models
 
 		/// <summary>FeaturedImage</summary>
 		IEnumerable<IPublishedContent> FeaturedImage { get; }
-
-		/// <summary>Gallery</summary>
-		IEnumerable<IPublishedContent> Gallery { get; }
 
 		/// <summary>HideInNavbar</summary>
 		bool HideInNavbar { get; }
@@ -90,16 +87,16 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// Description
+		/// Detail list
 		///</summary>
-		[ImplementPropertyType("description")]
-		public IHtmlString Description
+		[ImplementPropertyType("detailList")]
+		public Archetype.Models.ArchetypeModel DetailList
 		{
-			get { return GetDescription(this); }
+			get { return GetDetailList(this); }
 		}
 
-		/// <summary>Static getter for Description</summary>
-		public static IHtmlString GetDescription(IProject that) { return that.GetPropertyValue<IHtmlString>("description"); }
+		/// <summary>Static getter for Detail list</summary>
+		public static Archetype.Models.ArchetypeModel GetDetailList(IProject that) { return that.GetPropertyValue<Archetype.Models.ArchetypeModel>("detailList"); }
 
 		///<summary>
 		/// Details title
@@ -136,18 +133,6 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for FeaturedImage</summary>
 		public static IEnumerable<IPublishedContent> GetFeaturedImage(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("featuredImage"); }
-
-		///<summary>
-		/// Gallery
-		///</summary>
-		[ImplementPropertyType("gallery")]
-		public IEnumerable<IPublishedContent> Gallery
-		{
-			get { return GetGallery(this); }
-		}
-
-		/// <summary>Static getter for Gallery</summary>
-		public static IEnumerable<IPublishedContent> GetGallery(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("gallery"); }
 
 		///<summary>
 		/// HideInNavbar

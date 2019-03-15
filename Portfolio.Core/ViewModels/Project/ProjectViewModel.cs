@@ -9,8 +9,7 @@ namespace Portfolio.Core.ViewModels.Project
         public string Title { get; set; }
         public string Teaser { get; set; }
         public string FeaturedImage { get; set; }
-        public string Description { get; set; }
-        public List<string> Gallery { get; set; }
+        public List<ProjectDetailsViewModel> Details{ get; set; }
         public string LinkLabel { get; set; }
         public string LinkBackgroundColor { get; set; }
         public bool IsLinkBackgroundTransparent{ get; set; }

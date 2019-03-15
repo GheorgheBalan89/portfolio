@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Archetype.Models;
 using Portfolio.Core.Helpers;
 using Portfolio.Core.Models;
 using Portfolio.Core.ViewModels.Project;
@@ -13,6 +14,7 @@ namespace Portfolio.Core.Controllers
 {
     public class ProjectsApiController : BaseApiController
     {
+
         public IHttpActionResult GetProject(string projectId)
         {
             var pvm = new ProjectViewModel();
@@ -84,6 +86,9 @@ namespace Portfolio.Core.Controllers
 
         private static ProjectViewModel IPubishedContentToPvm(IPublishedContent cachedProject)
         {
+            var helper = new Umbraco.Web.UmbracoHelper(UmbracoContext.Current);
+            //var publishedMedia = helper.TypedMedia(id);
+
             var iContentProject = new Project(cachedProject);
 
             var pvm = new ProjectViewModel()
@@ -91,11 +96,11 @@ namespace Portfolio.Core.Controllers
                 Udi = iContentProject.GetKey(),
                 Title = iContentProject.Title,
                 Teaser = iContentProject.Teaser,
-                Description = iContentProject.Description.ToHtmlString(),
+
                 FeaturedImage = iContentProject.FeaturedImage != null
                     ? iContentProject.FeaturedImage.FirstOrDefault().GetCropUrl(600, 413)
                     : "",
-                Gallery = iContentProject.Gallery?.Select(image => image.GetCropUrl(1000, 1000)).ToList(),
+                //Gallery = iContentProject.Gallery?.Select(image => image.GetCropUrl(1000, 1000)).ToList(),
                 LinkLabel = iContentProject.LinkLabel,
                 LinkBackgroundColor = iContentProject.LinkBackgroundColor,
                 IsLinkBackgroundTransparent = iContentProject.TransparentBackground,
@@ -103,8 +108,25 @@ namespace Portfolio.Core.Controllers
                 DetailsViewTitleBackgroundColor = iContentProject.TitleBackgroundColor,
                 IsDetailsViewTitleTransparent = iContentProject.TransparentTitleBackground,
                 Url = iContentProject.Url,
-                IsFeatured = iContentProject.Featured
+                IsFeatured = iContentProject.Featured,
+                Details = new List<ProjectDetailsViewModel>()
             };
+
+            foreach (var item in iContentProject.DetailList)
+            {
+              var itm = new ProjectDetailsViewModel()
+              {
+                  Heading = item.GetValue<string>("Heading"),
+                  RichText = item.GetValue<string>("richText"),
+                  MediaItem = item.GetValue<IPublishedContent>("mediaItem") != null ? 
+                              item.GetValue<IPublishedContent>("mediaItem").GetCropUrl(520, 350)  :""
+              };
+                pvm.Details.Add(itm);           
+    
+            }
+          
+         
+
             return pvm;
         }
     }

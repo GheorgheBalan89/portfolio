@@ -1,65 +1,36 @@
 <template>
-<div>
-    <!-- <u-animate-container>
-        <u-animate v-for="(project, projId) in projects" v-if="projId % 2 == 0" name="bounceInRight" :key="projId"  delay="0s" duration="2s" :iteration="1" :offset="0" animateClass="bounceInRight" :begin="false"  >
-            <div  class="project-list-content-section">
-                <div class="project-list-content-section-block small-order-2 medium-order-1">
-                    <h3 class="project-list-content-section-block-header">{{project.Title}}</h3>
-                    <p class="project-list-content-section-block-subheader subheader">{{project.Teaser}}</p>
-                    <a :href="project.Url" class="round button small">Read more</a>
-                </div>
-                <div class="project-list-content-section-img small-order-1 medium-order-2">
-                    <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" />
-                </div>
+    <div class="grid-container  projectlist-container">
+        <div class="grid-x headline-container">
+            <div class="medium-12 ">
+                <h1 class="text-center">
+                    <div class="stroke"></div>
+                    <span>{{projectMeta.Heading1}}</span>
+                    <div class="stroke"></div>
+                </h1>
             </div>
-        </u-animate>
-        <u-animate  v-else name="bounceInLeft"  delay="0s" duration="2s" :key="projId" :iteration="1" :offset="0" animateClass="bounceInLeft" :begin="false">
-            <div class="project-list-content-section slideInRight">
-                    <div class="project-list-content-section-img small-order-1 medium-order-1">
-                        <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" />
-                    </div>
-                    <div class="project-list-content-section-block small-order-2 medium-order-2">
-                        <h3 class="project-list-content-section-block-header">{{project.Title}}</h3>
-                        <p class="project-list-content-section-block-subheader subheader">{{project.Teaser}}</p>
-                        <a :href="project.Url" class="round button small">Read more</a>
-                    </div>
-                </div>
-        </u-animate>
-    </u-animate-container> -->
-
-        <div class="grid-container  projectlist-container">
-           <div class="grid-x headline-container">
-               <div class="medium-12 ">
-                   <h1 class="text-center">
-                       <div class="stroke"></div>
-                       <span>{{projectMeta.Heading1}}</span>
-                       <div class="stroke"></div>
-                   </h1>
-               </div>
-               <div class="medium-12">
-                   <h2 class="text-center">{{projectMeta.Heading2}}</h2>
-               </div>
-           </div>
-            <div class="grid-x">
-                <template v-if="count <= 3" v-for="(item, key) in projects">
-                    <FeaturedProject :project="item" v-bind:key="key"/>
-                </template>
-                <template v-elseif="count > 3">
-                    <template v-for="(item, key) in topProjects">
-                        <FeaturedProject :project="item" v-bind:key="key"/>
-                    </template>
-
-                    <div v-if="!expandedView" class="cell large-12 text-center show-more-container">
-                        <button class="hollow button success" @click="showMore()">  <font-awesome-icon icon="code" /> Show more </button>
-                    </div>
-
-                     <template v-if="expandedView" v-for="(item, key) in projects">
-                        <FeaturedProject :project="item" v-bind:key="key"/>
-                    </template>
-                </template>
+            <div class="medium-12">
+                <h2 class="text-center">{{projectMeta.Heading2}}</h2>
             </div>
         </div>
-</div>
+        <div class="grid-x">
+            <template v-if="count <= 3" v-for="(item, key) in projects">
+                <FeaturedProject :project="item" v-bind:key="key"/>
+            </template>
+            <template v-elseif="count > 3">
+                <template v-for="(item, key) in topProjects">
+                    <FeaturedProject :project="item" v-bind:key="key"/>
+                </template>
+
+                <div v-if="!expandedView" class="cell large-12 text-center show-more-container">
+                    <button class="hollow button success" @click="showMore()">  <font-awesome-icon icon="code" /> Show more </button>
+                </div>
+
+                    <template v-if="expandedView" v-for="(item, key) in projects">
+                    <FeaturedProject :project="item" v-bind:key="key"/>
+                </template>
+            </template>
+        </div>
+    </div>
 </template>
 
 <script>
