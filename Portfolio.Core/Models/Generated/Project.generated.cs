@@ -27,9 +27,6 @@ namespace Portfolio.Core.Models
 		/// <summary>Detail list</summary>
 		Archetype.Models.ArchetypeModel DetailList { get; }
 
-		/// <summary>Details title</summary>
-		string DetailsViewTitle { get; }
-
 		/// <summary>Featured</summary>
 		bool Featured { get; }
 
@@ -39,26 +36,11 @@ namespace Portfolio.Core.Models
 		/// <summary>HideInNavbar</summary>
 		bool HideInNavbar { get; }
 
-		/// <summary>Link background color</summary>
-		string LinkBackgroundColor { get; }
-
-		/// <summary>Link label</summary>
-		string LinkLabel { get; }
-
 		/// <summary>Teaser</summary>
 		string Teaser { get; }
 
 		/// <summary>Title</summary>
 		string Title { get; }
-
-		/// <summary>Title background color</summary>
-		string TitleBackgroundColor { get; }
-
-		/// <summary>Transparent Background</summary>
-		bool TransparentBackground { get; }
-
-		/// <summary>Transparent Background</summary>
-		bool TransparentTitleBackground { get; }
 	}
 
 	/// <summary>Project</summary>
@@ -99,18 +81,6 @@ namespace Portfolio.Core.Models
 		public static Archetype.Models.ArchetypeModel GetDetailList(IProject that) { return that.GetPropertyValue<Archetype.Models.ArchetypeModel>("detailList"); }
 
 		///<summary>
-		/// Details title
-		///</summary>
-		[ImplementPropertyType("detailsViewTitle")]
-		public string DetailsViewTitle
-		{
-			get { return GetDetailsViewTitle(this); }
-		}
-
-		/// <summary>Static getter for Details title</summary>
-		public static string GetDetailsViewTitle(IProject that) { return that.GetPropertyValue<string>("detailsViewTitle"); }
-
-		///<summary>
 		/// Featured
 		///</summary>
 		[ImplementPropertyType("featured")]
@@ -147,30 +117,6 @@ namespace Portfolio.Core.Models
 		public static bool GetHideInNavbar(IProject that) { return that.GetPropertyValue<bool>("hideInNavbar"); }
 
 		///<summary>
-		/// Link background color
-		///</summary>
-		[ImplementPropertyType("linkBackgroundColor")]
-		public string LinkBackgroundColor
-		{
-			get { return GetLinkBackgroundColor(this); }
-		}
-
-		/// <summary>Static getter for Link background color</summary>
-		public static string GetLinkBackgroundColor(IProject that) { return that.GetPropertyValue<string>("linkBackgroundColor"); }
-
-		///<summary>
-		/// Link label
-		///</summary>
-		[ImplementPropertyType("linkLabel")]
-		public string LinkLabel
-		{
-			get { return GetLinkLabel(this); }
-		}
-
-		/// <summary>Static getter for Link label</summary>
-		public static string GetLinkLabel(IProject that) { return that.GetPropertyValue<string>("linkLabel"); }
-
-		///<summary>
 		/// Teaser
 		///</summary>
 		[ImplementPropertyType("teaser")]
@@ -193,41 +139,5 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Title</summary>
 		public static string GetTitle(IProject that) { return that.GetPropertyValue<string>("title"); }
-
-		///<summary>
-		/// Title background color
-		///</summary>
-		[ImplementPropertyType("titleBackgroundColor")]
-		public string TitleBackgroundColor
-		{
-			get { return GetTitleBackgroundColor(this); }
-		}
-
-		/// <summary>Static getter for Title background color</summary>
-		public static string GetTitleBackgroundColor(IProject that) { return that.GetPropertyValue<string>("titleBackgroundColor"); }
-
-		///<summary>
-		/// Transparent Background
-		///</summary>
-		[ImplementPropertyType("transparentBackground")]
-		public bool TransparentBackground
-		{
-			get { return GetTransparentBackground(this); }
-		}
-
-		/// <summary>Static getter for Transparent Background</summary>
-		public static bool GetTransparentBackground(IProject that) { return that.GetPropertyValue<bool>("transparentBackground"); }
-
-		///<summary>
-		/// Transparent Background
-		///</summary>
-		[ImplementPropertyType("transparentTitleBackground")]
-		public bool TransparentTitleBackground
-		{
-			get { return GetTransparentTitleBackground(this); }
-		}
-
-		/// <summary>Static getter for Transparent Background</summary>
-		public static bool GetTransparentTitleBackground(IProject that) { return that.GetPropertyValue<bool>("transparentTitleBackground"); }
 	}
 }

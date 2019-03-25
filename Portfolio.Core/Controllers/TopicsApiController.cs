@@ -29,12 +29,6 @@ namespace Portfolio.Core.Controllers
                             Title = iTopic.Title,
                             Teaser = iTopic.Teaser,
                             FeaturedImage = iTopic.FeaturedImage != null ?  iTopic.FeaturedImage.FirstOrDefault().GetCropUrl(300, 300) : "",
-                            LinkLabel = iTopic.LinkLabel,
-                            LinkBackgroundColor = iTopic.LinkBackgroundColor,
-                            IsLinkBackgroundTransparent = iTopic.TransparentBackground,
-                            DetailsViewTitle = iTopic.DetailsViewTitle,
-                            DetailsViewTitleBackgroundColor = iTopic.TitleBackgroundColor,
-                            IsDetailsViewTitleTransparent = iTopic.TransparentTitleBackground,
                             Url = iTopic.Url
                         }
                   );

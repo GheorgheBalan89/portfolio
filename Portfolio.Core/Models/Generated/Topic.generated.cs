@@ -55,15 +55,6 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// Details title
-		///</summary>
-		[ImplementPropertyType("detailsViewTitle")]
-		public string DetailsViewTitle
-		{
-			get { return Portfolio.Core.Models.Project.GetDetailsViewTitle(this); }
-		}
-
-		///<summary>
 		/// Featured
 		///</summary>
 		[ImplementPropertyType("featured")]
@@ -91,24 +82,6 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// Link background color
-		///</summary>
-		[ImplementPropertyType("linkBackgroundColor")]
-		public string LinkBackgroundColor
-		{
-			get { return Portfolio.Core.Models.Project.GetLinkBackgroundColor(this); }
-		}
-
-		///<summary>
-		/// Link label
-		///</summary>
-		[ImplementPropertyType("linkLabel")]
-		public string LinkLabel
-		{
-			get { return Portfolio.Core.Models.Project.GetLinkLabel(this); }
-		}
-
-		///<summary>
 		/// Teaser
 		///</summary>
 		[ImplementPropertyType("teaser")]
@@ -124,33 +97,6 @@ namespace Portfolio.Core.Models
 		public string Title
 		{
 			get { return Portfolio.Core.Models.Project.GetTitle(this); }
-		}
-
-		///<summary>
-		/// Title background color
-		///</summary>
-		[ImplementPropertyType("titleBackgroundColor")]
-		public string TitleBackgroundColor
-		{
-			get { return Portfolio.Core.Models.Project.GetTitleBackgroundColor(this); }
-		}
-
-		///<summary>
-		/// Transparent Background
-		///</summary>
-		[ImplementPropertyType("transparentBackground")]
-		public bool TransparentBackground
-		{
-			get { return Portfolio.Core.Models.Project.GetTransparentBackground(this); }
-		}
-
-		///<summary>
-		/// Transparent Background
-		///</summary>
-		[ImplementPropertyType("transparentTitleBackground")]
-		public bool TransparentTitleBackground
-		{
-			get { return Portfolio.Core.Models.Project.GetTransparentTitleBackground(this); }
 		}
 	}
 }

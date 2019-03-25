@@ -100,13 +100,7 @@ namespace Portfolio.Core.Controllers
                 FeaturedImage = iContentProject.FeaturedImage != null
                     ? iContentProject.FeaturedImage.FirstOrDefault().GetCropUrl(600, 413)
                     : "",
-                //Gallery = iContentProject.Gallery?.Select(image => image.GetCropUrl(1000, 1000)).ToList(),
-                LinkLabel = iContentProject.LinkLabel,
-                LinkBackgroundColor = iContentProject.LinkBackgroundColor,
-                IsLinkBackgroundTransparent = iContentProject.TransparentBackground,
-                DetailsViewTitle = iContentProject.DetailsViewTitle,
-                DetailsViewTitleBackgroundColor = iContentProject.TitleBackgroundColor,
-                IsDetailsViewTitleTransparent = iContentProject.TransparentTitleBackground,
+           
                 Url = iContentProject.Url,
                 IsFeatured = iContentProject.Featured,
                 Details = new List<ProjectDetailsViewModel>()
@@ -116,10 +110,12 @@ namespace Portfolio.Core.Controllers
             {
               var itm = new ProjectDetailsViewModel()
               {
-                  Heading = item.GetValue<string>("Heading"),
-                  RichText = item.GetValue<string>("richText"),
+                  Heading = item.GetValue<string>(nameof(ProjectDetailsViewModel.Heading)),
+                  RichText = item.GetValue<string>(nameof(ProjectDetailsViewModel.RichText)),
                   MediaItem = item.GetValue<IPublishedContent>("mediaItem") != null ? 
-                              item.GetValue<IPublishedContent>("mediaItem").GetCropUrl(520, 350)  :""
+                              item.GetValue<IPublishedContent>("mediaItem").GetCropUrl(520, 350)  :"",
+                  VideoUrl = item.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
+
               };
                 pvm.Details.Add(itm);           
     

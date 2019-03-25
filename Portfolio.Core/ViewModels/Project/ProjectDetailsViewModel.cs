@@ -11,5 +11,6 @@ namespace Portfolio.Core.ViewModels.Project
         public string Heading { get; set; }
         public string RichText { get; set; }
         public string MediaItem { get; set; }
+        public string VideoUrl { get; set; }
     }
 }
