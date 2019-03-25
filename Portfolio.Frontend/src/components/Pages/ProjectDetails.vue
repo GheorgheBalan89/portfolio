@@ -9,21 +9,28 @@
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
-                            <div v-html="detail.RichText"></div>
+                            <div class="details-richtext" v-html="detail.RichText"></div>
                         </div>
-                        <div class="project-details-section-img small-order-1 medium-order-2">
+
+                        <div v-if="detail.MediaItem" class="project-details-section-img small-order-1 medium-order-2">
                             <img :src="detail.MediaItem" alt="" />
                         </div>
+                          <div v-if="detail.VideoUrl !='' " class="project-details-section-img small-order-1 medium-order-1">
+                                <iframe :src="'https://player.vimeo.com/video/'+detail.VideoUrl"  width="952" height="725" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                          </div>
                     </div>
                 </div>
                 <div v-else name="bounceInLeft"  delay="0s" duration="0s" :key="projId" :iteration="0" :offset="0" animateClass="bounceInLeft" :begin="false">
                     <div class="project-details-section slideInRight">
-                            <div class="project-details-section-img small-order-1 medium-order-1">
+                            <div v-if="detail.MediaItem" class="project-details-section-img small-order-1 medium-order-1">
                                 <img :src="detail.MediaItem" alt="" />
+                            </div>
+                            <div v-if="detail.VideoUrl" class="project-details-section-img small-order-1 medium-order-1">
+                                <iframe :src="'https://player.vimeo.com/video/'+detail.VideoUrl" width="952" height="725" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             </div>
                             <div class="project-details-section-block small-order-2 medium-order-2">
                                 <h3 class="project-details-section-block-header" >{{detail.Heading}}</h3>
-                                <div v-html="detail.RichText"></div>
+                                <div class="details-richtext" v-html="detail.RichText"></div>
                             </div>
                         </div>
                 </div>

@@ -13,10 +13,10 @@
             </div>
         </div>
         <div class="grid-x">
-            <template v-if="count <= 3" v-for="(item, key) in projects">
+            <template v-if="projects != null && count <= 3" v-for="(item, key) in projects">
                 <FeaturedProject :project="item" v-bind:key="key"/>
             </template>
-            <template v-elseif="count > 3">
+            <template v-else>
                 <template v-for="(item, key) in topProjects">
                     <FeaturedProject :project="item" v-bind:key="key"/>
                 </template>
@@ -25,7 +25,7 @@
                     <button class="hollow button success" @click="showMore()">  <font-awesome-icon icon="code" /> Show more </button>
                 </div>
 
-                    <template v-if="expandedView" v-for="(item, key) in projects">
+                <template v-if="expandedView" v-for="(item, key) in projects">
                     <FeaturedProject :project="item" v-bind:key="key"/>
                 </template>
             </template>
@@ -54,7 +54,9 @@ export default{
         axios.get(getUrl).then(response => {
             var projects = response.data.Projects;
             this.projects = projects;
+      
             this.count = projects.length;
+         console.log(this.count);
 
             if(projects.length > 3){
                 this.topProjects = projects.slice(0,3);

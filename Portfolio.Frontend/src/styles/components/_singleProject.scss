@@ -9,7 +9,12 @@
     .project-details-section-img {
       align-self: center;
       flex: 1 0 100%;
-  
+    iframe{
+      border: 0;
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 100%;
+    }
       img {
         width: 100%;
       }
@@ -38,7 +43,7 @@
           position: absolute;
           top: 3em;
       }
-      p{
+      .details-richtext{
           position: absolute;
           top:9em;
       }
