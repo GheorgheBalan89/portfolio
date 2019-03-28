@@ -5,7 +5,7 @@ import FrontpageApp from './Apps/FrontpageApp'
 import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
 import GheorghesApp from './Apps/GheorghesApp'
-
+import About from './Apps/About'
 //font-awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -22,6 +22,7 @@ Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("GheorgesApp", GheorghesApp)
+Vue.component("About", About)
 // Vue.component("Uanimate", Uanimate)
 
 Vue.config.productionTip = false
@@ -36,6 +37,17 @@ if(document.getElementById("app")){
   })
     
 }
+
+if(document.getElementById("about")){
+  new Vue({
+    el: '#about',
+    components: { About },
+    template: '<About/>'
+  })
+    
+}
+
+
 
 if(document.getElementById("project")){
   new Vue({
