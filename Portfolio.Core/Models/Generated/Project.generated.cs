@@ -24,6 +24,12 @@ namespace Portfolio.Core.Models
 	/// <summary>Project</summary>
 	public partial interface IProject : IPublishedContent
 	{
+		/// <summary>Client Name</summary>
+		string ClientName { get; }
+
+		/// <summary>Description</summary>
+		IHtmlString Description { get; }
+
 		/// <summary>Detail list</summary>
 		Archetype.Models.ArchetypeModel DetailList { get; }
 
@@ -33,14 +39,23 @@ namespace Portfolio.Core.Models
 		/// <summary>FeaturedImage</summary>
 		IEnumerable<IPublishedContent> FeaturedImage { get; }
 
+		/// <summary>Hero</summary>
+		IPublishedContent Hero { get; }
+
 		/// <summary>HideInNavbar</summary>
 		bool HideInNavbar { get; }
+
+		/// <summary>Role</summary>
+		string Role { get; }
 
 		/// <summary>Teaser</summary>
 		string Teaser { get; }
 
 		/// <summary>Title</summary>
 		string Title { get; }
+
+		/// <summary>Year</summary>
+		string Year { get; }
 	}
 
 	/// <summary>Project</summary>
@@ -69,6 +84,30 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// Client Name
+		///</summary>
+		[ImplementPropertyType("clientName")]
+		public string ClientName
+		{
+			get { return GetClientName(this); }
+		}
+
+		/// <summary>Static getter for Client Name</summary>
+		public static string GetClientName(IProject that) { return that.GetPropertyValue<string>("clientName"); }
+
+		///<summary>
+		/// Description
+		///</summary>
+		[ImplementPropertyType("description")]
+		public IHtmlString Description
+		{
+			get { return GetDescription(this); }
+		}
+
+		/// <summary>Static getter for Description</summary>
+		public static IHtmlString GetDescription(IProject that) { return that.GetPropertyValue<IHtmlString>("description"); }
+
+		///<summary>
 		/// Detail list
 		///</summary>
 		[ImplementPropertyType("detailList")]
@@ -93,7 +132,7 @@ namespace Portfolio.Core.Models
 		public static bool GetFeatured(IProject that) { return that.GetPropertyValue<bool>("featured"); }
 
 		///<summary>
-		/// FeaturedImage
+		/// FeaturedImage: w: 624px x h: 413 px
 		///</summary>
 		[ImplementPropertyType("featuredImage")]
 		public IEnumerable<IPublishedContent> FeaturedImage
@@ -103,6 +142,18 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for FeaturedImage</summary>
 		public static IEnumerable<IPublishedContent> GetFeaturedImage(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("featuredImage"); }
+
+		///<summary>
+		/// Hero: w: 4272 x 2848 px (top 60%)
+		///</summary>
+		[ImplementPropertyType("hero")]
+		public IPublishedContent Hero
+		{
+			get { return GetHero(this); }
+		}
+
+		/// <summary>Static getter for Hero</summary>
+		public static IPublishedContent GetHero(IProject that) { return that.GetPropertyValue<IPublishedContent>("hero"); }
 
 		///<summary>
 		/// HideInNavbar
@@ -115,6 +166,18 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for HideInNavbar</summary>
 		public static bool GetHideInNavbar(IProject that) { return that.GetPropertyValue<bool>("hideInNavbar"); }
+
+		///<summary>
+		/// Role
+		///</summary>
+		[ImplementPropertyType("role")]
+		public string Role
+		{
+			get { return GetRole(this); }
+		}
+
+		/// <summary>Static getter for Role</summary>
+		public static string GetRole(IProject that) { return that.GetPropertyValue<string>("role"); }
 
 		///<summary>
 		/// Teaser
@@ -139,5 +202,17 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Title</summary>
 		public static string GetTitle(IProject that) { return that.GetPropertyValue<string>("title"); }
+
+		///<summary>
+		/// Year
+		///</summary>
+		[ImplementPropertyType("year")]
+		public string Year
+		{
+			get { return GetYear(this); }
+		}
+
+		/// <summary>Static getter for Year</summary>
+		public static string GetYear(IProject that) { return that.GetPropertyValue<string>("year"); }
 	}
 }

@@ -96,11 +96,14 @@ namespace Portfolio.Core.Controllers
                 Udi = iContentProject.GetKey(),
                 Title = iContentProject.Title,
                 Teaser = iContentProject.Teaser,
-
+                Description = iContentProject.Description.ToHtmlString(),
                 FeaturedImage = iContentProject.FeaturedImage != null
                     ? iContentProject.FeaturedImage.FirstOrDefault().GetCropUrl(600, 413)
                     : "",
-           
+                Hero = iContentProject.Hero != null ? iContentProject.Hero.GetCropUrl(4272, 2848) : "",
+                ClientName = iContentProject.ClientName,
+                Role = iContentProject.Role,
+                Year = iContentProject.Year,
                 Url = iContentProject.Url,
                 IsFeatured = iContentProject.Featured,
                 Details = new List<ProjectDetailsViewModel>()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web;
 
 namespace Portfolio.Core.ViewModels.Project
 {
@@ -10,12 +11,11 @@ namespace Portfolio.Core.ViewModels.Project
         public string Teaser { get; set; }
         public string FeaturedImage { get; set; }
         public List<ProjectDetailsViewModel> Details{ get; set; }
-        public string LinkLabel { get; set; }
-        public string LinkBackgroundColor { get; set; }
-        public bool IsLinkBackgroundTransparent{ get; set; }
-        public string DetailsViewTitle { get; set; }
-        public string DetailsViewTitleBackgroundColor { get; set; }
-        public bool IsDetailsViewTitleTransparent { get; set; }
+        public string Hero { get; set; }
+        public string ClientName { get; set; }
+        public string Year { get; set; }
+        public string Role { get; set; }
+        public  string Description { get; set; }
         public bool IsFeatured { get; set; }
         public string Url { get; set; }
     }

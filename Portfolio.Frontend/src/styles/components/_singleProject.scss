@@ -1,11 +1,52 @@
 .details-bg{
     background: $light-gray;
 }
+$hero-height: 60vh;
+
+.hero-section {
+  // background: url('https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-section-text {
+    color: $black;
+    background:$white;
+    // color: #fff;
+    opacity: 0.8;
+    height: 100%;
+    width: 84%;
+    h3{
+      padding-top:2em;
+    }
+  }
+
+  .hero-description{
+    padding: 2em 7em;
+    font-size: 1.1em;
+  }
+  .stroke{
+    width: 130px;
+    border-top: 0.205rem solid $black;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  h5{
+    padding-top:2em;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.8;
+  } 
+}
+
 
 .project-details-section {
     display: flex;
     flex-wrap: wrap;
-  
+    padding: 2em 7em;
     .project-details-section-img {
       align-self: center;
       flex: 1 0 100%;
@@ -41,19 +82,19 @@
       }
       h3{
           position: absolute;
-          top: 3em;
+          top: 2em;
       }
       .details-richtext{
           position: absolute;
           top:9em;
       }
+      
     }
   }
 
   .projectlist-container{
     max-width: 100%;
-    padding-top:60px;
-    .headline-container{
+      .headline-container{
       padding:4em 0;
 
       h1{

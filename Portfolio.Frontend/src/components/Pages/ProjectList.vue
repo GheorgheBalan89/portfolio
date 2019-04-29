@@ -1,5 +1,5 @@
 <template>
-    <div class="grid-container  projectlist-container">
+    <div class="projectlist-container">
         <div class="grid-x headline-container">
             <div class="medium-12 ">
                 <h1 class="text-center">

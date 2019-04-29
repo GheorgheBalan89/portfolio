@@ -46,6 +46,24 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// Client Name
+		///</summary>
+		[ImplementPropertyType("clientName")]
+		public string ClientName
+		{
+			get { return Portfolio.Core.Models.Project.GetClientName(this); }
+		}
+
+		///<summary>
+		/// Description
+		///</summary>
+		[ImplementPropertyType("description")]
+		public IHtmlString Description
+		{
+			get { return Portfolio.Core.Models.Project.GetDescription(this); }
+		}
+
+		///<summary>
 		/// Detail list
 		///</summary>
 		[ImplementPropertyType("detailList")]
@@ -64,12 +82,21 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// FeaturedImage
+		/// FeaturedImage: w: 624px x h: 413 px
 		///</summary>
 		[ImplementPropertyType("featuredImage")]
 		public IEnumerable<IPublishedContent> FeaturedImage
 		{
 			get { return Portfolio.Core.Models.Project.GetFeaturedImage(this); }
+		}
+
+		///<summary>
+		/// Hero: w: 4272 x 2848 px (top 60%)
+		///</summary>
+		[ImplementPropertyType("hero")]
+		public IPublishedContent Hero
+		{
+			get { return Portfolio.Core.Models.Project.GetHero(this); }
 		}
 
 		///<summary>
@@ -79,6 +106,15 @@ namespace Portfolio.Core.Models
 		public bool HideInNavbar
 		{
 			get { return Portfolio.Core.Models.Project.GetHideInNavbar(this); }
+		}
+
+		///<summary>
+		/// Role
+		///</summary>
+		[ImplementPropertyType("role")]
+		public string Role
+		{
+			get { return Portfolio.Core.Models.Project.GetRole(this); }
 		}
 
 		///<summary>
@@ -97,6 +133,15 @@ namespace Portfolio.Core.Models
 		public string Title
 		{
 			get { return Portfolio.Core.Models.Project.GetTitle(this); }
+		}
+
+		///<summary>
+		/// Year
+		///</summary>
+		[ImplementPropertyType("year")]
+		public string Year
+		{
+			get { return Portfolio.Core.Models.Project.GetYear(this); }
 		}
 	}
 }
