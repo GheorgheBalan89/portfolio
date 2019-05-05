@@ -16,7 +16,7 @@
             </div>
 
             <div>
-                <div v-for="(detail, projId) in project.Details" v-if="projId % 2 == 0"  :key="projId"  delay="0s" duration="0s" :iteration="0" :offset="0" :begin="false"  >
+                <div v-for="(detail, projId) in project.Details" v-if="projId % 2 == 0"  :key="projId">
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
@@ -31,8 +31,8 @@
                           </div>
                     </div>
                 </div>
-                <div v-else  delay="0s" duration="0s" :key="projId" :iteration="0" :offset="0"  :begin="false">
-                    <div class="project-details-section slideInRight">
+                <div v-else :key="projId">
+                    <div class="project-details-section">
                             <div v-if="detail.MediaItem" class="project-details-section-img small-order-1 medium-order-1">
                                 <img :src="detail.MediaItem" alt="" />
                             </div>
