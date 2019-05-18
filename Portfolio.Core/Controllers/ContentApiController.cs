@@ -23,7 +23,7 @@ namespace Portfolio.Core.Controllers
                 var websiteNode = new Website(node);
                 intro.AboutText = websiteNode.AboutText.ToHtmlString();
                 intro.ProfileImage = websiteNode.ProfilePicture != null? websiteNode.ProfilePicture.GetCropUrl(200, 300) : "";
-                intro.Cv = websiteNode.File;
+                //intro.Cv = websiteNode.File;
             }
 
             return Ok(intro);
@@ -96,6 +96,19 @@ namespace Portfolio.Core.Controllers
             var navigation = GetNavElements(site);
             
             return Ok(navigation);
+        }
+
+        public  IHttpActionResult GetResume(string websiteName)
+        {
+            var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(websiteName.ToLower()));
+            var website = new Website(site);
+            var cvModel = new Resume()
+            {
+                Cv = website.Cv,
+                CvText = website.CvText
+            };
+
+            return Ok(cvModel);
         }
 
         private static List<NavigationItem> GetNavElements(IPublishedContent node)

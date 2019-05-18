@@ -30,6 +30,16 @@
                 </template>
             </template>
         </div>
+        <div class="grid-x headline-container">
+            <div class="medium-12" v-if="cv">
+                <h2 class="text-center">
+                    <!-- <div class="stroke"></div> -->
+                    <span><a :href="cv" target="_blank">{{cvText}}</a></span>
+                    <!-- <div class="stroke"></div> -->
+                </h2>
+            </div>
+           
+        </div>
     </div>
 </template>
 
@@ -45,6 +55,8 @@ export default{
             projectMeta:"",
             projects :"",
             topProjects: "",
+            cv:"",
+            cvText:"",
             expandedView: false,
             count: 0
         }
@@ -54,7 +66,7 @@ export default{
         axios.get(getUrl).then(response => {
             var projects = response.data.Projects;
             this.projects = projects;
-      
+
             this.count = projects.length;
          console.log(this.count);
 
@@ -64,6 +76,12 @@ export default{
             }
             this.projectMeta = response.data;
             console.log(this.projectMeta);
+       });
+        
+        var getcv = "/umbraco/Api/ContentApi/GetResume?websiteName=Nerija";
+            axios.get(getcv).then(response => {
+            this.cv = response.data.Cv;
+            this.cvText = response.data.CvText;
        });
         
     },

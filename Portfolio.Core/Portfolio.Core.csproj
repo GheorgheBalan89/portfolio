@@ -376,6 +376,7 @@
     <Compile Include="Models\NavigationItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Employment\EmploymentViewModel.cs" />
+    <Compile Include="ViewModels\Intro\Resume.cs" />
     <Compile Include="ViewModels\Intro\IntroViewModel.cs" />
     <Compile Include="ViewModels\Mvc\PageViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectDetailsViewModel.cs" />

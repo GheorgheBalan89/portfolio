@@ -55,12 +55,21 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// file
+		/// cv
 		///</summary>
-		[ImplementPropertyType("file")]
-		public string File
+		[ImplementPropertyType("cv")]
+		public string Cv
 		{
-			get { return this.GetPropertyValue<string>("file"); }
+			get { return this.GetPropertyValue<string>("cv"); }
+		}
+
+		///<summary>
+		/// CvText
+		///</summary>
+		[ImplementPropertyType("cvText")]
+		public string CvText
+		{
+			get { return this.GetPropertyValue<string>("cvText"); }
 		}
 
 		///<summary>
