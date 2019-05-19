@@ -39,6 +39,8 @@ namespace Portfolio.Core.Controllers
 
             JsonSerializer.Converters.Add(new IsoDateTimeConverter());
             JsonSerializer.Converters.Add(new StringEnumConverter { CamelCaseText = true });
+
+            
         }
 
         public IPublishedContent GetIPublishedNodeByAlias(string nodeTypeAlias)

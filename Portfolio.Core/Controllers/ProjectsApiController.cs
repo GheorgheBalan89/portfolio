@@ -14,6 +14,7 @@ namespace Portfolio.Core.Controllers
 {
     public class ProjectsApiController : BaseApiController
     {
+        readonly UmbracoHelper UHelper = new UmbracoHelper(UmbracoContext.Current);
 
         public IHttpActionResult GetProject(string projectId)
         {
@@ -80,14 +81,12 @@ namespace Portfolio.Core.Controllers
                     }
                 }
             }
-
+            
             return response;
         }
 
-        private static ProjectViewModel IPubishedContentToPvm(IPublishedContent cachedProject)
+        private ProjectViewModel IPubishedContentToPvm(IPublishedContent cachedProject)
         {
-            var helper = new Umbraco.Web.UmbracoHelper(UmbracoContext.Current);
-            //var publishedMedia = helper.TypedMedia(id);
 
             var iContentProject = new Project(cachedProject);
 
@@ -104,7 +103,7 @@ namespace Portfolio.Core.Controllers
                 ClientName = iContentProject.ClientName,
                 Role = iContentProject.Role,
                 Year = iContentProject.Year,
-                Url = iContentProject.Url,
+                Url = iContentProject.UrlAbsolute(),
                 IsFeatured = iContentProject.Featured,
                 Details = new List<ProjectDetailsViewModel>()
             };
@@ -124,8 +123,6 @@ namespace Portfolio.Core.Controllers
     
             }
           
-         
-
             return pvm;
         }
     }
