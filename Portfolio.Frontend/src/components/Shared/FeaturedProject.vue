@@ -24,7 +24,7 @@ props: ['project'],
     },
     methods: {
         featuredClick: function(url){
-            window.location.href = url;
+            window.location.href =  url;
         },
         hoverIn: function(){
             this.isHoverIn = true;             

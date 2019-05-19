@@ -103,7 +103,7 @@ namespace Portfolio.Core.Controllers
                 ClientName = iContentProject.ClientName,
                 Role = iContentProject.Role,
                 Year = iContentProject.Year,
-                Url = iContentProject.UrlAbsolute(),
+                Url =  iContentProject.Url,
                 IsFeatured = iContentProject.Featured,
                 Details = new List<ProjectDetailsViewModel>()
             };

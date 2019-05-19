@@ -123,7 +123,7 @@ namespace Portfolio.Core.Controllers
                     Label = child.Name,
                     IsPublished = child.IsVisible(),
                     IsHidden = Convert.ToBoolean(visible),
-                    Url = child.UrlAbsolute()
+                    Url = child.Url
                 };
                 
                 if (child.Children.ToList().Count > 0)
