@@ -98,7 +98,7 @@ namespace Portfolio.Core.Controllers
             return Ok(navigation);
         }
 
-        public  IHttpActionResult GetResume(string websiteName)
+        public IHttpActionResult GetResume(string websiteName)
         {
             var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(websiteName.ToLower()));
             var website = new Website(site);

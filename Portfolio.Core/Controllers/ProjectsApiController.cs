@@ -114,8 +114,9 @@ namespace Portfolio.Core.Controllers
               {
                   Heading = item.GetValue<string>(nameof(ProjectDetailsViewModel.Heading)),
                   RichText = item.GetValue<string>(nameof(ProjectDetailsViewModel.RichText)),
-                  MediaItem = item.GetValue<IPublishedContent>("mediaItem") != null ? 
-                              item.GetValue<IPublishedContent>("mediaItem").GetCropUrl(520, 350)  :"",
+                  MediaItem = item.GetValue<IPublishedContent>("mediaItem") != null ?
+                              item.GetValue<IPublishedContent>("mediaItem").Url
+                              /*  item.GetValue<IPublishedContent>("mediaItem").GetCropUrl(520, 350)*/  : "",
                   VideoUrl = item.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
 
               };
