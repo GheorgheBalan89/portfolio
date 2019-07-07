@@ -9,11 +9,11 @@ import About from './Apps/About'
 //font-awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core'
 
-import { faUsersCog, faCode, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faUsersCog, faCode, faShoppingCart, faChevronCircleDown, faChevronCircleUp  } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
-library.add([faUsersCog, faCode, faShoppingCart])
+library.add([faUsersCog, faCode, faShoppingCart, faChevronCircleDown, faChevronCircleUp])
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 //--font awesome

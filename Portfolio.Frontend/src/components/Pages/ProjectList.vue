@@ -22,23 +22,18 @@
                 </template>
 
                 <div v-if="!expandedView" class="cell large-12 text-center show-more-container">
-                    <button class="hollow button success" @click="showMore()">  <font-awesome-icon icon="code" /> Show more </button>
+                    <button class="hollow button primary" @click="showMore()">  <font-awesome-icon icon="chevron-circle-down" /> Show more </button>
                 </div>
 
                 <template v-if="expandedView" v-for="(item, key) in projects">
                     <FeaturedProject :project="item" v-bind:key="key"/>
                 </template>
+
+                 <div v-if="expandedView" class="cell large-12 text-center show-more-container">
+                    <button class="hollow button primary" @click="showLess()">  <font-awesome-icon icon="chevron-circle-up" /> Show less </button>
+                </div>
+
             </template>
-        </div>
-        <div class="grid-x headline-container">
-            <div class="medium-12" v-if="cv">
-                <h2 class="text-center">
-                    <!-- <div class="stroke"></div> -->
-                    <span><a :href="cv" target="_blank">{{cvText}}</a></span>
-                    <!-- <div class="stroke"></div> -->
-                </h2>
-            </div>
-           
         </div>
     </div>
 </template>
@@ -88,6 +83,9 @@ export default{
       methods: {
         showMore: function(){
              this.expandedView = true;
+        },
+         showLess: function(){
+             this.expandedView = false;
         }
         
     },
