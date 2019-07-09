@@ -64,11 +64,16 @@ export default{
         var pidUrl = "/umbraco/Api/ProjectsApi/GetProject/ssqq?projectId="+ this.projectid + "";
 
         axios.get(pidUrl).then(response => {
-            console.log(response.data);
-            // this.navData = response.data;
-            this.project = response.data
+           console.log("path "+ window.location.origin + window.location.pathname);
+
+           this.project = response.data
         });
         
-    },
+    },methods:{
+         track: function(){
+            var pathname =  window.location.origin + window.location.pathname;
+           page(pathname);
+        }
+    }
 }
 </script>

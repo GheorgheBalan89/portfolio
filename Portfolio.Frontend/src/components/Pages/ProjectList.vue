@@ -41,7 +41,7 @@
 <script>
 import Vue from 'vue'
 import axios from "axios"
-
+import { page } from 'vue-analytics'
 
 export default{
     name: "ProjectList",
@@ -62,9 +62,9 @@ export default{
             var projects = response.data.Projects;
             this.projects = projects;
 
+            console.log("path "+ window.location.origin +"/"+ window.location.pathname);
             this.count = projects.length;
-         console.log(this.count);
-
+         
             if(projects.length > 3){
                 this.topProjects = projects.slice(0,3);
                 this.projects = projects.slice(3, projects.length);     
@@ -86,6 +86,10 @@ export default{
         },
          showLess: function(){
              this.expandedView = false;
+        },
+        track: function(){
+            var pathname =  window.location.origin + window.location.pathname;
+           page(pathname);
         }
         
     },
