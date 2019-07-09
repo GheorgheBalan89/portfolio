@@ -62,7 +62,7 @@ export default{
             var projects = response.data.Projects;
             this.projects = projects;
 
-            console.log("path "+ window.location.origin +"/"+ window.location.pathname);
+            console.log("path "+ window.location.origin + window.location.pathname);
             this.count = projects.length;
          
             if(projects.length > 3){
