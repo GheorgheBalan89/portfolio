@@ -1,6 +1,6 @@
 <template>
     <div class="projectlist-container">
-        <div class="grid-x headline-container">
+        <div class="grid-x headline-container hide-for-small-only">
             <div class="medium-12 ">
                 <h1 class="text-center">
                     <div class="stroke"></div>
@@ -11,6 +11,10 @@
             <div class="medium-12">
                 <h2 class="text-center">{{projectMeta.Heading2}}</h2>
             </div>
+        </div>
+        <div class="headline-container-responsive show-for-small-only responsive">
+            <h3 class="text-center"> {{projectMeta.Heading1}} </h3>
+            <h4 class="text-center">{{projectMeta.Heading2}}</h4>
         </div>
         <div class="grid-x">
             <template v-if="projects != null && count <= 3" v-for="(item, key) in projects">
@@ -91,7 +95,6 @@ export default{
             var pathname =  window.location.origin + window.location.pathname;
            page(pathname);
         }
-        
     },
 }
 </script>
