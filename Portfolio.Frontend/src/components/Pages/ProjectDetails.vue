@@ -3,19 +3,18 @@
             <div class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Hero + ')'}">  
                 <div class="hero-section-text">
                     <h3>   
-                        <div class="stroke"></div>
+                        <div class="stroke hide-for-small-only"></div>
                         {{project.Title}}
-                        <div class="stroke"></div>
+                        <div class="stroke hide-for-small-only"></div>
                     </h3>
                      <div class="text-center">
                         <h5> Client: {{project.ClientName}}  <br> Year: {{project.Year}} <br/> Role: {{ project.Role}}</h5> 
                     </div>
                     <div class="hero-description" v-html="project.Description"></div>
-                   
                 </div>
             </div>
 
-            <div>
+            <div class="hide-for-small-only">
                 <div v-for="(detail, projId) in project.Details" v-if="projId % 2 == 0"  :key="projId">
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
@@ -46,6 +45,25 @@
                         </div>
                 </div>
             </div>
+
+            <div class="show-for-small-only">
+                    <div v-for="(detail, projId) in project.Details" :key="projId">
+                        <div class="row text-center">
+                            <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
+                           
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns" v-html="detail.RichText"></div>
+                            <div v-if="detail.MediaItem" class="large-12 columns">
+                                <img :src="detail.MediaItem" alt="" />
+                            </div>
+                            <div v-if="detail.VideoUrl !=''  && detail.VideoUrl != null" class="large-12 columns">
+                                    <iframe :src="'https://player.vimeo.com/video/'+detail.VideoUrl && detail.VideoUrl != null"  width="952" height="725" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 </template>
 
