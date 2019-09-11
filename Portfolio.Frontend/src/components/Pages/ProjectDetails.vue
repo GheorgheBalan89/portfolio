@@ -10,10 +10,13 @@
                      <div class="text-center">
                         <h5> Client: {{project.ClientName}}  <br> Year: {{project.Year}} <br/> Role: {{ project.Role}}</h5> 
                     </div>
-                    <div class="hero-description" v-html="project.Description"></div>
+                    <div class="hero-description hide-for-small-only" v-html="project.Description"></div>
                 </div>
             </div>
 
+            <div class="row show-for-small-only">
+                <div class="large-12 columns" v-html="project.Description"></div>
+            </div>
             <div class="hide-for-small-only">
                 <div v-for="(detail, projId) in project.Details" v-if="projId % 2 == 0"  :key="projId">
                     <div  class="project-details-section">
@@ -50,7 +53,6 @@
                     <div v-for="(detail, projId) in project.Details" :key="projId">
                         <div class="row text-center">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
-                           
                         </div>
                         <div class="row">
                             <div class="large-12 columns" v-html="detail.RichText"></div>

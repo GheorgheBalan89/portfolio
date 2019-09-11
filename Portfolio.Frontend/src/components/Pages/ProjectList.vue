@@ -17,27 +17,21 @@
             <h4 class="text-center">{{projectMeta.Heading2}}</h4>
         </div>
         <div class="grid-x">
-            <template v-if="projects != null && count <= 3" v-for="(item, key) in projects">
-                <FeaturedProject :project="item" v-bind:key="key"/>
+        <template v-if="projects != null" >
+            <template v-for="topProj in topProjects">
+                <FeaturedProject :project="topProj" v-bind:key="topProj.Udi"/>
             </template>
-            <template v-else>
-                <template v-for="(item, key) in topProjects">
-                    <FeaturedProject :project="item" v-bind:key="key"/>
-                </template>
-
-                <div v-if="!expandedView" class="cell large-12 text-center show-more-container">
-                    <button class="hollow button primary" @click="showMore()">  <font-awesome-icon icon="chevron-circle-down" /> Show more </button>
-                </div>
-
-                <template v-if="expandedView" v-for="(item, key) in projects">
-                    <FeaturedProject :project="item" v-bind:key="key"/>
-                </template>
-
-                 <div v-if="expandedView" class="cell large-12 text-center show-more-container">
+            <div v-if="!expandedView && restProjects!= null" class="cell large-12 text-center show-more-container">
+                 <button class="hollow button primary" @click="showMore()">  <font-awesome-icon icon="chevron-circle-down" /> Show more </button>
+            </div>
+            <template v-if="expandedView && restProjects !=null " v-for="(restProj, key3) in restProjects">
+                    <FeaturedProject :project="restProj" v-bind:key="restProj.Udi"/>
+            </template>
+            <div v-if="expandedView" class="cell large-12 text-center show-more-container">
                     <button class="hollow button primary" @click="showLess()">  <font-awesome-icon icon="chevron-circle-up" /> Show less </button>
-                </div>
+             </div> 
 
-            </template>
+        </template>
         </div>
     </div>
 </template>
@@ -54,6 +48,7 @@ export default{
             projectMeta:"",
             projects :"",
             topProjects: "",
+            restProjects: "",
             cv:"",
             cvText:"",
             expandedView: false,
@@ -65,13 +60,17 @@ export default{
         axios.get(getUrl).then(response => {
             var projects = response.data.Projects;
             this.projects = projects;
-
+            
+           
+            console.log(projects);
             console.log("path "+ window.location.origin + window.location.pathname);
             this.count = projects.length;
          
             if(projects.length > 3){
                 this.topProjects = projects.slice(0,3);
-                this.projects = projects.slice(3, projects.length);     
+                this.restProjects = projects.slice(3, projects.length);     
+                console.log(this.restProjects);
+
             }
             this.projectMeta = response.data;
             console.log(this.projectMeta);
