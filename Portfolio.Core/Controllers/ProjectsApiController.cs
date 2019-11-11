@@ -69,8 +69,8 @@ namespace Portfolio.Core.Controllers
             if (projectListPage != null)
             {
                 var projectCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Project.ModelTypeAlias).And().ParentId(projectListPage.Id).Compile();
-                var cachedProjects = onlyFeatured ? UHelper.TypedSearch(projectCriteria).Take(4).ToList()
-                    : UHelper.TypedSearch(projectCriteria).ToList();
+                var cachedProjects = onlyFeatured ? UHelper.TypedSearch(projectCriteria).Take(4).OrderBy(x => x.Name).ToList()
+                    : UHelper.TypedSearch(projectCriteria).OrderBy(x => x.Name).ToList();
 
                 if (cachedProjects.Any())
                 {
