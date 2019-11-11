@@ -29,7 +29,7 @@
                             <img :src="detail.MediaItem" alt="" />
                         </div>
                           <div v-if="detail.VideoUrl !=''  && detail.VideoUrl != null" class="project-details-section-img small-order-1 medium-order-1">
-                                <iframe :src="'https://player.vimeo.com/video/'+detail.VideoUrl && detail.VideoUrl != null"  width="952" height="725" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe :src="detail.VideoUrl"  width="952" height="450"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                           </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                                 <img :src="detail.MediaItem" alt="" />
                             </div>
                             <div v-if="detail.VideoUrl !='' && detail.VideoUrl != null" class="project-details-section-img small-order-1 medium-order-1">
-                                <iframe :src="'https://player.vimeo.com/video/'+detail.VideoUrl" width="952" height="725" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe :src="detail.VideoUrl" width="952" height="450" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             </div>
                             <div class="project-details-section-block small-order-2 medium-order-2">
                                 <h3 class="project-details-section-block-header" >{{detail.Heading}}</h3>
@@ -60,7 +60,7 @@
                                 <img :src="detail.MediaItem" alt="" />
                             </div>
                             <div v-if="detail.VideoUrl !=''  && detail.VideoUrl != null" class="large-12 columns">
-                                    <iframe :src="'https://player.vimeo.com/video/'+detail.VideoUrl && detail.VideoUrl != null"  width="952" height="725" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    <iframe :src="detail.VideoUrl" width="952" height="450" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             </div>
                     </div>
                 </div>
