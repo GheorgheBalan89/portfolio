@@ -3,21 +3,23 @@
             <div class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Hero + ')'}">  
                 <div class="hero-section-text">
                     <h3>   
-                        <div class="stroke hide-for-small-only"></div>
+                        <div class="stroke small-hidden"></div>
                         {{project.Title}}
-                        <div class="stroke hide-for-small-only"></div>
+                        <div class="stroke small-hidden"></div>
                     </h3>
                      <div class="text-center">
                         <h5> Client: {{project.ClientName}}  <br> Year: {{project.Year}} <br/> Role: {{ project.Role}}</h5> 
                     </div>
-                    <div class="hero-description hide-for-small-only" v-html="project.Description"></div>
+                    <div class="hero-description small-hidden" v-html="project.Description"></div>
                 </div>
             </div>
 
-            <div class="row show-for-small-only">
+            <!-- <div class="row show-for-small-only"> -->
+            <div class="row small-visible text-center text-padding">
                 <div class="large-12 columns" v-html="project.Description"></div>
             </div>
-            <div class="hide-for-small-only">
+            <!-- <div class="hide-for-small-only"> -->
+                <div class="small-hidden">
                 <div v-for="(detail, projId) in project.Details" v-if="projId % 2 == 0"  :key="projId">
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
@@ -47,20 +49,23 @@
                             </div>
                         </div>
                 </div>
+                &nbsp;
+                &nbsp;
             </div>
 
-            <div class="show-for-small-only">
+            <!-- <div class="show-for-small-only"> -->
+            <div class="small-visible">
                     <div v-for="(detail, projId) in project.Details" :key="projId">
-                        <div class="row text-center">
+                        <div class="row text-center ">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
                         </div>
                         <div class="row">
-                            <div class="large-12 columns" v-html="detail.RichText"></div>
-                            <div v-if="detail.MediaItem" class="large-12 columns">
+                            <div class="large-12 columns text-padding" v-html="detail.RichText"></div>
+                            <div v-if="detail.MediaItem" class="large-12 columns centered-content">
                                 <img :src="detail.MediaItem" alt="" />
                             </div>
-                            <div v-if="detail.VideoUrl !=''  && detail.VideoUrl != null" class="large-12 columns">
-                                    <iframe :src="detail.VideoUrl" width="952" height="450" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <div v-if="detail.VideoUrl !=''  && detail.VideoUrl != null" class="large-12 columns centered-content">
+                                    <iframe :src="detail.VideoUrl" width="400" height="350" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             </div>
                     </div>
                 </div>

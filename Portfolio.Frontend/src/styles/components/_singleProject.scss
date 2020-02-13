@@ -1,8 +1,38 @@
+// @import "../settings";
+// @import "../app.scss";
+
 .details-bg{
     background: $light-gray;
 }
 $hero-height: 60vh;
 
+@media screen and  #{breakpoint(large down)} {
+  .small-visible{
+    display: visible;
+    img{
+      max-width: 60%;
+      left:15%;
+    }
+    .centered-content{
+      text-align: center;
+    }
+  }
+  .small-hidden{
+    display: none;
+  }
+}
+
+@media screen and #{breakpoint(large up)}{
+  .small-visible{
+    display: none;
+  }
+  .small-hidden{
+    display: visible;
+  }
+}
+.text-padding{
+  padding:0 2em;
+}
 .hero-section {
   // background: url('https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg') 50% no-repeat;
   background-size: cover;
