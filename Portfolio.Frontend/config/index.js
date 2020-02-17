@@ -12,11 +12,11 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/umbraco/Api/' :{
-        target : 'http://portfolio.local/',
+        target : 'http://www.nerijabalan.com/',
         changeOrigin: true
       },
       '/media/':{
-        target: 'http://portfolio.local',
+        target: 'http://www.nerijabalan.com/',
         changeOrigin: true
       }
     },
