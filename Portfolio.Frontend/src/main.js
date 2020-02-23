@@ -6,6 +6,7 @@ import FrontpageApp from './Apps/FrontpageApp'
 import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
 import About from './Apps/About'
+
 //font-awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUsersCog, faCode, faShoppingCart, faChevronCircleDown, faChevronCircleUp  } from '@fortawesome/free-solid-svg-icons'
@@ -24,6 +25,7 @@ Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("About", About)
+// Vue.component("FeaturedProject", FeaturedProject)
 // Vue.component("Uanimate", Uanimate)
 
 Vue.config.productionTip = false
@@ -65,10 +67,10 @@ if(document.getElementById("projects")){
       components: { ProjectListApp }
   })
 }
-if(document.getElementById("app-gheorghe")){
-  new Vue({
-    el:"#app-gheorghe",
-    template :"<GheorghesApp/>",
-    components: {GheorghesApp}
-  })
-}
+// if(document.getElementById("app-gheorghe")){
+//   new Vue({
+//     el:"#app-gheorghe",
+//     template :"<GheorghesApp/>",
+//     components: {GheorghesApp}
+//   })
+// }

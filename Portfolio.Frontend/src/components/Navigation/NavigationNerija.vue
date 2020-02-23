@@ -1,6 +1,11 @@
-<template>
-<div>
+<template>  
+<div class="navigation-container">
+    <div>
+    
      <nav class="hover-underline-menu" data-menu-underline-from-center>
+         <div class="top-bar">
+            <img src="/static/Avatar.png" class="header-image">
+        </div>
         <ul v-if="navData" class="menu align-center">
             <li v-for="navItem in navData" v-if="!navItem.IsHidden">
                 <a v-if="isHovered"  :href="navItem.Url"  @mouseover ="menuHover()" class="underline-from-center"> {{ navItem.Label }} </a>
@@ -8,6 +13,7 @@
             </li>
         </ul>
     </nav>    
+    </div>
 </div>
 </template>
 <script>

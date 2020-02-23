@@ -40,6 +40,7 @@
 import Vue from 'vue'
 import axios from "axios"
 import { page } from 'vue-analytics'
+import FeaturedProject from '../Shared/FeaturedProject'
 
 export default{
     name: "ProjectList",
@@ -95,5 +96,8 @@ export default{
            page(pathname);
         }
     },
+    components: {
+        FeaturedProject
+    }
 }
 </script>

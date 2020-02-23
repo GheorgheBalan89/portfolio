@@ -1,0 +1,32 @@
+.mb_parallax_container {
+    background-image: url('/static/parallax-bg.png');
+    height: 85vh;
+    // height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .mb_parallax_overlay {
+    // height: 60vh;
+    width: 100%;
+    // margin: auto;
+    background-color: orange;
+    opacity: 0.6;
+    bottom: 0;
+    height: 32vh;
+    position: absolute;
+    text-align: center;
+     h1{
+        padding: 1em 0 0 0;
+        text-transform: uppercase;
+    }
+    h3{
+        font-weight: bold;
+    }
+    p{
+        padding: 0.2em 30em;
+    }
+  }
+  

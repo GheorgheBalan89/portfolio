@@ -1,5 +1,17 @@
 $menu-underline-from-center-border-thickness: 0.115rem;
-
+.navigation-container{
+  position: relative;
+  height: 136px;
+}
+.header-image{
+  height: 50px;
+  width: 50px;
+  margin: auto;
+}
+.top-bar{
+  background-color: $white;
+  padding: 1em 0;
+}
 .hover-underline-menu, .underline-menu-reverse  {
   z-index: 100;
   width: 100%;
