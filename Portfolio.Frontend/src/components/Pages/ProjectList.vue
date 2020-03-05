@@ -1,21 +1,6 @@
 <template>
     <div class="projectlist-container">
-        <div class="grid-x headline-container hide-for-small-only">
-            <div class="medium-12 ">
-                <h1 class="text-center">
-                    <div class="stroke"></div>
-                    <span>{{projectMeta.Heading1}}</span>
-                    <div class="stroke"></div>
-                </h1>
-            </div>
-            <div class="medium-12">
-                <h2 class="text-center">{{projectMeta.Heading2}}</h2>
-            </div>
-        </div>
-        <div class="headline-container-responsive show-for-small-only responsive">
-            <h3 class="text-center"> {{projectMeta.Heading1}} </h3>
-            <h4 class="text-center">{{projectMeta.Heading2}}</h4>
-        </div>
+        
         <div class="grid-x">
         <template v-if="projects != null" >
             <template v-for="topProj in topProjects">
@@ -44,39 +29,16 @@ import FeaturedProject from '../Shared/FeaturedProject'
 
 export default{
     name: "ProjectList",
+    props:['projects', 'topProjects', 'restProjects'],
     data(){
         return {
-            projectMeta:"",
-            projects :"",
-            topProjects: "",
-            restProjects: "",
             cv:"",
             cvText:"",
             expandedView: false,
             count: 0
         }
     },
-    mounted(){
-        var getUrl = "/umbraco/Api/ProjectsApi/GetProjects?website=Nerija";
-        axios.get(getUrl).then(response => {
-            var projects = response.data.Projects;
-            this.projects = projects;
-            
-           
-            console.log(projects);
-            console.log("path "+ window.location.origin + window.location.pathname);
-            this.count = projects.length;
-         
-            if(projects.length > 3){
-                this.topProjects = projects.slice(0,3);
-                this.restProjects = projects.slice(3, projects.length);     
-                console.log(this.restProjects);
-
-            }
-            this.projectMeta = response.data;
-            console.log(this.projectMeta);
-       });
-        
+    mounted(){       
         var getcv = "/umbraco/Api/ContentApi/GetResume?websiteName=Nerija";
             axios.get(getcv).then(response => {
             this.cv = response.data.Cv;
