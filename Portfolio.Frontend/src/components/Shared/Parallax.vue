@@ -1,14 +1,9 @@
 <template>
     <div class="mb_parallax_container">
         <div class="mb_parallax_overlay">
-            <h1>Design portfolio</h1>
-            <!-- <h3 v-if="projectMeta != null">{{projectMeta.Heading1}}</h3>
-            <p v-if="projectMeta != null">{{projectMeta.Heading2}}></p> -->
-
-              
-         <div v-if="projectMeta != null" class="grid-x headline-container hide-for-small-only">
+            <div v-if="projectMeta != null" class="grid-x headline-container hide-for-small-only">
             <div class="medium-12 ">
-                <h3 class="text-center"> {{projectMeta.Heading1}}</h3>
+                <h1 class="text-center"> {{projectMeta.Heading1}}</h1>
             </div>
             <div class="medium-12">
                 <p class="text-center">{{projectMeta.Heading2}}</p>
@@ -18,8 +13,7 @@
             <h3 class="text-center"> {{projectMeta.Heading1}} </h3>
             <div class="text-center">{{projectMeta.Heading2}}</div>
         </div>
-        </div>
-      
+    </div>
 </div>
 
 

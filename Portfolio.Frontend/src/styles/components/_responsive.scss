@@ -1,3 +1,58 @@
 .headline-container-responsive{
     max-width: 100%;
 }
+
+
+@media screen and  #{breakpoint(large down)} {
+    .large-visible{
+      display: visible;
+     
+      .centered-content{
+        text-align: center;
+      }
+    }
+ 
+  }
+  
+  @media screen and #{breakpoint(large up)}{
+    .large-visible{
+    display: visible;
+    }
+    .small-visible{
+      display: none;
+    }
+  }
+  
+  @media screen and  #{breakpoint(medium down)} {
+    .medium-visible{
+      display: visible;
+      img{
+        max-width: 60%;
+        left:15%;
+      }
+      .centered-content{
+        text-align: center;
+      }
+    }
+   .medium-hidden, .large-visible{
+      display: none;
+    }
+  }
+
+ 
+  @media screen and  #{breakpoint(small down)} {
+    .small-visible{
+      display: inline-block;
+      img{
+        max-width: 60%;
+        left:15%;
+      }
+      .centered-content{
+        text-align: center;
+      }
+    }
+   .small-hidden, .large-visible{
+      display: none ;
+    }
+  }
+
