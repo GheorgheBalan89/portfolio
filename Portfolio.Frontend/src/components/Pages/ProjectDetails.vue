@@ -8,7 +8,7 @@
                         {{project.Title}}
                         <div class="stroke "></div>
                     </h3>
-                    <h4 class="large-visible">
+                    <h4 class="large-hidden medium-visible">
                         {{project.Title}}
                     </h4>
                      <div class="text-center">
@@ -30,7 +30,7 @@
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
-                            <div class="details-richtext" v-html="detail.RichText"></div>
+                            <div class="details-richtext text-padding-right" v-html="detail.RichText"></div>
                         </div>
 
                         <div v-if="detail.MediaItem" class="project-details-section-img large-order-1 medium-order-2">
@@ -50,8 +50,8 @@
                                 <iframe :src="detail.VideoUrl" width="952" height="450" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             </div>
                             <div class="project-details-section-block large-order-2 medium-order-2">
-                                <h3 class="project-details-section-block-header" >{{detail.Heading}}</h3>
-                                <div class="details-richtext" v-html="detail.RichText"></div>
+                                <h3 class="project-details-section-block-header heading-padding-left" >{{detail.Heading}}</h3>
+                                <div class="details-richtext text-padding-left" v-html="detail.RichText"></div>
                             </div>
                         </div>
                 </div>
