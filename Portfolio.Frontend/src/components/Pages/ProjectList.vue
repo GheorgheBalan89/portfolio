@@ -1,6 +1,5 @@
 <template>
     <div class="projectlist-container">
-        
         <div class="grid-x">
         <template v-if="projects != null" >
             <template v-for="topProj in topProjects">
@@ -15,7 +14,6 @@
             <div v-if="expandedView" class="cell large-12 text-center show-more-container">
                     <button class="hollow button primary" @click="showLess()">  <font-awesome-icon icon="chevron-circle-up" /> Show less </button>
              </div> 
-
         </template>
         </div>
     </div>

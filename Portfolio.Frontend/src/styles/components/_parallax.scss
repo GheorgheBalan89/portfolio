@@ -1,7 +1,6 @@
 .mb_parallax_container {
     background-image: url('/static/parallax-bg.png');
     height: 85vh;
-    // height: 500px;
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
@@ -9,9 +8,7 @@
   }
   
   .mb_parallax_overlay {
-    // height: 60vh;
     width: 100%;
-    // margin: auto;
     background-color: $main-color;
     opacity: 0.6;
     bottom: -15px;

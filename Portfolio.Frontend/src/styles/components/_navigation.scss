@@ -9,7 +9,7 @@ $menu-underline-from-center-border-thickness: 0.115rem;
   margin: auto;
 }
 .top-bar{
-  background-color: $white;
+  background-color: $light-color;
   padding: 1em 0;
 }
 .hover-underline-menu, .underline-menu-reverse  {
@@ -21,7 +21,7 @@ $menu-underline-from-center-border-thickness: 0.115rem;
     background-color: $main-color;
 
     a {
-      color: $white;
+      color: $light-color;
       padding: 1.2rem 1.5rem;
       text-transform: uppercase;
     }
@@ -33,7 +33,7 @@ $menu-underline-from-center-border-thickness: 0.115rem;
         content: "";
         position: absolute;
         top: calc(100% - #{$menu-underline-from-center-border-thickness});
-        border-bottom: $menu-underline-from-center-border-thickness solid $white;
+        border-bottom: $menu-underline-from-center-border-thickness solid $light-color;
         left: 50%;
         right: 50%;
         transition: all 0.5s ease;
@@ -51,7 +51,7 @@ $menu-underline-from-center-border-thickness: 0.115rem;
 .underline-menu-reverse {
  
   .menu {
-    background-color: $white;
+    background-color: $light-color;
 
     a {
       color: $marketing-site-footer-bg;

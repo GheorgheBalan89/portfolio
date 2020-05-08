@@ -1,16 +1,37 @@
 <template>
-<footer class="marketing-site-footer">
+<footer class="site-footer">
+   <div class="text-center heading">
+      <h4>Contact me</h4>
+    </div>
   <div class="grid-container">
-    <div class="grid-x grid-margin-x align-center">
+     <div class="grid-x grid-margin-x align-center">
       <div class="cell medium-3 text-center footer-col">
-         <p>  <a class="button primary" :href="cv" target="_blank">{{cvText}}</a></p>
-          <p> <a href="https://www.linkedin.com/in/nerija-butkevi%C4%8Di%C5%ABt%C4%97-balan-41176445/" target="_blank"> LinkedIn</a> 
-            | <a href="https://www.behance.net/nerijabalan_ux" target="_blank"> Behance</a> 
-            </p>
-         <p>© Nerija Butkeviciute-Balan</p>      
+          <a class="footer-icon" :href="cv" target="_blank">
+            <img src="/static/footer_images/avatar/Avatar.svg" alt="cv">
+            <p>CV</p>
+          </a>            
+      </div>
+      <div class="cell medium-3  text-center footer-col">
+        <a class="footer-icon" href="mailto:nerija.balan@gmail.com" >
+            <img src="/static/footer_images/mail/e-mail.png" alt="mail">
+            <p>nerija.balan@gmail.com</p>
+          </a>
+      </div>
+      <div class="cell medium-3  text-center footer-col">
+           <a class="footer-icon" href="#">
+            <img src="/static/footer_images/phone/phone.png" alt="phone">
+            <p>+45 27 50 17 69</p>
+          </a>
+      </div>
+      <div class="cell medium-3  text-center footer-col">
+         <a class="footer-icon" href="https://www.linkedin.com/in/nerija-butkevi%C4%8Di%C5%ABt%C4%97-balan-41176445/" target="_blank">
+            <img src="/static/footer_images/linkedin/linkedin.png" alt="linkedin">
+            <p>LinkedIn</p>
+          </a>
       </div>
     </div>
   </div>
+  <div class="footer-bg"></div>
 </footer>
 
 

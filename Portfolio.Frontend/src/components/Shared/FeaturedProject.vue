@@ -1,14 +1,14 @@
 <template>
     <div class="cell medium-4 featured-project" v-if="project"  @mouseenter="hoverIn()" @mouseleave="hoverOut()"  @click="featuredClick(project.Url)" :key="project.Udi" >
         <img :src="project.FeaturedImage" :alt="project.Title" width="100%"/>   
-                <div class="animation-container">
-                <transition-group name="slide" enter-active-class="slideInLeft" leave-active-class="slideOutLeft"  tag="div">    
-                    <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.7s;">
-                        <h3 class="text-center">{{ project.Title }} </h3>
-                        <p class="text-center"> {{ project.Teaser }} </p>
-                    </div>
-                </transition-group>
-            </div>                       
+            <div class="animation-container">
+            <transition-group name="slide" enter-active-class="slideInLeft" leave-active-class="slideOutLeft"  tag="div">    
+                <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.7s;">
+                    <h3 class="text-center">{{ project.Title }} </h3>
+                    <p class="text-center"> {{ project.Teaser }} </p>
+                </div>
+            </transition-group>
+        </div>                       
      </div>
 </template>
 <script>

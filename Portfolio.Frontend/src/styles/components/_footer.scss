@@ -1,14 +1,37 @@
 
-.marketing-site-footer {
-  background: $fourth-color;
+.site-footer {
+  background: $white;
   color: $dark-color;
-  padding: 3rem 0;
-
-  .footer-col p{
+  // padding: 3rem 0;
+  
+.heading{
+  text-transform: uppercase;
+  background-color: $light-color;
+  h4{
+    padding: 0.5em 0;
+  }
+}
+  .footer-col {
     color: $light-grey;
-    padding: 1rem 0 0.5rem 0;
+    padding: 2em 4em;
+    .footer-icon{
+      img{
+        height: 50px;
+      }
+      text-decoration: none;
+      text-align: center;
+      p{
+        font-weight: bold;
+        color:$third-color;
+      }
+    }
   }
 
+  .footer-bg{
+    height: 2vh;
+    width: 100%;
+    background: url('/static/clouds.svg');
+  }
   @include breakpoint(small only) {
     .columns {
       margin-bottom: 2rem;

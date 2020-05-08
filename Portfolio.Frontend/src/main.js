@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
-import FrontpageApp from './Apps/FrontpageApp'
 import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
 import About from './Apps/About'
@@ -21,7 +20,6 @@ library.add([faUsersCog, faCode, faShoppingCart, faChevronCircleDown, faChevronC
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 //--font awesome
 
-Vue.component("FrontpageApp", FrontpageApp)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("About", About)
@@ -31,16 +29,6 @@ Vue.component("About", About)
 Vue.config.productionTip = false
 
 
-/* eslint-disable no-new */
-if(document.getElementById("app")){
-  new Vue({
-    el: '#app',
-    components: { FrontpageApp },
-    template: '<FrontpageApp/>'
-  })
-    
-}
-
 if(document.getElementById("about")){
   new Vue({
     el: '#about',
@@ -49,7 +37,6 @@ if(document.getElementById("about")){
   })
     
 }
-
 
 
 if(document.getElementById("project")){
@@ -67,10 +54,3 @@ if(document.getElementById("projects")){
       components: { ProjectListApp }
   })
 }
-// if(document.getElementById("app-gheorghe")){
-//   new Vue({
-//     el:"#app-gheorghe",
-//     template :"<GheorghesApp/>",
-//     components: {GheorghesApp}
-//   })
-// }

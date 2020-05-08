@@ -1,0 +1,22 @@
+.hero-section-meta{
+    background-size: cover;
+    background-position: center;
+    height: 28vh;
+    text-align: center;
+}
+.hero-section-text-meta{
+    text-align: center;
+    margin-top: -5em;
+    background-color: $main-color;
+    opacity:0.8;
+      h4{
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 1em 0;
+    }
+    p{
+        font-size: 1em;
+        font-weight: bold;
+        padding: 0 3em 4em 3em;
+    }
+}

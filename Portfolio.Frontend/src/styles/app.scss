@@ -45,8 +45,8 @@
 // @include motion-ui-animations;
 
 @import "../../node_modules/vue2-animate/dist/vue2-animate.min.css";
-@import './settings';
 @import "./components/colours";
+@import './settings';
 @import "./components/navigation";
 @import "./components/frontpage";
 @import "./components/projects";
@@ -57,3 +57,6 @@
 @import "./components/singleProject";
 @import "./components/aboutPage";
 @import './components/responsive';
+@import "./components/responsive/projectListMeta.scss";
+@import "./components/responsive/projectList";
+@import "overrites"

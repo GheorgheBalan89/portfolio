@@ -1,6 +1,6 @@
 <template>
         <div class="projectlist-container details-bg">
-             <meta property="og:image" :content="project.FeaturedImage"/>
+            <meta property="og:image" :content="project.FeaturedImage"/>
             <div class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Hero + ')'}">  
                 <div class="hero-section-text">
                     <h3 class="large-visible">   

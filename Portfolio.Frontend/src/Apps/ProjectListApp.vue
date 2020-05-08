@@ -1,9 +1,17 @@
 <template>
-  <div id="projectlist">
-    <NavigationNerija/>
-    <Parallax :projectMeta="meta"/>
-    <ProjectList :projects="projList" :topProjects="topList" :restProjects="bottomList"/>
-    <Footer/> 
+  <div>
+    <div id="projectlist" class="large-visible medium-hidden">
+      <NavigationNerija/>
+      <Parallax :projectMeta="meta"/>
+      <ProjectList :projects="projList" :topProjects="topList" :restProjects="bottomList"/>
+      <Footer/> 
+    </div>
+    <div class="large-hidden medium-visible">
+      <NavigationNerija/>
+      <ProjectListMeta :meta="meta"/>
+      <ProjectListResponsive :projects="projList"/>
+      <Footer/>
+    </div>
   </div>
 </template>
 
@@ -11,7 +19,9 @@
 
 import NavigationNerija from '../components/Navigation/NavigationNerija'
 import Parallax from '../components/Shared/Parallax'
+import ProjectListMeta from '../components/responsive/ProjectListMeta'
 import ProjectList from '../components/Pages/ProjectList'
+import ProjectListResponsive from '../components/responsive/ProjectListResponsive'
 import Footer from '../components/Footer'
 import axios from "axios"
 
@@ -29,12 +39,10 @@ export default {
        var getUrl = "/umbraco/Api/ProjectsApi/GetProjects?website=Nerija";
         axios.get(getUrl).then(response => {
             var projects = response.data.Projects;
-            this.projList = projects;
-            
-            console.log(projects);
-            console.log("path "+ window.location.origin + window.location.pathname);
+            this.projList = projects;          
+
+            // console.log("path "+ window.location.origin + window.location.pathname);
             this.count = projects.length;
-         
             if(projects.length > 3){
                 this.topList = projects.slice(0,3);
                 this.bottomList = projects.slice(3, projects.length);     
@@ -42,13 +50,15 @@ export default {
 
             }
             this.meta = response.data;
-            console.log(this.meta);
+
        });
   },
  components:{
     NavigationNerija,
     Parallax,
     ProjectList,
+    ProjectListMeta,
+    ProjectListResponsive,
     Footer
   }
 }

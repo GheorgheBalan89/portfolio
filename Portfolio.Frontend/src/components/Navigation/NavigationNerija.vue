@@ -1,8 +1,7 @@
 <template>  
 <div class="navigation-container">
     <div>
-    
-     <nav class="hover-underline-menu" data-menu-underline-from-center>
+      <nav class="hover-underline-menu" data-menu-underline-from-center>
          <div class="top-bar">
             <img src="/static/Avatar.png" class="header-image">
         </div>

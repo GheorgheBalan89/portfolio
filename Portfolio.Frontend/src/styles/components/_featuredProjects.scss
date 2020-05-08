@@ -7,10 +7,10 @@
 
 }
 .light-bg{
-    background-color: $light-bg;
+    background-color: $light-color;
 }
 .dark-bg{
-    background-color: $dark-bg;
+    background-color: $secondary-color;
 }
 .zoomIn{
     transform: scale(1.05);
@@ -34,7 +34,7 @@
     h3{
       text-transform: initial;
       padding-top:calc(50% - 450px/2);
-      color: $orange;
+      // color: $orange;
       font-size: 1.2em;
     }
      p{
