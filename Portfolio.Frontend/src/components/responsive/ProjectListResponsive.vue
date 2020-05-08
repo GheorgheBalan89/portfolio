@@ -33,7 +33,11 @@ export default{
         track: function(){
             var pathname =  window.location.origin + window.location.pathname;
            page(pathname);
+        },
+        viewDetail: function(url){
+            window.location.href =  url;
         }
+
     }
   
 }
