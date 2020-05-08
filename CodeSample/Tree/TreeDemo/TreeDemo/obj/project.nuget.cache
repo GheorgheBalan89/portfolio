@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "U9BOZYJMQ/M9iIvfVy8Y6gnuHjFPTBHYXUKxaCMhOB/5WAASY1yHhFvzIvEv71dU/JM0TCJzxuy0anVjdLlbJg==",
+  "dgSpecHash": "4nS+MCFWVRhui38Vv2iXnPENN+yiUt4jaKAsevf9jbrK7VhT5I1Ai0CFN9+qGW0wxPk0GXNAdbsc4Zhtp/TigA==",
   "success": true,
   "projectFilePath": "C:\\Personal\\Portfolio\\CodeSample\\Tree\\TreeDemo\\TreeDemo\\TreeDemo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\GheorgheBalan\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

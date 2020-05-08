@@ -59,7 +59,7 @@
                 &nbsp;
             </div>
 
-            <!-- <div class="show-for-large-only"> -->
+           
             <div class="small-visible medium-visible">
                     <div v-for="(detail, projId) in project.Details" :key="projId">
                         <div class="row text-center ">
