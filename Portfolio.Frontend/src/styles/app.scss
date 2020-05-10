@@ -45,18 +45,21 @@
 // @include motion-ui-animations;
 
 @import "../../node_modules/vue2-animate/dist/vue2-animate.min.css";
-@import "./components/colours";
-@import './settings';
-@import "./components/navigation";
-@import "./components/frontpage";
-@import "./components/projects";
-@import "./components/footer";
+@import "./settings/colours";
+@import './settings/settings';
+@import "./settings/overrites";
 
-@import "./components/singleProjectView";
+
+@import "./components/pages/frontpage";
+@import "./components/pages/projects";
+@import "./components/pages/singleProject";
+@import "./components/pages/aboutPage";
+
+@import "./components/navigation";
+@import "./components/footer";
 @import "./components/parallax";
-@import "./components/singleProject";
-@import "./components/aboutPage";
+@import "./components/singleProjectView";
+
 @import './components/responsive/responsive';
 @import "./components/responsive/projectListMeta.scss";
 @import "./components/responsive/projectList";
-@import "overrites"
