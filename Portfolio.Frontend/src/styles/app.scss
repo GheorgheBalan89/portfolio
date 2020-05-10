@@ -52,11 +52,11 @@
 @import "./components/projects";
 @import "./components/footer";
 
-@import "./components/featuredProjects";
+@import "./components/singleProjectView";
 @import "./components/parallax";
 @import "./components/singleProject";
 @import "./components/aboutPage";
-@import './components/responsive';
+@import './components/responsive/responsive';
 @import "./components/responsive/projectListMeta.scss";
 @import "./components/responsive/projectList";
 @import "overrites"

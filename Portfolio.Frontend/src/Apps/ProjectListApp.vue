@@ -39,15 +39,15 @@ export default {
        var getUrl = "/umbraco/Api/ProjectsApi/GetProjects?website=Nerija";
         axios.get(getUrl).then(response => {
             var projects = response.data.Projects;
-            this.projList = projects;          
-
-            // console.log("path "+ window.location.origin + window.location.pathname);
+            this.projList = projects;         
             this.count = projects.length;
-            if(projects.length > 3){
-                this.topList = projects.slice(0,3);
-                this.bottomList = projects.slice(3, projects.length);     
+            if(projects.length > 9){
+                this.topList = projects.slice(0,9);
+                this.bottomList = projects.slice(9, projects.length);     
                 console.log(this.bottomList);
-
+            }else{
+              this.topList = projects;
+              // this.bottomList = null;
             }
             this.meta = response.data;
 

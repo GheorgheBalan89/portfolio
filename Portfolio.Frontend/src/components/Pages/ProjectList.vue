@@ -1,15 +1,18 @@
 <template>
     <div class="projectlist-container">
+        <div class="text-center heading">
+            <h4>Projects</h4>
+        </div>
         <div class="grid-x">
         <template v-if="projects != null" >
             <template v-for="topProj in topProjects">
-                <FeaturedProject :project="topProj" v-bind:key="topProj.Udi"/>
+                <SingleProject :project="topProj" v-bind:key="topProj.Udi"/>
             </template>
-            <div v-if="!expandedView && restProjects!= null" class="cell large-12 text-center show-more-container">
+            <div v-if="!expandedView && restProjects!= null && restProjects.length > 0" class="cell large-12 text-center show-more-container">
                  <button class="hollow button primary" @click="showMore()">  <font-awesome-icon icon="chevron-circle-down" /> Show more </button>
             </div>
             <template v-if="expandedView && restProjects !=null " v-for="(restProj, key3) in restProjects">
-                    <FeaturedProject :project="restProj" v-bind:key="restProj.Udi"/>
+                    <SingleProject :project="restProj" v-bind:key="restProj.Udi"/>
             </template>
             <div v-if="expandedView" class="cell large-12 text-center show-more-container">
                     <button class="hollow button primary" @click="showLess()">  <font-awesome-icon icon="chevron-circle-up" /> Show less </button>
@@ -23,7 +26,7 @@
 import Vue from 'vue'
 import axios from "axios"
 import { page } from 'vue-analytics'
-import FeaturedProject from '../Shared/FeaturedProject'
+import SingleProject from '../Shared/SingleProject'
 
 export default{
     name: "ProjectList",
@@ -57,7 +60,7 @@ export default{
         }
     },
     components: {
-        FeaturedProject
+        SingleProject
     }
 }
 </script>

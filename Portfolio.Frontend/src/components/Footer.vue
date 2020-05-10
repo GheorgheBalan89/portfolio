@@ -13,13 +13,13 @@
       </div>
       <div class="cell medium-3  text-center footer-col">
         <a class="footer-icon" href="mailto:nerija.balan@gmail.com" >
-            <img src="/static/footer_images/mail/e-mail.png" alt="mail">
+            <img src="/static/footer_images/mail/e-mail.svg" alt="mail">
             <p>nerija.balan@gmail.com</p>
           </a>
       </div>
       <div class="cell medium-3  text-center footer-col">
            <a class="footer-icon" href="#">
-            <img src="/static/footer_images/phone/phone.png" alt="phone">
+            <img src="/static/footer_images/phone/phone.svg" alt="phone">
             <p>+45 27 50 17 69</p>
           </a>
       </div>

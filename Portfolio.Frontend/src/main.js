@@ -23,7 +23,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
 Vue.component("About", About)
-// Vue.component("FeaturedProject", FeaturedProject)
 // Vue.component("Uanimate", Uanimate)
 
 Vue.config.productionTip = false
