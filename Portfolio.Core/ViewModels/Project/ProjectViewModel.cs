@@ -6,17 +6,24 @@ namespace Portfolio.Core.ViewModels.Project
 {
     public class ProjectViewModel
     {
-        public Guid Udi { get; set; }
-        public string Title { get; set; }
-        public string Teaser { get; set; }
-        public string FeaturedImage { get; set; }
-        public List<ProjectDetailsViewModel> Details{ get; set; }
-        public string Hero { get; set; }
-        public string ClientName { get; set; }
-        public string Year { get; set; }
-        public string Role { get; set; }
-        public  string Description { get; set; }
-        public bool IsFeatured { get; set; }
-        public string Url { get; set; }
+        public Guid Udi { get;  }
+        public string Url { get; }
+        public General General { get; }
+        public Detail Detail { get; }
+        public Permissions Permissions { get;}
+        public ListDetail ListDetail { get; }
+        public SimilarProjects SimilarProjects { get; }
+
+        public ProjectViewModel(Guid udi, string url, General general, Detail detail, Permissions permissions, ListDetail listDetail, SimilarProjects similarProjects)
+        {
+            Udi = udi;
+            Url = url;
+            General = general;
+            Detail = detail;
+            Permissions = permissions;
+            ListDetail = listDetail;
+            SimilarProjects = similarProjects;
+        }
     }
+  
 }

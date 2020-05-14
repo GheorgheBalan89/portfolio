@@ -11,32 +11,32 @@ namespace Portfolio.Core.Controllers
 {
     public class TopicsApiController : BaseApiController
     {
-        public IHttpActionResult GetTopics()
-        {
-            var topics = new List<TopicViewModel>();
-            var topicCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Topic.ModelTypeAlias).Compile();
-            var cachedTopics = UHelper.TypedSearch(topicCriteria).ToList();
+        //public IHttpActionResult GetTopics()
+        //{
+        //    var topics = new List<TopicViewModel>();
+        //    var topicCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Topic.ModelTypeAlias).Compile();
+        //    var cachedTopics = UHelper.TypedSearch(topicCriteria).ToList();
 
-            if (cachedTopics.Any())
-            {
-                foreach (var topic in cachedTopics)
-                {
-                    var iTopic = new Topic(topic);
-                    topics.Add(
-                        new TopicViewModel()
-                        {
-                            Udi = iTopic.GetKey(),
-                            Title = iTopic.Title,
-                            Teaser = iTopic.Teaser,
-                            FeaturedImage = iTopic.FeaturedImage != null ?  iTopic.FeaturedImage.FirstOrDefault().GetCropUrl(300, 300) : "",
-                            Url = iTopic.Url
-                        }
-                  );
+        //    if (cachedTopics.Any())
+        //    {
+        //        foreach (var topic in cachedTopics)
+        //        {
+        //            var iTopic = new Topic(topic);
+        //            topics.Add(
+        //                new TopicViewModel()
+        //                {
+        //                    Udi = iTopic.GetKey(),
+        //                    Title = iTopic.Title,
+        //                    Teaser = iTopic.Teaser,
+        //                    FeaturedImage = iTopic.FeaturedImage != null ?  iTopic.FeaturedImage.FirstOrDefault().GetCropUrl(300, 300) : "",
+        //                    Url = iTopic.Url
+        //                }
+        //          );
 
-                }
-            }
+        //        }
+        //    }
 
-            return Ok(topics);
-        }
+        //    return Ok(topics);
+        //}
     }
 }

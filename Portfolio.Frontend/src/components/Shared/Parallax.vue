@@ -5,7 +5,7 @@
             <div class="medium-12 ">
                 <h1 class="text-center"> {{projectMeta.Heading1}}</h1>
             </div>
-            <div class="medium-12">
+            <div class="medium-12 detail-container">
                 <p class="text-center">{{projectMeta.Heading2}}</p>
             </div>
         </div>

@@ -55,7 +55,7 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// Heading2
+		/// Description
 		///</summary>
 		[ImplementPropertyType("heading2")]
 		public string Heading2
@@ -70,6 +70,15 @@ namespace Portfolio.Core.Models
 		public bool HideInNavbar
 		{
 			get { return this.GetPropertyValue<bool>("hideInNavbar"); }
+		}
+
+		///<summary>
+		/// ParallaxBackground: background image for parallax
+		///</summary>
+		[ImplementPropertyType("parallaxBackground")]
+		public IPublishedContent ParallaxBackground
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("parallaxBackground"); }
 		}
 
 		///<summary>

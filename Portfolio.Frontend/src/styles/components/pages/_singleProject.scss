@@ -59,6 +59,14 @@ $hero-height: 60vh;
     display: flex;
     flex-wrap: wrap;
     padding: 2em 7em;
+
+    .project-details-section-block-header{
+      color: $white;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    
     .project-details-section-img {
       align-self: center;
       flex: 1 0 100%;

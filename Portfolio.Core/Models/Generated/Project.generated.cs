@@ -45,14 +45,29 @@ namespace Portfolio.Core.Models
 		/// <summary>HideInNavbar</summary>
 		bool HideInNavbar { get; }
 
+		/// <summary>mobileListImage</summary>
+		IPublishedContent MobileListImage { get; }
+
+		/// <summary>RelatedProjects</summary>
+		IEnumerable<IPublishedContent> RelatedProject { get; }
+
 		/// <summary>Role</summary>
 		string Role { get; }
+
+		/// <summary>Sort</summary>
+		int Sort { get; }
 
 		/// <summary>Teaser</summary>
 		string Teaser { get; }
 
 		/// <summary>Title</summary>
 		string Title { get; }
+
+		/// <summary>webListImage</summary>
+		IPublishedContent WebListImage { get; }
+
+		/// <summary>webListPlaceholder</summary>
+		IPublishedContent WebListPlaceholder { get; }
 
 		/// <summary>Year</summary>
 		string Year { get; }
@@ -168,6 +183,30 @@ namespace Portfolio.Core.Models
 		public static bool GetHideInNavbar(IProject that) { return that.GetPropertyValue<bool>("hideInNavbar"); }
 
 		///<summary>
+		/// mobileListImage
+		///</summary>
+		[ImplementPropertyType("mobileListImage")]
+		public IPublishedContent MobileListImage
+		{
+			get { return GetMobileListImage(this); }
+		}
+
+		/// <summary>Static getter for mobileListImage</summary>
+		public static IPublishedContent GetMobileListImage(IProject that) { return that.GetPropertyValue<IPublishedContent>("mobileListImage"); }
+
+		///<summary>
+		/// RelatedProjects: content picker for related projects
+		///</summary>
+		[ImplementPropertyType("relatedProject")]
+		public IEnumerable<IPublishedContent> RelatedProject
+		{
+			get { return GetRelatedProject(this); }
+		}
+
+		/// <summary>Static getter for RelatedProjects</summary>
+		public static IEnumerable<IPublishedContent> GetRelatedProject(IProject that) { return that.GetPropertyValue<IEnumerable<IPublishedContent>>("relatedProject"); }
+
+		///<summary>
 		/// Role
 		///</summary>
 		[ImplementPropertyType("role")]
@@ -178,6 +217,18 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Role</summary>
 		public static string GetRole(IProject that) { return that.GetPropertyValue<string>("role"); }
+
+		///<summary>
+		/// Sort: Sort order
+		///</summary>
+		[ImplementPropertyType("sort")]
+		public int Sort
+		{
+			get { return GetSort(this); }
+		}
+
+		/// <summary>Static getter for Sort</summary>
+		public static int GetSort(IProject that) { return that.GetPropertyValue<int>("sort"); }
 
 		///<summary>
 		/// Teaser
@@ -202,6 +253,30 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Title</summary>
 		public static string GetTitle(IProject that) { return that.GetPropertyValue<string>("title"); }
+
+		///<summary>
+		/// webListImage: w: 624px x h: 413 px
+		///</summary>
+		[ImplementPropertyType("webListImage")]
+		public IPublishedContent WebListImage
+		{
+			get { return GetWebListImage(this); }
+		}
+
+		/// <summary>Static getter for webListImage</summary>
+		public static IPublishedContent GetWebListImage(IProject that) { return that.GetPropertyValue<IPublishedContent>("webListImage"); }
+
+		///<summary>
+		/// webListPlaceholder: w: 624 px, h: 423 px
+		///</summary>
+		[ImplementPropertyType("webListPlaceholder")]
+		public IPublishedContent WebListPlaceholder
+		{
+			get { return GetWebListPlaceholder(this); }
+		}
+
+		/// <summary>Static getter for webListPlaceholder</summary>
+		public static IPublishedContent GetWebListPlaceholder(IProject that) { return that.GetPropertyValue<IPublishedContent>("webListPlaceholder"); }
 
 		///<summary>
 		/// Year

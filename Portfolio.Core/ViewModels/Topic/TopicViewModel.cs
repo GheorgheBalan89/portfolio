@@ -7,7 +7,7 @@ using Portfolio.Core.ViewModels.Project;
 
 namespace Portfolio.Core.ViewModels.Topic
 {
-    public class TopicViewModel : ProjectViewModel
-    {
-    }
+    //public class TopicViewModel : ProjectViewModel
+    //{
+    //}
 }

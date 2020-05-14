@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Archetype.Models;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.Core.Helpers;
 using Portfolio.Core.Models;
+using Portfolio.Core.Security;
 using Portfolio.Core.ViewModels.Project;
 using Umbraco.Core.Models;
 using Umbraco.Web;
@@ -18,19 +20,18 @@ namespace Portfolio.Core.Controllers
 
         public IHttpActionResult GetProject(string projectId)
         {
-            var pvm = new ProjectViewModel();
             Guid.TryParse(projectId, out Guid uuidProjectId);
-
             var project = UHelper.TypedContent(uuidProjectId);
 
             if (project != null)
             {
-                pvm = IPubishedContentToPvm(project);
+              return Ok(IPubishedContentToPvm(project));
             }
 
-            return Ok(pvm);
+            return Ok(new EmptyResult());
         }
 
+        //[BasicAuthentication]
         public IHttpActionResult GetProjects(string website)
         {
             var response = new ProjectListViewModel {Projects = new List<ProjectViewModel>()};
@@ -46,19 +47,18 @@ namespace Portfolio.Core.Controllers
 
         }
 
-        public IHttpActionResult GetFeaturedProjects(string website)
-        {
-            var response = new ProjectListViewModel()
-            {
-                Projects = new List<ProjectViewModel>()
-            };
-            var projects = GetProjectsInternal(website, true);
+        //public IHttpActionResult GetFeaturedProjects(string website)
+        //{
+        //    var response = new ProjectListViewModel()
+        //    {
+        //        Projects = new List<ProjectViewModel>()
+        //    };
+        //    var projects = GetProjectsInternal(website, true);
 
-            var featured = projects.Where(x => x.IsFeatured).Take(3);
-            response.Projects = featured.ToList();
-            return Ok(response);
-        }
-
+        //    var featured = projects.Where(x => x.IsFeatured).Take(3);
+        //    response.Projects = featured.ToList();
+        //    return Ok(response);
+        //}
         
         private List<ProjectViewModel> GetProjectsInternal(string website, bool onlyFeatured = false)
         {
@@ -90,39 +90,32 @@ namespace Portfolio.Core.Controllers
 
             var iContentProject = new Project(cachedProject);
 
-            var pvm = new ProjectViewModel()
+            var general = new General(iContentProject.Sort, iContentProject.Title, iContentProject.Teaser, iContentProject.Description.ToHtmlString(), iContentProject.FeaturedImage?.FirstOrDefault().GetCropUrl(600, 413));
+            
+            var projectDetails = iContentProject.DetailList.Select(x => new ProjectDetailsViewModel()
             {
-                Udi = iContentProject.GetKey(),
-                Title = iContentProject.Title,
-                Teaser = iContentProject.Teaser,
-                Description = iContentProject.Description.ToHtmlString(),
-                FeaturedImage = iContentProject.FeaturedImage != null
-                    ? iContentProject.FeaturedImage.FirstOrDefault().GetCropUrl(600, 413)
-                    : "",
-                Hero = iContentProject.Hero != null ? iContentProject.Hero.GetCropUrl(4272, 2848) : "",
-                ClientName = iContentProject.ClientName,
-                Role = iContentProject.Role,
-                Year = iContentProject.Year,
-                Url =  iContentProject.Url,
-                IsFeatured = iContentProject.Featured,
-                Details = new List<ProjectDetailsViewModel>()
-            };
+                Heading = x.GetValue<string>(nameof(ProjectDetailsViewModel.Heading)),
+                RichText = x.GetValue<string>(nameof(ProjectDetailsViewModel.RichText)),
+                MediaItem = x.GetValue<IPublishedContent>("mediaItem") != null ?
+                    x.GetValue<IPublishedContent>("mediaItem").Url : "",
+                VideoUrl = x.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
+            }).ToList();
+            
+            var detail = new Detail(projectDetails, iContentProject.Hero?.GetCropUrl(4272, 2848), iContentProject.ClientName, iContentProject.Year, iContentProject.Role);
+            var permissions = new Permissions(iContentProject.Featured, iContentProject.HideInNavbar);
+            var listDetail = new ListDetail(iContentProject.WebListImage?.GetCropUrl(624, 413),
+                iContentProject.WebListPlaceholder?.GetCropUrl(624,413),
+                iContentProject.MobileListImage?.GetCropUrl());
 
-            foreach (var item in iContentProject.DetailList)
-            {
-              var itm = new ProjectDetailsViewModel()
-              {
-                  Heading = item.GetValue<string>(nameof(ProjectDetailsViewModel.Heading)),
-                  RichText = item.GetValue<string>(nameof(ProjectDetailsViewModel.RichText)),
-                  MediaItem = item.GetValue<IPublishedContent>("mediaItem") != null ?
-                              item.GetValue<IPublishedContent>("mediaItem").Url : "",
-                  VideoUrl = item.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
-
-              };
-                pvm.Details.Add(itm);           
-    
-            }
-          
+            var pvm = new ProjectViewModel(iContentProject.GetKey(),
+                iContentProject.Url, 
+                general,
+                detail,
+                permissions,
+                listDetail,
+                new SimilarProjects()
+                );
+         
             return pvm;
         }
     }

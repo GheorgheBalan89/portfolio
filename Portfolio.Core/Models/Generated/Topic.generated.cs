@@ -109,12 +109,39 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// mobileListImage
+		///</summary>
+		[ImplementPropertyType("mobileListImage")]
+		public IPublishedContent MobileListImage
+		{
+			get { return Portfolio.Core.Models.Project.GetMobileListImage(this); }
+		}
+
+		///<summary>
+		/// RelatedProjects: content picker for related projects
+		///</summary>
+		[ImplementPropertyType("relatedProject")]
+		public IEnumerable<IPublishedContent> RelatedProject
+		{
+			get { return Portfolio.Core.Models.Project.GetRelatedProject(this); }
+		}
+
+		///<summary>
 		/// Role
 		///</summary>
 		[ImplementPropertyType("role")]
 		public string Role
 		{
 			get { return Portfolio.Core.Models.Project.GetRole(this); }
+		}
+
+		///<summary>
+		/// Sort: Sort order
+		///</summary>
+		[ImplementPropertyType("sort")]
+		public int Sort
+		{
+			get { return Portfolio.Core.Models.Project.GetSort(this); }
 		}
 
 		///<summary>
@@ -133,6 +160,24 @@ namespace Portfolio.Core.Models
 		public string Title
 		{
 			get { return Portfolio.Core.Models.Project.GetTitle(this); }
+		}
+
+		///<summary>
+		/// webListImage: w: 624px x h: 413 px
+		///</summary>
+		[ImplementPropertyType("webListImage")]
+		public IPublishedContent WebListImage
+		{
+			get { return Portfolio.Core.Models.Project.GetWebListImage(this); }
+		}
+
+		///<summary>
+		/// webListPlaceholder: w: 624 px, h: 423 px
+		///</summary>
+		[ImplementPropertyType("webListPlaceholder")]
+		public IPublishedContent WebListPlaceholder
+		{
+			get { return Portfolio.Core.Models.Project.GetWebListPlaceholder(this); }
 		}
 
 		///<summary>

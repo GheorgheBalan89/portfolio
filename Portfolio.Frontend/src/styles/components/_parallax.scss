@@ -6,6 +6,11 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    .detail-container{
+      width: 50%;
+      white-space: pre-line;
+      margin: auto;
+    }
   }
   
   .mb_parallax_overlay {
@@ -24,8 +29,11 @@
         text-transform: uppercase;
     }
     p{
-        padding: 2em 40em;
         text-align: center;
+        font-weight: bold;
+        font-size: 0.8em;
+        padding-top: 1em;
+        line-height: 3em;
     }
   }
   

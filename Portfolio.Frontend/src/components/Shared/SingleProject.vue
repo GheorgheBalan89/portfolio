@@ -4,7 +4,7 @@
             <div class="animation-container">
             <transition-group name="fade" enter-active-class="fadeIn" leave-active-class="fadeOut"  tag="div">    
                 <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.3s;">
-                    <h3 class="text-center">{{ project.Title }} </h3>
+                    <p class="text-center title">{{ project.Title }} </p>
                     <p class="text-center"> {{ project.Teaser }} </p>
                 </div>
             </transition-group>
