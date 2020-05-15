@@ -361,7 +361,6 @@
     <Compile Include="Controllers\Mvc\ProjectController.cs" />
     <Compile Include="Controllers\Mvc\ProjectListController.cs" />
     <Compile Include="Controllers\ProjectsApiController.cs" />
-    <Compile Include="Controllers\TopicsApiController.cs" />
     <Compile Include="Controllers\Mvc\WebsiteController.cs" />
     <Compile Include="Helpers\SearchHelpers.cs" />
     <Compile Include="Models\Generated\ContentPage.generated.cs" />
@@ -389,7 +388,6 @@
     <Compile Include="ViewModels\Project\ProjectListViewModel.cs" />
     <Compile Include="ViewModels\Project\SimilarProjects.cs" />
     <Compile Include="ViewModels\Skill\SkillViewModel.cs" />
-    <Compile Include="ViewModels\Topic\TopicViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

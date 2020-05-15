@@ -12,7 +12,7 @@
                  <button class="hollow button primary" @click="showMore()">  <font-awesome-icon icon="chevron-circle-down" /> Show more </button>
             </div>
             <template v-if="expandedView && restProjects !=null " v-for="(restProj, key3) in restProjects">
-                    <SingleProject :project="restProj" v-bind:key="restProj.Udi"/>
+                <SingleProject :project="restProj" v-bind:key="restProj.Udi"/>
             </template>
             <div v-if="expandedView" class="cell large-12 text-center show-more-container">
                     <button class="hollow button primary" @click="showLess()">  <font-awesome-icon icon="chevron-circle-up" /> Show less </button>

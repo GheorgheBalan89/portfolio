@@ -1,11 +1,11 @@
 <template>
     <div class="cell medium-4 featured-project" v-if="project"  @mouseenter="hoverIn()" @mouseleave="hoverOut()"  @click="featuredClick(project.Url)" :key="project.Udi" >
-        <img :src="project.FeaturedImage" :alt="project.Title" width="100%"/>   
+        <img :src="project.General.FeaturedImage" :alt="project.Title" width="100%"/>   
             <div class="animation-container">
             <transition-group name="fade" enter-active-class="fadeIn" leave-active-class="fadeOut"  tag="div">    
                 <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.3s;">
-                    <p class="text-center title">{{ project.Title }} </p>
-                    <p class="text-center"> {{ project.Teaser }} </p>
+                    <p class="text-center title">{{ project.General.Title }} </p>
+                    <p class="text-center"> {{ project.General.Teaser }} </p>
                 </div>
             </transition-group>
         </div>                       

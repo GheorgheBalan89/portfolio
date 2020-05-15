@@ -1,20 +1,20 @@
 <template>
         <div class="projectlist-container details-bg">
-            <meta property="og:image" :content="project.FeaturedImage"/>
-            <div class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Hero + ')'}">  
+            <meta property="og:image" :content="project.General.FeaturedImage"/>
+            <div class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Detail.Hero + ')'}">  
                 <div class="hero-section-text">
                     <h3 class="large-visible">   
                         <div class="stroke "></div>
-                        {{project.Title}}
+                        {{project.General.Title}}
                         <div class="stroke "></div>
                     </h3>
                     <h4 class="large-hidden medium-visible">
-                        {{project.Title}}
+                        {{project.General.Title}}
                     </h4>
                      <div class="text-center">
-                        <h5> Client: {{project.ClientName}}  <br> Year: {{project.Year}} <br/> Role: {{ project.Role}}</h5> 
+                        <h5> Client: {{project.Detail.ClientName}}  <br> Year: {{project.Detail.Year}} <br/> Role: {{ project.Detail.Role}}</h5> 
                     </div>
-                    <div class="hero-description medium-visible small-hidden" v-html="project.Description"></div>
+                    <div class="hero-description medium-visible small-hidden" v-html="project.General.Description"></div>
                 </div>
             </div>
 
@@ -22,11 +22,11 @@
             <div class="row small-visible medium-hidden text-center text-padding">
                 &nbsp;
                 &nbsp;
-                <div class="large-12 columns" v-html="project.Description"></div>
+                <div class="large-12 columns" v-html="project.General.Description"></div>
             </div>
         
             <div class="large-visible">
-                  <div v-for="(detail, projId) in project.Details" v-if="projId % 2 == 0"  :key="projId">
+                  <div v-for="(detail, projId) in project.Detail.Details" v-if="projId % 2 == 0"  :key="projId">
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
@@ -58,10 +58,9 @@
                 &nbsp;
                 &nbsp;
             </div>
-
            
             <div class="small-visible medium-visible">
-                    <div v-for="(detail, projId) in project.Details" :key="projId">
+                    <div v-for="(detail, projId) in project.Detail.Details" :key="projId">
                         <div class="row text-center ">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
                         </div>
@@ -100,6 +99,7 @@ export default{
            console.log("path "+ window.location.origin + window.location.pathname);
 
            this.project = response.data
+           console.log(response.Data)
         });
         
     },methods:{

@@ -1,10 +1,12 @@
+using System;
 using System.Linq;
 using System.Web.Http;
+using System.Web;
 using WebActivatorEx;
 using Portfolio.Core;
 using Swashbuckle.Application;
 
-[assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
+[assembly: System.Web.PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
 namespace Portfolio.Core
 {
@@ -13,7 +15,7 @@ namespace Portfolio.Core
         public static void Register()
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
-
+         
             GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {

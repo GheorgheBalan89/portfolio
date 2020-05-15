@@ -13,6 +13,7 @@ module.exports = {
     proxyTable: {
       '/umbraco/Api/' :{
         target : 'http://www.nerijabalan.com/',
+        // target: 'http://portfolio.local/',
         changeOrigin: true
       },
       '/media/':{

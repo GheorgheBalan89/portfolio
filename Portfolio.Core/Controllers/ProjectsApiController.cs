@@ -28,38 +28,28 @@ namespace Portfolio.Core.Controllers
               return Ok(IPubishedContentToPvm(project));
             }
 
-            return Ok(new EmptyResult());
+            return NotFound();
         }
 
         //[BasicAuthentication]
         public IHttpActionResult GetProjects(string website)
         {
-            var response = new ProjectListViewModel {Projects = new List<ProjectViewModel>()};
-            response.Projects = GetProjectsInternal(website);
-
             var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(website.ToLower()));
-            var iProjectList = new ProjectList(site?.Children.FirstOrDefault(x => x.DocumentTypeAlias.Contains("ProjectList")));
+            if (site != null)
+            {
+                var iProjectList = new ProjectList(site?.Children.FirstOrDefault(x => x.DocumentTypeAlias.Contains("ProjectList")));
 
-            response.Heading1 = iProjectList.Heading1;
-            response.Heading2 = iProjectList.Heading2;
+                var response = new ProjectListViewModel(iProjectList.Heading1,
+                    iProjectList.Heading2,
+                    iProjectList.ParallaxBackground?.GetCropUrl(4272, 2848),
+                    GetProjectsInternal(website));
+                return Ok(response);
 
-            return Ok(response);
+            }
 
+            return NotFound() ;
         }
 
-        //public IHttpActionResult GetFeaturedProjects(string website)
-        //{
-        //    var response = new ProjectListViewModel()
-        //    {
-        //        Projects = new List<ProjectViewModel>()
-        //    };
-        //    var projects = GetProjectsInternal(website, true);
-
-        //    var featured = projects.Where(x => x.IsFeatured).Take(3);
-        //    response.Projects = featured.ToList();
-        //    return Ok(response);
-        //}
-        
         private List<ProjectViewModel> GetProjectsInternal(string website, bool onlyFeatured = false)
         {
             var response = new List<ProjectViewModel>();
@@ -105,7 +95,20 @@ namespace Portfolio.Core.Controllers
             var permissions = new Permissions(iContentProject.Featured, iContentProject.HideInNavbar);
             var listDetail = new ListDetail(iContentProject.WebListImage?.GetCropUrl(624, 413),
                 iContentProject.WebListPlaceholder?.GetCropUrl(624,413),
-                iContentProject.MobileListImage?.GetCropUrl());
+                iContentProject.MobileListImage?.GetCropUrl(278,284));
+            
+           List<SimilarProject> similarProjects = new List<SimilarProject>();
+
+            if (iContentProject.RelatedProject.Count() > 0)
+            {
+                similarProjects.AddRange(iContentProject.RelatedProject.
+                    Select(related => 
+                        new Project(related))
+                        .Select(proj => new SimilarProject(proj.GetKey(), 
+                                                            proj.WebListImage?.GetCropUrl(624, 413), 
+                                                            proj.MobileListImage?.GetCropUrl(278, 284), 
+                                                            proj.Title)));
+            }
 
             var pvm = new ProjectViewModel(iContentProject.GetKey(),
                 iContentProject.Url, 
@@ -113,7 +116,7 @@ namespace Portfolio.Core.Controllers
                 detail,
                 permissions,
                 listDetail,
-                new SimilarProjects()
+                similarProjects
                 );
          
             return pvm;

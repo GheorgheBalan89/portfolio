@@ -1,0 +1,295 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="37" viewBox="0 0 375 37">
+    <defs>
+        <filter id="prefix__c" width="118.5%" height="129.4%" x="-9.3%" y="-14.7%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__f" width="116.7%" height="120.8%" x="-8.3%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__h" width="116.7%" height="120.8%" x="-8.3%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__j" width="118.5%" height="129.4%" x="-9.3%" y="-14.7%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__l" width="116.7%" height="120.8%" x="-8.3%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__n" width="118.5%" height="129.4%" x="-9.3%" y="-14.7%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__p" width="116.7%" height="120.8%" x="-8.3%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__r" width="116.7%" height="120.8%" x="-8.3%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__t" width="118.5%" height="129.4%" x="-9.3%" y="-14.7%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__v" width="116.7%" height="120.8%" x="-8.3%" y="-10.4%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__y" width="115.6%" height="125%" x="-7.8%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__B" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__D" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__F" width="115.6%" height="125%" x="-7.8%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__H" width="115.6%" height="125%" x="-7.8%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__J" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__L" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__N" width="115.6%" height="125%" x="-7.8%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__P" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__R" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__T" width="115.6%" height="125%" x="-7.8%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__V" width="115.6%" height="125%" x="-7.8%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__X" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <filter id="prefix__Z" width="113.9%" height="117.9%" x="-6.9%" y="-8.9%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" radius="1" result="shadowSpreadInner1"/>
+            <feGaussianBlur in="shadowSpreadInner1" result="shadowBlurInner1" stdDeviation="1.5"/>
+            <feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" k2="-1" k3="1" operator="arithmetic" result="shadowInnerInner1"/>
+            <feColorMatrix in="shadowInnerInner1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+        </filter>
+        <path id="prefix__b" d="M134.17 3c1.256 0 2.395.738 3.223 1.934 1.378-1.301 3.058-1.747 4.111-.97.736.543 1.008 1.566.835 2.723.724-.702 1.594-1.111 2.529-1.111 1.496 0 2.824 1.046 3.661 2.665.211-.058.436-.09.67-.09 1.265 0 2.292.923 2.292 2.061 0 .777-.48 1.454-1.186 1.805.108.237.167.498.167.77 0 .502-.2.961-.53 1.318 1.26.612 2.058 1.526 2.058 2.547C152 18.5 149.377 20 146.142 20c-1.9 0-3.588-.517-4.658-1.317-.761.827-1.706 1.317-2.73 1.317-1.475 0-2.789-1.019-3.627-2.602-1.068.65-2.585 1.057-4.269 1.057-3.235 0-5.858-1.5-5.858-3.349 0-1.646 2.079-3.015 4.818-3.296-.151-.664-.233-1.374-.233-2.113 0-3.699 2.053-6.697 4.585-6.697z"/>
+        <path id="prefix__e" d="M110.746 0c1.55 0 2.87 1.163 3.357 2.785.66-.445 1.423-.698 2.236-.698 2.527 0 4.576 2.453 4.576 5.478 0 .463-.048.912-.138 1.341 2.936.348 5.223 3.119 5.223 6.485 0 3.602-2.618 6.522-5.847 6.522-.857 0-1.671-.206-2.405-.575-1.065 1.614-2.78 2.662-4.714 2.662-1.581 0-3.016-.7-4.068-1.837C107.914 23.3 106.479 24 104.898 24c-1.974 0-3.72-1.09-4.778-2.762-.415.1-.823.153-1.184.153-1.621 0-2.936-1.171-2.936-2.616 0-.507.239-1.043.619-1.525-.388-.442-.619-1-.619-1.605 0-1.132 1.187-2.406 2.481-2.905-.919-.953-1.464-2.613-1.464-4.34 0-2.66 1.184-4.226 3.997-4.226 1.972 0 4.962.699 6.573 1.92-.257-.574-.4-1.227-.4-1.92 0-2.305 1.593-4.174 3.559-4.174z"/>
+        <path id="prefix__g" d="M160.746 4c1.55 0 2.87 1.163 3.357 2.785.66-.445 1.423-.698 2.236-.698 2.527 0 4.576 2.453 4.576 5.478 0 .463-.048.912-.138 1.341 2.936.348 5.223 3.119 5.223 6.485 0 3.602-2.618 6.522-5.847 6.522-.857 0-1.671-.206-2.405-.575-1.065 1.614-2.78 2.662-4.714 2.662-1.581 0-3.016-.7-4.068-1.837C157.914 27.3 156.479 28 154.898 28c-1.974 0-3.72-1.09-4.778-2.762-.415.1-.823.153-1.184.153-1.621 0-2.936-1.171-2.936-2.616 0-.507.239-1.043.619-1.525-.388-.442-.619-1-.619-1.605 0-1.132 1.187-2.406 2.481-2.905-.919-.953-1.464-2.613-1.464-4.34 0-2.66 1.184-4.226 3.997-4.226 1.972 0 4.962.699 6.573 1.92-.257-.574-.4-1.227-.4-1.92 0-2.305 1.593-4.174 3.559-4.174z"/>
+        <path id="prefix__i" d="M9.17 6c1.256 0 2.395.738 3.223 1.934 1.378-1.301 3.058-1.747 4.111-.97.736.543 1.008 1.566.835 2.723.724-.702 1.594-1.111 2.529-1.111 1.496 0 2.824 1.046 3.661 2.665.211-.058.436-.09.67-.09 1.265 0 2.292.923 2.292 2.061 0 .777-.48 1.454-1.186 1.805.108.237.167.498.167.77 0 .502-.2.961-.53 1.318 1.26.612 2.058 1.526 2.058 2.547C27 21.5 24.377 23 21.142 23c-1.9 0-3.588-.517-4.658-1.317-.761.827-1.706 1.317-2.73 1.317-1.475 0-2.789-1.019-3.627-2.602-1.068.65-2.585 1.057-4.269 1.057-3.235 0-5.858-1.5-5.858-3.349 0-1.646 2.079-3.015 4.818-3.296-.151-.664-.233-1.374-.233-2.113C4.585 8.998 6.638 6 9.17 6z"/>
+        <path id="prefix__k" d="M62.746 1c1.55 0 2.87 1.163 3.357 2.785.66-.445 1.423-.698 2.236-.698 2.527 0 4.576 2.453 4.576 5.478 0 .463-.048.912-.138 1.341 2.936.348 5.223 3.119 5.223 6.485 0 3.602-2.618 6.522-5.847 6.522-.857 0-1.671-.206-2.405-.575C68.683 23.952 66.968 25 65.034 25c-1.581 0-3.016-.7-4.068-1.837C59.914 24.3 58.479 25 56.898 25c-1.974 0-3.72-1.09-4.778-2.762-.415.1-.823.153-1.184.153-1.621 0-2.936-1.171-2.936-2.616 0-.507.239-1.043.619-1.525-.388-.442-.619-1-.619-1.605 0-1.132 1.187-2.406 2.481-2.905-.919-.953-1.464-2.613-1.464-4.34 0-2.66 1.184-4.226 3.997-4.226 1.972 0 4.962.699 6.573 1.92-.257-.574-.4-1.227-.4-1.92C59.186 2.869 60.78 1 62.745 1z"/>
+        <path id="prefix__m" d="M134.17 3c1.256 0 2.395.738 3.223 1.934 1.378-1.301 3.058-1.747 4.111-.97.736.543 1.008 1.566.835 2.723.724-.702 1.594-1.111 2.529-1.111 1.496 0 2.824 1.046 3.661 2.665.211-.058.436-.09.67-.09 1.265 0 2.292.923 2.292 2.061 0 .777-.48 1.454-1.186 1.805.108.237.167.498.167.77 0 .502-.2.961-.53 1.318 1.26.612 2.058 1.526 2.058 2.547C152 18.5 149.377 20 146.142 20c-1.9 0-3.588-.517-4.658-1.317-.761.827-1.706 1.317-2.73 1.317-1.475 0-2.789-1.019-3.627-2.602-1.068.65-2.585 1.057-4.269 1.057-3.235 0-5.858-1.5-5.858-3.349 0-1.646 2.079-3.015 4.818-3.296-.151-.664-.233-1.374-.233-2.113 0-3.699 2.053-6.697 4.585-6.697z"/>
+        <path id="prefix__o" d="M110.746 0c1.55 0 2.87 1.163 3.357 2.785.66-.445 1.423-.698 2.236-.698 2.527 0 4.576 2.453 4.576 5.478 0 .463-.048.912-.138 1.341 2.936.348 5.223 3.119 5.223 6.485 0 3.602-2.618 6.522-5.847 6.522-.857 0-1.671-.206-2.405-.575-1.065 1.614-2.78 2.662-4.714 2.662-1.581 0-3.016-.7-4.068-1.837C107.914 23.3 106.479 24 104.898 24c-1.974 0-3.72-1.09-4.778-2.762-.415.1-.823.153-1.184.153-1.621 0-2.936-1.171-2.936-2.616 0-.507.239-1.043.619-1.525-.388-.442-.619-1-.619-1.605 0-1.132 1.187-2.406 2.481-2.905-.919-.953-1.464-2.613-1.464-4.34 0-2.66 1.184-4.226 3.997-4.226 1.972 0 4.962.699 6.573 1.92-.257-.574-.4-1.227-.4-1.92 0-2.305 1.593-4.174 3.559-4.174z"/>
+        <path id="prefix__q" d="M160.746 4c1.55 0 2.87 1.163 3.357 2.785.66-.445 1.423-.698 2.236-.698 2.527 0 4.576 2.453 4.576 5.478 0 .463-.048.912-.138 1.341 2.936.348 5.223 3.119 5.223 6.485 0 3.602-2.618 6.522-5.847 6.522-.857 0-1.671-.206-2.405-.575-1.065 1.614-2.78 2.662-4.714 2.662-1.581 0-3.016-.7-4.068-1.837C157.914 27.3 156.479 28 154.898 28c-1.974 0-3.72-1.09-4.778-2.762-.415.1-.823.153-1.184.153-1.621 0-2.936-1.171-2.936-2.616 0-.507.239-1.043.619-1.525-.388-.442-.619-1-.619-1.605 0-1.132 1.187-2.406 2.481-2.905-.919-.953-1.464-2.613-1.464-4.34 0-2.66 1.184-4.226 3.997-4.226 1.972 0 4.962.699 6.573 1.92-.257-.574-.4-1.227-.4-1.92 0-2.305 1.593-4.174 3.559-4.174z"/>
+        <path id="prefix__s" d="M9.17 6c1.256 0 2.395.738 3.223 1.934 1.378-1.301 3.058-1.747 4.111-.97.736.543 1.008 1.566.835 2.723.724-.702 1.594-1.111 2.529-1.111 1.496 0 2.824 1.046 3.661 2.665.211-.058.436-.09.67-.09 1.265 0 2.292.923 2.292 2.061 0 .777-.48 1.454-1.186 1.805.108.237.167.498.167.77 0 .502-.2.961-.53 1.318 1.26.612 2.058 1.526 2.058 2.547C27 21.5 24.377 23 21.142 23c-1.9 0-3.588-.517-4.658-1.317-.761.827-1.706 1.317-2.73 1.317-1.475 0-2.789-1.019-3.627-2.602-1.068.65-2.585 1.057-4.269 1.057-3.235 0-5.858-1.5-5.858-3.349 0-1.646 2.079-3.015 4.818-3.296-.151-.664-.233-1.374-.233-2.113C4.585 8.998 6.638 6 9.17 6z"/>
+        <path id="prefix__u" d="M62.746 1c1.55 0 2.87 1.163 3.357 2.785.66-.445 1.423-.698 2.236-.698 2.527 0 4.576 2.453 4.576 5.478 0 .463-.048.912-.138 1.341 2.936.348 5.223 3.119 5.223 6.485 0 3.602-2.618 6.522-5.847 6.522-.857 0-1.671-.206-2.405-.575C68.683 23.952 66.968 25 65.034 25c-1.581 0-3.016-.7-4.068-1.837C59.914 24.3 58.479 25 56.898 25c-1.974 0-3.72-1.09-4.778-2.762-.415.1-.823.153-1.184.153-1.621 0-2.936-1.171-2.936-2.616 0-.507.239-1.043.619-1.525-.388-.442-.619-1-.619-1.605 0-1.132 1.187-2.406 2.481-2.905-.919-.953-1.464-2.613-1.464-4.34 0-2.66 1.184-4.226 3.997-4.226 1.972 0 4.962.699 6.573 1.92-.257-.574-.4-1.227-.4-1.92C59.186 2.869 60.78 1 62.745 1z"/>
+        <path id="prefix__x" d="M162.868 6c1.489 0 2.837.868 3.819 2.274 1.634-1.53 3.625-2.054 4.874-1.14.872.64 1.193 1.842.988 3.204.859-.827 1.89-1.308 2.998-1.308 1.773 0 3.348 1.231 4.34 3.136.25-.069.516-.105.792-.105 1.5 0 2.717 1.085 2.717 2.424 0 .914-.567 1.71-1.405 2.123.128.28.198.586.198.907 0 .589-.235 1.128-.626 1.548 1.491.723 2.437 1.797 2.437 2.998 0 2.175-3.109 3.939-6.943 3.939-2.25 0-4.25-.607-5.52-1.549-.902.973-2.022 1.549-3.235 1.549-1.75 0-3.306-1.198-4.3-3.06-1.265.764-3.063 1.242-5.059 1.242-3.834 0-6.943-1.764-6.943-3.94 0-1.936 2.464-3.547 5.71-3.877-.179-.78-.276-1.617-.276-2.486 0-4.352 2.433-7.879 5.434-7.879z"/>
+        <path id="prefix__A" d="M133.695 2c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671-1.277 1.884-3.335 3.106-5.656 3.106-1.898 0-3.619-.816-4.882-2.143-1.262 1.327-2.984 2.143-4.881 2.143-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__C" d="M194.695 7c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671-1.277 1.884-3.335 3.106-5.656 3.106-1.898 0-3.619-.816-4.882-2.143-1.262 1.327-2.984 2.143-4.881 2.143-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__E" d="M104.868 7c1.489 0 2.837.868 3.819 2.274 1.634-1.53 3.625-2.054 4.874-1.14.872.64 1.193 1.842.988 3.204.859-.827 1.89-1.308 2.998-1.308 1.773 0 3.348 1.231 4.34 3.136.25-.069.516-.105.792-.105 1.5 0 2.717 1.085 2.717 2.424 0 .914-.567 1.71-1.405 2.123.128.28.198.586.198.907 0 .589-.235 1.128-.626 1.548 1.491.723 2.437 1.797 2.437 2.998 0 2.175-3.109 3.939-6.943 3.939-2.25 0-4.25-.607-5.52-1.549-.902.973-2.022 1.549-3.235 1.549-1.75 0-3.306-1.198-4.3-3.06-1.265.764-3.063 1.242-5.059 1.242-3.834 0-6.943-1.764-6.943-3.94 0-1.936 2.464-3.547 5.71-3.877-.179-.78-.276-1.617-.276-2.486 0-4.352 2.433-7.879 5.434-7.879z"/>
+        <path id="prefix__G" d="M10.868 9c1.489 0 2.837.868 3.819 2.274 1.634-1.53 3.625-2.054 4.874-1.14.872.64 1.193 1.842.988 3.204.859-.827 1.89-1.308 2.998-1.308 1.773 0 3.348 1.231 4.34 3.136.25-.069.516-.105.792-.105 1.5 0 2.717 1.085 2.717 2.424 0 .914-.567 1.71-1.405 2.123.128.28.198.586.198.907 0 .589-.235 1.128-.626 1.548C31.054 22.786 32 23.86 32 25.061 32 27.236 28.891 29 25.057 29c-2.25 0-4.25-.607-5.52-1.549-.902.973-2.022 1.549-3.235 1.549-1.75 0-3.306-1.198-4.3-3.06-1.265.764-3.063 1.242-5.059 1.242C3.11 27.182 0 25.418 0 23.242c0-1.936 2.464-3.547 5.71-3.877-.179-.78-.276-1.617-.276-2.486C5.434 12.527 7.867 9 10.868 9z"/>
+        <path id="prefix__I" d="M76.695 3c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671C83.82 29.778 81.762 31 79.441 31c-1.898 0-3.619-.816-4.882-2.143C73.297 30.184 71.575 31 69.678 31c-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__K" d="M43.695 0c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671C50.82 26.778 48.762 28 46.441 28c-1.898 0-3.619-.816-4.882-2.143C40.297 27.184 38.575 28 36.678 28c-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__M" d="M162.868 6c1.489 0 2.837.868 3.819 2.274 1.634-1.53 3.625-2.054 4.874-1.14.872.64 1.193 1.842.988 3.204.859-.827 1.89-1.308 2.998-1.308 1.773 0 3.348 1.231 4.34 3.136.25-.069.516-.105.792-.105 1.5 0 2.717 1.085 2.717 2.424 0 .914-.567 1.71-1.405 2.123.128.28.198.586.198.907 0 .589-.235 1.128-.626 1.548 1.491.723 2.437 1.797 2.437 2.998 0 2.175-3.109 3.939-6.943 3.939-2.25 0-4.25-.607-5.52-1.549-.902.973-2.022 1.549-3.235 1.549-1.75 0-3.306-1.198-4.3-3.06-1.265.764-3.063 1.242-5.059 1.242-3.834 0-6.943-1.764-6.943-3.94 0-1.936 2.464-3.547 5.71-3.877-.179-.78-.276-1.617-.276-2.486 0-4.352 2.433-7.879 5.434-7.879z"/>
+        <path id="prefix__O" d="M133.695 2c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671-1.277 1.884-3.335 3.106-5.656 3.106-1.898 0-3.619-.816-4.882-2.143-1.262 1.327-2.984 2.143-4.881 2.143-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__Q" d="M194.695 7c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671-1.277 1.884-3.335 3.106-5.656 3.106-1.898 0-3.619-.816-4.882-2.143-1.262 1.327-2.984 2.143-4.881 2.143-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__S" d="M104.868 7c1.489 0 2.837.868 3.819 2.274 1.634-1.53 3.625-2.054 4.874-1.14.872.64 1.193 1.842.988 3.204.859-.827 1.89-1.308 2.998-1.308 1.773 0 3.348 1.231 4.34 3.136.25-.069.516-.105.792-.105 1.5 0 2.717 1.085 2.717 2.424 0 .914-.567 1.71-1.405 2.123.128.28.198.586.198.907 0 .589-.235 1.128-.626 1.548 1.491.723 2.437 1.797 2.437 2.998 0 2.175-3.109 3.939-6.943 3.939-2.25 0-4.25-.607-5.52-1.549-.902.973-2.022 1.549-3.235 1.549-1.75 0-3.306-1.198-4.3-3.06-1.265.764-3.063 1.242-5.059 1.242-3.834 0-6.943-1.764-6.943-3.94 0-1.936 2.464-3.547 5.71-3.877-.179-.78-.276-1.617-.276-2.486 0-4.352 2.433-7.879 5.434-7.879z"/>
+        <path id="prefix__U" d="M10.868 9c1.489 0 2.837.868 3.819 2.274 1.634-1.53 3.625-2.054 4.874-1.14.872.64 1.193 1.842.988 3.204.859-.827 1.89-1.308 2.998-1.308 1.773 0 3.348 1.231 4.34 3.136.25-.069.516-.105.792-.105 1.5 0 2.717 1.085 2.717 2.424 0 .914-.567 1.71-1.405 2.123.128.28.198.586.198.907 0 .589-.235 1.128-.626 1.548C31.054 22.786 32 23.86 32 25.061 32 27.236 28.891 29 25.057 29c-2.25 0-4.25-.607-5.52-1.549-.902.973-2.022 1.549-3.235 1.549-1.75 0-3.306-1.198-4.3-3.06-1.265.764-3.063 1.242-5.059 1.242C3.11 27.182 0 25.418 0 23.242c0-1.936 2.464-3.547 5.71-3.877-.179-.78-.276-1.617-.276-2.486C5.434 12.527 7.867 9 10.868 9z"/>
+        <path id="prefix__W" d="M76.695 3c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671C83.82 29.778 81.762 31 79.441 31c-1.898 0-3.619-.816-4.882-2.143C73.297 30.184 71.575 31 69.678 31c-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <path id="prefix__Y" d="M43.695 0c1.86 0 3.443 1.356 4.029 3.249.792-.519 1.708-.814 2.683-.814 3.033 0 5.491 2.861 5.491 6.391 0 .54-.057 1.065-.166 1.566 3.523.404 6.268 3.637 6.268 7.565 0 4.202-3.142 7.608-7.017 7.608-1.029 0-2.006-.24-2.886-.671C50.82 26.778 48.762 28 46.441 28c-1.898 0-3.619-.816-4.882-2.143C40.297 27.184 38.575 28 36.678 28c-2.369 0-4.463-1.273-5.734-3.222-.498.116-.987.179-1.42.179-1.946 0-3.524-1.367-3.524-3.053 0-.591.286-1.216.742-1.778-.465-.517-.742-1.167-.742-1.874 0-1.32 1.425-2.806 2.977-3.39-1.103-1.11-1.757-3.048-1.757-5.062 0-3.104 1.421-4.93 4.797-4.93 2.365 0 5.952.815 7.887 2.24-.308-.67-.48-1.433-.48-2.24 0-2.69 1.912-4.87 4.27-4.87z"/>
+        <linearGradient id="prefix__a" x1="50%" x2="50%" y1="0%" y2="60.411%">
+            <stop offset="0%" stop-color="#EFE6E1" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#E3C4B4" stop-opacity=".5"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="50%" x2="50%" y1="0%" y2="60.411%">
+            <stop offset="0%" stop-color="#EFE6E1" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#E3C4B4" stop-opacity=".5"/>
+        </linearGradient>
+        <linearGradient id="prefix__w" x1="50%" x2="50%" y1="0%" y2="60.411%">
+            <stop offset="0%" stop-color="#EFE6E1" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#EFE6E1"/>
+        </linearGradient>
+        <linearGradient id="prefix__z" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#EFE6E1" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#EFE6E1"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F7F2F0" d="M0 0H375V1837H0z" transform="translate(0 -1800)"/>
+        <path fill="#FFF" d="M0 1692H375V1841H0z" transform="translate(0 -1800)"/>
+        <path fill="#FFF" d="M0 1692H375V1831H0z" transform="translate(0 -1800)"/>
+        <g>
+            <g transform="translate(0 -1800) translate(-6 1800) translate(30)">
+                <use fill="url(#prefix__a)" xlink:href="#prefix__b"/>
+                <use fill="#000" filter="url(#prefix__c)" xlink:href="#prefix__b"/>
+                <use fill="url(#prefix__d)" xlink:href="#prefix__e"/>
+                <use fill="#000" filter="url(#prefix__f)" xlink:href="#prefix__e"/>
+                <use fill="url(#prefix__d)" xlink:href="#prefix__g"/>
+                <use fill="#000" filter="url(#prefix__h)" xlink:href="#prefix__g"/>
+                <g>
+                    <use fill="url(#prefix__a)" xlink:href="#prefix__i"/>
+                    <use fill="#000" filter="url(#prefix__j)" xlink:href="#prefix__i"/>
+                </g>
+                <g>
+                    <use fill="url(#prefix__d)" xlink:href="#prefix__k"/>
+                    <use fill="#000" filter="url(#prefix__l)" xlink:href="#prefix__k"/>
+                </g>
+            </g>
+            <g transform="translate(0 -1800) translate(-6 1800) translate(205)">
+                <use fill="url(#prefix__a)" xlink:href="#prefix__m"/>
+                <use fill="#000" filter="url(#prefix__n)" xlink:href="#prefix__m"/>
+                <use fill="url(#prefix__d)" xlink:href="#prefix__o"/>
+                <use fill="#000" filter="url(#prefix__p)" xlink:href="#prefix__o"/>
+                <use fill="url(#prefix__d)" xlink:href="#prefix__q"/>
+                <use fill="#000" filter="url(#prefix__r)" xlink:href="#prefix__q"/>
+                <g>
+                    <use fill="url(#prefix__a)" xlink:href="#prefix__s"/>
+                    <use fill="#000" filter="url(#prefix__t)" xlink:href="#prefix__s"/>
+                </g>
+                <g>
+                    <use fill="url(#prefix__d)" xlink:href="#prefix__u"/>
+                    <use fill="#000" filter="url(#prefix__v)" xlink:href="#prefix__u"/>
+                </g>
+            </g>
+            <g transform="translate(0 -1800) translate(-6 1800) translate(173 9)">
+                <use fill="url(#prefix__w)" xlink:href="#prefix__x"/>
+                <use fill="#000" filter="url(#prefix__y)" xlink:href="#prefix__x"/>
+                <use fill="url(#prefix__z)" xlink:href="#prefix__A"/>
+                <use fill="#000" filter="url(#prefix__B)" xlink:href="#prefix__A"/>
+                <use fill="url(#prefix__z)" xlink:href="#prefix__C"/>
+                <use fill="#000" filter="url(#prefix__D)" xlink:href="#prefix__C"/>
+                <use fill="url(#prefix__w)" xlink:href="#prefix__E"/>
+                <use fill="#000" filter="url(#prefix__F)" xlink:href="#prefix__E"/>
+                <g>
+                    <use fill="url(#prefix__w)" xlink:href="#prefix__G"/>
+                    <use fill="#000" filter="url(#prefix__H)" xlink:href="#prefix__G"/>
+                </g>
+                <g>
+                    <use fill="url(#prefix__z)" xlink:href="#prefix__I"/>
+                    <use fill="#000" filter="url(#prefix__J)" xlink:href="#prefix__I"/>
+                </g>
+                <g>
+                    <use fill="url(#prefix__z)" xlink:href="#prefix__K"/>
+                    <use fill="#000" filter="url(#prefix__L)" xlink:href="#prefix__K"/>
+                </g>
+            </g>
+            <g transform="translate(0 -1800) translate(-6 1800) translate(0 9)">
+                <use fill="url(#prefix__w)" xlink:href="#prefix__M"/>
+                <use fill="#000" filter="url(#prefix__N)" xlink:href="#prefix__M"/>
+                <use fill="url(#prefix__z)" xlink:href="#prefix__O"/>
+                <use fill="#000" filter="url(#prefix__P)" xlink:href="#prefix__O"/>
+                <use fill="url(#prefix__z)" xlink:href="#prefix__Q"/>
+                <use fill="#000" filter="url(#prefix__R)" xlink:href="#prefix__Q"/>
+                <use fill="url(#prefix__w)" xlink:href="#prefix__S"/>
+                <use fill="#000" filter="url(#prefix__T)" xlink:href="#prefix__S"/>
+                <g>
+                    <use fill="url(#prefix__w)" xlink:href="#prefix__U"/>
+                    <use fill="#000" filter="url(#prefix__V)" xlink:href="#prefix__U"/>
+                </g>
+                <g>
+                    <use fill="url(#prefix__z)" xlink:href="#prefix__W"/>
+                    <use fill="#000" filter="url(#prefix__X)" xlink:href="#prefix__W"/>
+                </g>
+                <g>
+                    <use fill="url(#prefix__z)" xlink:href="#prefix__Y"/>
+                    <use fill="#000" filter="url(#prefix__Z)" xlink:href="#prefix__Y"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -12,9 +12,9 @@ namespace Portfolio.Core.ViewModels.Project
         public Detail Detail { get; }
         public Permissions Permissions { get;}
         public ListDetail ListDetail { get; }
-        public SimilarProjects SimilarProjects { get; }
+        public List<SimilarProject> SimilarProjects { get; }
 
-        public ProjectViewModel(Guid udi, string url, General general, Detail detail, Permissions permissions, ListDetail listDetail, SimilarProjects similarProjects)
+        public ProjectViewModel(Guid udi, string url, General general, Detail detail, Permissions permissions, ListDetail listDetail, List<SimilarProject> similarProjects = null)
         {
             Udi = udi;
             Url = url;
