@@ -85,7 +85,7 @@
 import axios from "axios"
 
 export default{  
-    name : "ProjectDetails",
+    name : "Project",
     props: ["projectid"],
     data(){
         return {

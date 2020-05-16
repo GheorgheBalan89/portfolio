@@ -15,7 +15,7 @@
 import Vue from 'vue'
 
 export default{
-name:"SingleProject",
+name:"ProjectDetail",
 props: ['project'],
     data(){
         return {

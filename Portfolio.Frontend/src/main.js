@@ -4,7 +4,6 @@ import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
 import Project from './Apps/Project'
 import ProjectListApp from './Apps/ProjectListApp'
-import About from './Apps/About'
 
 //font-awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -18,25 +17,11 @@ Vue.use(VueAnalytics, {
 library.add([faUsersCog, faCode, faShoppingCart, faChevronCircleDown, faChevronCircleUp])
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-//--font awesome
-
 Vue.component("Project", Project)
 Vue.component("ProjectList", ProjectListApp)
-Vue.component("About", About)
 // Vue.component("Uanimate", Uanimate)
 
 Vue.config.productionTip = false
-
-
-if(document.getElementById("about")){
-  new Vue({
-    el: '#about',
-    components: { About },
-    template: '<About/>'
-  })
-    
-}
-
 
 if(document.getElementById("project")){
   new Vue({

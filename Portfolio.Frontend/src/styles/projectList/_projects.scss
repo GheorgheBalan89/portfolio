@@ -32,6 +32,18 @@
     }
   }
 
+  
+.overlay{
+  position: relative;
+    .title{
+        padding-top:30%;
+        left:40%;
+        font-size: 1.4em;
+        color: $white;
+    //    padding-top:5em;
+       text-transform: uppercase;
+    }
+}
   .projectlist-container{
     max-width: 100%;
     background-color: $fourth-color;
@@ -46,6 +58,7 @@
       padding: 1em 0;
       text-transform: uppercase;
       font-size: 1em;
+      font-weight: bold;
       margin:0;
     }
 

@@ -1,7 +1,7 @@
 <template>
   <div id="project">
     <NavigationNerija/>
-    <ProjectDetails :projectid="projId" />
+    <Project :projectid="projId" />
     <Footer/> 
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 
 import NavigationNerija from '../components/Navigation/NavigationNerija'
-import ProjectDetails from '../components/Pages/ProjectDetails'
+import Project from '../components/SingleProject/Project'
 import Footer from '../components/Footer'
 
 export default {
@@ -21,7 +21,7 @@ export default {
  },
  components:{
     NavigationNerija,
-    ProjectDetails,
+    Project,
     Footer
   }
 }

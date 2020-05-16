@@ -1,0 +1,35 @@
+.rocket-animation-container{
+    width: 100%;
+    position: relative;
+    background-color:$main-color-alpha;
+    z-index: 0;
+    .rockets{
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin: auto;
+   }
+   .shadow-container{
+    z-index: 1;
+    width: 15%;
+    margin: auto;
+    position: relative;
+    height: 5vh;
+    .back-shadows{
+        position: absolute;
+        background: url('/static/Rockets/BackShadows.svg') no-repeat;
+        width: 100%; 
+        left: 2em;
+        height: 3vh;
+        top: -1em;
+       }
+    .front-shadows{
+        position: absolute;
+        background: url('/static/Rockets/FrontShadows.svg') no-repeat;
+        width: 100%;
+        height: 3vh;
+    }
+
+   }
+   
+}

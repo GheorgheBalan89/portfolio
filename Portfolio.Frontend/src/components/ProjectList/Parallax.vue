@@ -8,14 +8,15 @@
             <div class="medium-12 detail-container">
                 <p class="text-center">{{projectMeta.Heading2}}</p>
             </div>
+           
         </div>
         <div v-if="projectMeta != null" class="headline-container-responsive show-for-small-only responsive">
             <h3 class="text-center"> {{projectMeta.Heading1}} </h3>
             <div class="text-center">{{projectMeta.Heading2}}</div>
         </div>
     </div>
+    
 </div>
-
 
 </template>
 <script>

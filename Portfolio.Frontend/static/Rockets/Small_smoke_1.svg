@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="38px" viewBox="0 0 45 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Small_smoke_1</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="64.7081163%" id="linearGradient-1">
+            <stop stop-color="#EFE6E1" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#EFE6E1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M710.434296,161 C710.579282,167.38845 710.96346,172.180023 711.586829,175.374721 C712.168371,175.476163 712.725768,175.683201 713.238991,176.00145 C713.42495,176.116773 713.600228,176.243669 713.764707,176.381099 L713.915663,176.268303 C715.713629,174.96877 717.823295,174.595284 719.515937,175.488412 C720.697446,176.11188 721.477012,177.247641 721.812805,178.627 C722.561745,178.329208 723.423869,178.159509 724.340909,178.159509 C727.240404,178.159509 729.590909,179.855983 729.590909,181.948689 C729.590909,182.544651 729.400283,183.108479 729.060639,183.610142 C731.404754,184.440621 733,186.081881 733,187.970779 C733,190.608063 729.890258,192.762607 725.974945,192.902973 C726.110679,193.273804 726.181818,193.661647 726.181818,194.060533 C726.181818,196.788525 722.85448,199 718.75,199 C716.593969,199 714.652371,198.389795 713.294836,197.415053 C711.938538,198.389795 709.99694,199 707.840909,199 C706.802808,199 705.814419,198.858536 704.917002,198.603031 C703.073565,199.155585 700.660521,198.708369 698.283472,197.40598 C697.405283,197.648068 696.442092,197.782049 695.431818,197.782049 C691.327338,197.782049 688,195.570574 688,192.842582 C688,191.232196 689.159499,189.801805 690.953891,188.900081 C690.143041,186.428466 690.359139,184.127174 691.777126,182.719911 C693.315878,181.192897 695.915415,181.070369 698.644777,182.1306 C699.087869,180.071596 700.503741,178.565492 702.181818,178.565492 C702.976134,178.565492 703.7117,178.902948 704.313208,179.476828 L704.411772,179.302133 L704.551996,179.07202 C705.20257,178.038855 706.020951,177.193408 706.920418,176.566335 C707.547529,173.296833 708.059681,168.107397 708.456919,161 L710.434296,161 Z" id="path-2"></path>
+        <filter x="-6.7%" y="-7.9%" width="113.3%" height="115.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-3" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.662745098   0 0 0 0 0.537254902   0 0 0 0 0.482352941  0 0 0 0.6 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.6 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Ideas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rocket" transform="translate(-688.000000, -161.000000)">
+            <g id="Small_smoke_1">
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

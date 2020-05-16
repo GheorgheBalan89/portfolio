@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="57px" viewBox="0 0 66 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Big_smoke</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="64.7081163%" id="linearGradient-1">
+            <stop stop-color="#EFE6E1" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#EFE6E1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M789.459677,149 C791.008371,161.283132 793.92627,170.364998 798.213374,176.245597 C799.135877,175.740693 800.176034,175.457447 801.276515,175.457447 C801.911678,175.457447 802.526745,175.551802 803.110697,175.72843 C803.519071,175.676073 803.937394,175.649123 804.362903,175.649123 C809.13304,175.649123 813,179.036049 813,183.214035 C813,184.518044 812.623299,185.744991 811.96001,186.815951 C814.395447,188.451544 816,191.24445 816,194.414894 C816,199.455961 811.943428,203.542553 806.939394,203.542553 C805.52363,203.542553 804.183707,203.215437 802.990037,202.632137 C801.330262,204.687157 798.798381,206 795.962121,206 C793.52731,206 791.316812,205.0325 789.688779,203.458304 C788.061976,205.0325 785.851477,206 783.416667,206 C781.587526,206 779.884981,205.453972 778.460881,204.514891 C777.306618,205.455842 775.937943,206 774.470852,206 C772.453025,206 770.62137,204.970612 769.273587,203.29629 C767.925715,204.970612 766.09406,206 764.076233,206 C761.661755,206 759.513837,204.526135 758.142509,202.237068 C757.644895,202.37357 757.158762,202.446701 756.725448,202.446701 C754.66794,202.446701 753,200.669843 753,198.477979 C753,197.747357 753.273132,196.977498 753.713512,196.275741 L753.740115,196.233239 C753.275275,195.571087 753,194.749134 753,193.858689 C753,193.126421 753.274364,192.354739 753.716491,191.651709 C751.42826,190.054683 750,187.789307 750,185.277193 C750,180.434528 755.307592,176.508772 761.854839,176.508772 C763.691047,176.508772 765.42975,176.817552 766.981212,177.36874 L766.973094,177.040609 L766.973094,177.040609 C766.973094,173.704473 768.99484,171 771.488789,171 C772.154103,171 772.785812,171.192469 773.354498,171.538054 C776.399626,165.220685 778.493481,157.70753 779.637097,149 L789.459677,149 Z" id="path-2"></path>
+        <filter x="-4.5%" y="-5.3%" width="109.1%" height="110.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-3" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.662745098   0 0 0 0 0.537254902   0 0 0 0 0.482352941  0 0 0 0.6 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.6 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Ideas" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rocket" transform="translate(-750.000000, -149.000000)">
+            <g id="Big_smoke">
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

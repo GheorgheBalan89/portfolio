@@ -49,15 +49,16 @@
 @import './settings/settings';
 @import "./settings/overrites";
 
-@import "./components/pages/frontPageProjects";
-@import "./components/pages/projects";
-@import "./components/pages/singleProject";
-@import "./components/pages/aboutPage";
+@import "./projectList/projects";
+@import "./projectList/parallax";
+@import "./projectList/projectDetail";
+@import "./projectList/rocketAnimation";
+
+@import "./singleProject/project";
 
 @import "./components/navigation";
 @import "./components/footer";
-@import "./components/parallax";
-@import "./components/singleProjectView";
+
 
 @import './components/responsive/responsive';
 @import "./components/responsive/projectListMeta.scss";

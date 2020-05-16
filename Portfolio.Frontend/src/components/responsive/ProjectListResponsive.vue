@@ -6,9 +6,9 @@
             <div class="projects-container text-center" v-if="projects != null" >
                 <div v-for="project in projects" class="project"   @click="viewDetail(project.Url)" :key="project.Udi"> 
                  <div>              
-                    <img :src="project.FeaturedImage" :alt="project.Title" width="100%"/>   
+                    <img :src="project.General.FeaturedImage" :alt="project.General.Title" width="100%"/>   
                         <div>
-                            <p class="text-center">{{ project.Title }} </p>
+                            <p class="text-center">{{ project.General.Title }} </p>
                         </div>
                     </div> 
                 </div>

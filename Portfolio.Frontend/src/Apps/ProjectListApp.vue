@@ -3,6 +3,7 @@
     <div id="projectlist" class="large-visible medium-hidden">
       <NavigationNerija/>
       <Parallax :projectMeta="meta"/>
+      <Rockets/>
       <ProjectList :projects="projList" :topProjects="topList" :restProjects="bottomList"/>
       <Footer/> 
     </div>
@@ -18,9 +19,10 @@
 <script>
 
 import NavigationNerija from '../components/Navigation/NavigationNerija'
-import Parallax from '../components/Shared/Parallax'
+import Parallax from '../components/ProjectList/Parallax'
+import Rockets from '../components/ProjectList/Rockets'
 import ProjectListMeta from '../components/responsive/ProjectListMeta'
-import ProjectList from '../components/Pages/ProjectList'
+import ProjectList from '../components/ProjectList/ProjectList'
 import ProjectListResponsive from '../components/responsive/ProjectListResponsive'
 import Footer from '../components/Footer'
 import axios from "axios"
@@ -56,6 +58,7 @@ export default {
  components:{
     NavigationNerija,
     Parallax,
+    Rockets,
     ProjectList,
     ProjectListMeta,
     ProjectListResponsive,

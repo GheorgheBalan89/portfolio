@@ -3,7 +3,7 @@
     <div>
       <nav class="hover-underline-menu" data-menu-underline-from-center>
          <div class="top-bar">
-            <img src="/static/Avatar.png" class="header-image">
+            <img src="/static/Avatar.png" class="header-image" alt="logo">
         </div>
         <ul v-if="navData" class="menu align-center">
             <li v-for="navItem in navData" v-if="!navItem.IsHidden">
