@@ -14,16 +14,20 @@
             <h3 class="text-center"> {{projectMeta.Heading1}} </h3>
             <div class="text-center">{{projectMeta.Heading2}}</div>
         </div>
+         <Rockets/>
     </div>
-    
 </div>
 
 </template>
 <script>
 import Vue from 'vue'
-
+import Rockets from './Rockets'
 export default{
 name:"Parallax",
-props:['projectMeta']
+props:['projectMeta'],
+
+    components:{
+     Rockets
+    }
 }
 </script>

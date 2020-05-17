@@ -1,35 +1,93 @@
 .rocket-animation-container{
     width: 100%;
     position: relative;
-    background-color:$main-color-alpha;
+    // background-color:$main-color-alpha;
     z-index: 0;
     .rockets{
         position: relative;
-        z-index: 2;
+        z-index: 3;
         display: block;
         margin: auto;
+        margin-bottom: 1em;
+   }
+   .hide{
+       display: none;
    }
    .shadow-container{
+    display: flex;
     z-index: 1;
-    width: 15%;
+    width: 30%;
     margin: auto;
     position: relative;
+    align-items: center;
+    justify-content: center;
     height: 5vh;
+    top:-2em;
     .back-shadows{
         position: absolute;
-        background: url('/static/Rockets/BackShadows.svg') no-repeat;
-        width: 100%; 
-        left: 2em;
-        height: 3vh;
+        background: url('/static/Rockets/BackShadows.svg') center no-repeat;
+        width: 85%; 
+        margin: auto;
+        height: 5em;
         top: -1em;
+      
        }
     .front-shadows{
         position: absolute;
-        background: url('/static/Rockets/FrontShadows.svg') no-repeat;
+        background: url('/static/Rockets/FrontShadows.svg') center no-repeat;
         width: 100%;
-        height: 3vh;
+        height: 4em;
+        animation-duration:4 ;
+        animation-delay: 2s;
     }
+ }
 
-   }
-   
+ .smoke-container{
+    z-index: 2;
+    align-self: center;
+    margin: auto;
+    width: 29%;
+    position: relative;
+    display: flex;
+    top: -1em;
+    img{
+        align-self: center;
+        display: flex;
+        margin: auto;
+        height: 3.5em;
+    }
+}
+
+    .slide-in-enter-active {
+        opacity: 0.6;
+       transition: all 1s ease; 
+     }
+    .slide-in-leave-active {
+      opacity: 0.8;
+      transition: all 1.2s;
+      transform: translateY(5px);
+      animation-duration: 2s;
+    }
+    .slide-in-enter, .slide-in-leave-to
+    {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    .bounce-in-enter-active {
+        animation-delay: 1s;
+        opacity: 0.4;
+        transition: all 1.5s ease-in; 
+    }
+    .bounce-in-leave-active {
+        opacity: 1;
+        transition: all 1.2s;
+        animation-duration: 3s;
+      }
+     .bounce-in, .bounce-in-leave-to
+      {
+        transform: translateY(-20px), scale(2);
+          transform: translateY(-10px);
+          opacity: 0;
+      }
+  
 }

@@ -23,6 +23,7 @@ Vue.component("ProjectList", ProjectListApp)
 
 Vue.config.productionTip = false
 
+
 if(document.getElementById("project")){
   new Vue({
     el: '#project',
