@@ -1,8 +1,6 @@
 .details-bg{
     background: $light-gray;
 }
-$hero-height: 60vh;
-
 .text-padding{
   padding:0 2em;
 }
@@ -16,9 +14,7 @@ $hero-height: 60vh;
   padding-left: 1em;
 }
 .hero-section {
-  // background: url('https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg') 50% no-repeat;
   background-size: cover;
-  height: $hero-height;
   text-align: center;
   display: flex;
   align-items: center;
@@ -27,8 +23,7 @@ $hero-height: 60vh;
   .hero-section-text {
     color: $black;
     background:$white;
-    // color: #fff;
-    opacity: 0.8;
+     opacity: 0.8;
     height: 100%;
     width: 88%;
     h3{

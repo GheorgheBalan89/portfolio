@@ -1,7 +1,6 @@
 <template>
-        <div class="projectlist-container details-bg">
-            <meta property="og:image" :content="project.General.FeaturedImage"/>
-            <div class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Detail.Hero + ')'}">  
+        <div v-if="project != null" class="projectlist-container details-bg">
+            <div v-if="project.Detail != null" class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Detail.Hero + ')'}">  
                 <div class="hero-section-text">
                     <h3 class="large-visible">   
                         <div class="stroke "></div>
@@ -22,11 +21,11 @@
             <div class="row small-visible medium-hidden text-center text-padding">
                 &nbsp;
                 &nbsp;
-                <div class="large-12 columns" v-html="project.General.Description"></div>
+                <div v-if="project.General != null" class="large-12 columns" v-html="project.General.Description"></div>
             </div>
         
-            <div class="large-visible">
-                  <div v-for="(detail, projId) in project.Detail.Details" v-if="projId % 2 == 0"  :key="projId">
+            <div v-if="project.Detail != null && project.Detail.Details != null" class="large-visible">
+                  <div  v-for="(detail, projId) in project.Detail.Details" v-if="projId % 2 == 0"  :key="projId">
                     <div  class="project-details-section">
                         <div class="project-details-section-block small-order-2 medium-order-1">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
@@ -59,7 +58,7 @@
                 &nbsp;
             </div>
            
-            <div class="small-visible medium-visible">
+            <div v-if="project.Detail != null && project.Detail.Details != null" class="small-visible medium-visible">
                     <div v-for="(detail, projId) in project.Detail.Details" :key="projId">
                         <div class="row text-center ">
                             <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
@@ -85,7 +84,7 @@
 import axios from "axios"
 
 export default{  
-    name : "Project",
+    name : "SingleProjectPage",
     props: ["projectid"],
     data(){
         return {
