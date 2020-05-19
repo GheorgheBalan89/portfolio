@@ -55,7 +55,7 @@ namespace Portfolio.Core.Controllers
             var response = new List<ProjectViewModel>();
             var site = GetIPublishedContentNodes(Website.ModelTypeAlias).FirstOrDefault(x => x.Name.ToLower().Contains(website.ToLower()));
 
-            var projectListPage = site?.Children.FirstOrDefault(x => x.Name.Contains("Projects"));
+            var projectListPage = site?.Children.FirstOrDefault(x => x.DocumentTypeAlias.Contains(nameof(ProjectList)));
             if (projectListPage != null)
             {
                 var projectCriteria = SearchHelpers.CreateContentCriteria().NodeTypeAlias(Project.ModelTypeAlias).And().ParentId(projectListPage.Id).Compile();
