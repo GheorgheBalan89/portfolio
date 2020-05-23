@@ -23,6 +23,10 @@
   }
   
   @media screen and  #{breakpoint(medium down)} {
+    .hover-underline-menu .menu a, .underline-menu-reverse .menu a{
+      font-size: 0.8em;
+    }
+
     .medium-visible{
       display: visible;
       img{

@@ -1,0 +1,35 @@
+.site-footer-small{
+    background: $white;
+    color: $dark-color;
+    img{
+        height: 50px;
+        max-width: 100%;
+        left: 0;
+    }
+    .heading{
+        text-transform: uppercase;
+        background-color: $light-color;
+       
+        h4{
+            font-weight: bold;
+            font-size: 0.8em;
+            padding: 1em 0;
+        }
+       
+    }
+
+    p{
+        font-size:0.42em;
+        font-weight: bold;
+        color:$third-color;
+        a{
+            color: $third-color;
+        }
+    }
+
+    .footer-bg{
+        height: 3vh;
+        width: 100%;
+        background: url('/static/clouds.svg');
+      }
+}

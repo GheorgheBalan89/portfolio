@@ -3,10 +3,10 @@
             <div class="project-list-header">
                 <h4 class="text-center">Projects</h4>
             </div>
-            <div class="projects-container text-center" v-if="projects != null" >
-                <div v-for="project in projects" class="project"   @click="viewDetail(project.Url)" :key="project.Udi"> 
+            <div class="projects-container text-center grid-x" v-if="projects != null" >
+                <div v-for="project in projects" class="project cell medium-6 small-12"   @click="viewDetail(project.Url)" :key="project.Udi"> 
                  <div>              
-                    <img :src="project.General.FeaturedImage" :alt="project.General.Title" width="100%"/>   
+                    <img :src="project.General.FeaturedImage" :alt="project.General.Title"/>   
                         <div>
                             <p class="text-center">{{ project.General.Title }} </p>
                         </div>

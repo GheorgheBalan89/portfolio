@@ -10,7 +10,7 @@
       <NavigationNerija/>
       <ProjectListMeta :meta="meta"/>
       <ProjectListResponsive :projects="projList"/>
-      <Footer/>
+      <FooterResponsive/>
     </div>
   </div>
 </template>
@@ -23,6 +23,7 @@ import ProjectListMeta from '../components/responsive/ProjectListMeta'
 import ProjectList from '../components/ProjectList/ProjectList'
 import ProjectListResponsive from '../components/responsive/ProjectListResponsive'
 import Footer from '../components/Footer'
+import FooterResponsive from '../components/responsive/FooterResponsive'
 import axios from "axios"
 
 export default {
@@ -59,7 +60,8 @@ export default {
     ProjectList,
     ProjectListMeta,
     ProjectListResponsive,
-    Footer
+    Footer,
+    FooterResponsive
   }
 }
 </script>

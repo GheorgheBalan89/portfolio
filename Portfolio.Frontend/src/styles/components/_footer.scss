@@ -2,8 +2,7 @@
 .site-footer {
   background: $white;
   color: $dark-color;
-  // padding: 3rem 0;
-  
+   
 .heading{
   text-transform: uppercase;
   background-color: $light-color;
@@ -28,10 +27,15 @@
         color:$third-color;
       }
     }
+    .footer-icon:hover{
+      transition: all 0.5s ease;
+      zoom: 130%;
+      animation-duration: 1s;
+    }
   }
 
   .footer-bg{
-    height: 2vh;
+    height: 3vh;
     width: 100%;
     background: url('/static/clouds.svg');
   }
