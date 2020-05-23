@@ -20,7 +20,7 @@
       <div class="cell medium-3  text-center footer-col">
            <a class="footer-icon" href="#">
             <img src="/static/footer_images/phone/phone.svg" alt="phone">
-            <p>+45 27 50 17 69</p>
+            <p>+45 42 67 10 72</p>
           </a>
       </div>
       <div class="cell medium-3  text-center footer-col">
