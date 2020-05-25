@@ -1,15 +1,14 @@
 <template>
-    <div class="cell medium-4 featured-project" v-if="project"  @mouseenter="isHoverIn = true" @mouseleave="isHoverIn = false"  @click="featuredClick(project.Url)" :key="project.Udi" >
-        <img :src="project.General.FeaturedImage" :alt="project.Title" width="100%"/>   
-            <div class="animation-container">
-            <transition-group name="fade" enter-active-class="fadeIn" leave-active-class="fadeOut"  tag="div">    
-                <div v-if="isHoverIn" class="overlay" v-bind:key="project.Udi" style="animation-duration: 0.3s;">
-                    <h3 class="text-center title">{{ project.General.Title }} </h3>
-                    <p class="text-center"> {{ project.General.Teaser }} </p>
-                    <p class="text-center">Read more </p>
-                </div>
-            </transition-group>
-        </div>                       
+    <div class="cell medium-4 featured-project" v-if="project"  @mouseenter="isHoverIn = true"  @mouseleave="isHoverIn = false"   @click="featuredClick(project.Url)" :key="project.Udi" >
+         <transition-group name="slide-fade" class="overlay-container" tag="div">
+              <img v-if="isHoverIn !=null" :src="isHoverIn == null|| isHoverIn == '' || !isHoverIn ? project.ListDetail.WebListImage : project.ListDetail.WebListPlaceholder " :alt="project.Title" class="overlay" key="startImg" width="100%"/>   
+              <h3 v-if="isHoverIn == null|| isHoverIn == '' || !isHoverIn" class="text-center placeholder-title inactive" key="startTitle"> {{project.General.Title}}</h3>
+              <h3 v-if="isHoverIn != null && isHoverIn" class="activeTitle" key="activeTitle">{{project.General.Title}}</h3>
+              <h4 v-if="isHoverIn != null && isHoverIn" class="activeDescription" key="activeDescription">{{project.General.Teaser}}</h4>
+              <h5  v-if="isHoverIn != null && isHoverIn" class="readMore" key="readMore"> Read more</h5>
+        </transition-group>
+                  
+ <!---->
      </div>
 </template>
 <script>

@@ -9,8 +9,10 @@
 
             <div class="rocket-animation-container">
                 <img class="rockets"  src="/static/Rockets/Rockets.svg">
-                <div class="smoke-container" tag="div"> 
-                   <img src="/static/Rockets/rocketSmoke.svg" alt="small-smoke-1" key="smoke-1"/>
+                <div class="smoke-container" > 
+                <img src="/static/Rockets/rocketSmoke.svg" alt="small-smoke-1" />
+                 <img src="/static/Rockets/BackShadows.svg" class="back-shadows" alt="back shadows"/>
+                 <img src="/static/Rockets/FrontShadows.svg" class="front-shadows" alt="front shadows"/>
                 </div>
             </div>
         </div>
@@ -21,8 +23,10 @@
 
             <div class="rocket-animation-container">
                 <img class="rockets"  src="/static/Rockets/Rockets.svg">
-                <div class="smoke-container" tag="div"> 
-                <img src="/static/Rockets/rocketSmoke.svg" alt="small-smoke-1" key="smoke-1"/>
+                <div class="smoke-container"> 
+                <img src="/static/Rockets/rocketSmoke.svg" alt="small-smoke-1" />
+                 <img src="/static/Rockets/BackShadows.svg" class="back-shadows" alt="back shadows"/>
+                 <img src="/static/Rockets/FrontShadows.svg" class="front-shadows" alt="front shadows"/>
                 </div>
             </div>
         </div>
