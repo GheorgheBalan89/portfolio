@@ -40,11 +40,22 @@
         .smoke-container{
             width: 100%;
             top:0;
+            margin-bottom: 2em;
             img{
                 max-height: 40px;
+                position: absolute;
+                width: 100%;
+            }
+            .back-shadows{
+                margin:-7px 0 0 -7px;
+            }
+            .small-smoke{
+                margin-top: -13px;
+                z-index: 3;
             }
         }
         .rockets{
+            margin-bottom: 2em;
             max-height: 50px;
         }
     }
@@ -80,12 +91,22 @@
         margin-bottom: 6px !important;
         .rockets{
             max-height: 44px;
+            margin-bottom: 2em;
         }
         .smoke-container {
             width: 100%;
             img{
                 max-height: 35px;
+                position: absolute;
+                width: 100%;
          }
+         .back-shadows{
+            margin:-7px 0 0 -7px;
+        }
+        .small-smoke{
+            margin-top: -6px;
+            z-index: 3;
+        }
         }
     }
 }

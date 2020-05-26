@@ -24,7 +24,7 @@
             <div class="rocket-animation-container">
                 <img class="rockets"  src="/static/Rockets/Rockets.svg">
                 <div class="smoke-container"> 
-                <img src="/static/Rockets/rocketSmoke.svg" alt="small-smoke-1" />
+                <img src="/static/Rockets/rocketSmoke.svg" alt="small-smoke-1" class="small-smoke" />
                  <img src="/static/Rockets/BackShadows.svg" class="back-shadows" alt="back shadows"/>
                  <img src="/static/Rockets/FrontShadows.svg" class="front-shadows" alt="front shadows"/>
                 </div>
