@@ -27,11 +27,21 @@
         color:$third-color;
       }
     }
-    .footer-icon:hover{
-      transition: all 0.5s ease;
-      zoom: 130%;
-      animation-duration: 1s;
+       
+    .footer-icon img:hover{
+      animation: flipiny 5s linear infinite;
+      animation-play-state: running;
     }
+
+    @-webkit-keyframes flipiny {
+        100% {transform: rotate(1turn); }
+      }
+      
+      @keyframes flipiny {
+         100% {transform: rotateY(1turn); }
+      }
+
+   
   }
 
   .footer-bg{

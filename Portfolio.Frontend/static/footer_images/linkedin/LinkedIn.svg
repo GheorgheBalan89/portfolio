@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LinkedIn</title>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Langing_page_Desktop" transform="translate(-1249.000000, -2034.000000)">
+            <g id="LinkedIn" transform="translate(1249.000000, 2034.000000)">
+                <rect id="Rectangle" fill="#A9897B" x="0" y="0" width="60" height="60" rx="5"></rect>
+                <path d="M5,0 L55,0 C57.7614237,-4.52436086e-15 60,2.23857625 60,5 L60,19.9840637 L60,19.9840637 C48.9907906,22.6613546 38.6426894,24 28.9556962,24 C19.268703,24 9.61680429,22.6613546 0,19.9840637 L0,5 C-3.38176876e-16,2.23857625 2.23857625,1.39544373e-15 5,0 Z" id="Rectangle" fill="#E3C4B4"></path>
+                <text id="in" font-family="NotoSansSC-Black, Noto Sans SC" font-size="36" font-weight="700" letter-spacing="0.165272727" fill="#FFFFFF">
+                    <tspan x="14" y="45">in</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
