@@ -49,24 +49,7 @@
                 &nbsp;
             </div>
            
-            <div v-if="project.Detail != null && project.Detail.Details != null" class="small-visible medium-visible">
-                    <div v-for="(detail, projId) in project.Detail.Details" :key="projId">
-                        <div class="row text-center ">
-                            <h3 class="project-details-section-block-header">{{detail.Heading}}</h3>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns text-padding" v-html="detail.RichText"></div>
-                            <div v-if="detail.MediaItem" class="large-12 columns centered-content">
-                                <img :src="detail.MediaItem" alt="" />
-                            </div>
-                            <div v-if="detail.VideoUrl !=''  && detail.VideoUrl != null" class="large-12 columns centered-content">
-                                  <iframe class="small-visible medium-hidden" :src="detail.VideoUrl" width="280" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                  <iframe class="medium-visible small-hidden" :src="detail.VideoUrl" width="500" height="350" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                  
-                            </div>
-                    </div>
-                </div>
-            </div>
+          
 
         </div>
 </template>

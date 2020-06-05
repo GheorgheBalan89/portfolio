@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>LinkedIn</title>
-    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Langing_page_Desktop" transform="translate(-1249.000000, -2034.000000)">
-            <g id="LinkedIn" transform="translate(1249.000000, 2034.000000)">
-                <rect id="Rectangle" fill="#A9897B" x="0" y="0" width="60" height="60" rx="5"></rect>
-                <path d="M5,0 L55,0 C57.7614237,-4.52436086e-15 60,2.23857625 60,5 L60,19.9840637 L60,19.9840637 C48.9907906,22.6613546 38.6426894,24 28.9556962,24 C19.268703,24 9.61680429,22.6613546 0,19.9840637 L0,5 C-3.38176876e-16,2.23857625 2.23857625,1.39544373e-15 5,0 Z" id="Rectangle" fill="#E3C4B4"></path>
-                <text id="in" font-family="NotoSansSC-Black, Noto Sans SC" font-size="36" font-weight="700" letter-spacing="0.165272727" fill="#FFFFFF">
-                    <tspan x="14" y="45">in</tspan>
-                </text>
-            </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" d="M0 1904H1442V2258H0z" transform="translate(-1249 -2034)"/>
+        <g transform="translate(-1249 -2034) translate(1249 2034)">
+            <rect width="60" height="60" fill="#A9897B" rx="5"/>
+            <path fill="#E3C4B4" d="M5 0h50c2.761 0 5 2.239 5 5v14.984C48.99 22.661 38.643 24 28.956 24 19.269 24 9.616 22.661 0 19.984V5c0-2.761 2.239-5 5-5z"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M19.796 21.672c2.124 0 3.636-1.368 3.636-3.276 0-1.944-1.512-3.312-3.636-3.312-2.16 0-3.672 1.368-3.672 3.312 0 1.908 1.512 3.276 3.672 3.276zM22.964 45V24.516h-6.372V45h6.372zm11.721 0V31.32c1.26-1.188 2.124-1.836 3.564-1.836 1.62 0 2.376.828 2.376 3.636V45h6.408V32.328c0-5.112-1.908-8.316-6.372-8.316-2.772 0-4.86 1.404-6.552 3.06h-.144l-.432-2.556h-5.22V45h6.372z"/>
         </g>
     </g>
 </svg>

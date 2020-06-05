@@ -23,7 +23,7 @@ $menu-underline-from-center-border-thickness: 0.115rem;
 
     a {
       line-height: 1.4;
-      color: $light-color;
+      color: $dark-color;
       font-weight: 700;
       font-size: 1em;
       padding: 1rem 1.5rem;
@@ -37,7 +37,7 @@ $menu-underline-from-center-border-thickness: 0.115rem;
         content: "";
         position: absolute;
         top: calc(100% - #{$menu-underline-from-center-border-thickness});
-        border-bottom: $menu-underline-from-center-border-thickness solid $light-color;
+        border-bottom: $menu-underline-from-center-border-thickness solid $dark-color;
         left: 50%;
         right: 50%;
         transition: all 0.5s ease;

@@ -1,7 +1,7 @@
 .hero-section-responsive{
     background-size: cover;
     background-position: center top;
-    height: 45vh;
+    height: 44vh;
     display: flex;
     .hero-section-text {
         color: $black;
@@ -27,19 +27,45 @@
             font-size: 0.8em;
             padding: 1em 0 3em 0;
             // line-height: 3em;
-        p{
-            line-height: 2em;
-            a{
-            color: $third-color;
-            }
-            a:hover{
-            color: $secondary-color;
-            text-decoration: underline;
-            }
-        }
-        }
-      }
+            p{
+                line-height: 2.5em;
+                font-weight: 600;
+                a{
+                  color: $third-color;
+                  text-decoration: underline;
+                }
+             }
 
-      
+        }
+      }    
     
 }
+
+.responsive-project-detail {
+    .project-title{
+        padding: 2em 1.5em;
+    }
+    .row:first-child{
+        padding-top: 2em;
+    }
+    .media-col{
+        padding: 0 2em;
+        img {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            left: 0;
+        }
+    }
+  }
+
+  
+ 
+  @media screen and  #{breakpoint(medium down)} {
+    .hero-section-responsive{
+        height: auto;
+    }
+    .hero-section-text {
+        padding-top: 8em;
+    }
+  }
