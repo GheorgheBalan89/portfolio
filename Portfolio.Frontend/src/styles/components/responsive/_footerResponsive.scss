@@ -9,7 +9,6 @@
     .heading{
         text-transform: uppercase;
         background-color: $light-color;
-       
         h4{
             font-weight: bold;
             font-size: 0.8em;
@@ -28,8 +27,8 @@
     }
 
     .footer-bg{
-        height: 3vh;
+        height: 2vh;
         width: 100%;
-        background: url('/static/clouds.svg');
+        background: url('/static/clouds.svg') repeat-x;
       }
 }

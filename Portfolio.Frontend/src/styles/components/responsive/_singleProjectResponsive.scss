@@ -1,0 +1,45 @@
+.hero-section-responsive{
+    background-size: cover;
+    background-position: center top;
+    height: 45vh;
+    display: flex;
+    .hero-section-text {
+        color: $black;
+        background-color: $main-color-alpha;
+        margin-top: auto;   
+        width: 100%;
+        h1{
+          padding: 2em 0 0;
+          font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h5{
+            font-size: 0.9em;
+        }
+        
+        .hero-description{
+            width: 80%;
+            margin: auto;
+        
+            text-align: center;
+            font-size: 0.8em;
+            padding: 1em 0 3em 0;
+            // line-height: 3em;
+        p{
+            line-height: 2em;
+            a{
+            color: $third-color;
+            }
+            a:hover{
+            color: $secondary-color;
+            text-decoration: underline;
+            }
+        }
+        }
+      }
+
+      
+    
+}

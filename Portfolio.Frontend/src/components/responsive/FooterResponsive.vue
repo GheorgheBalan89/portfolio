@@ -25,7 +25,7 @@
       </div>
       <div class="cell medium-3 small-3 text-center footer-col">
          <a class="footer-icon" href="https://www.linkedin.com/in/nerija-butkevi%C4%8Di%C5%ABt%C4%97-balan-41176445/" target="_blank">
-            <img src="/static/footer_images/linkedin/linkedin.png" alt="linkedin">
+            <img src="/static/footer_images/linkedin/LinkedIn.svg" alt="linkedin">
             <p>LinkedIn</p>
           </a>
       </div>

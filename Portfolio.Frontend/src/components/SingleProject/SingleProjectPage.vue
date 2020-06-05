@@ -2,26 +2,17 @@
         <div v-if="project != null" class="projectlist-container details-bg">
             <div v-if="project.Detail != null" class="hero-section" v-bind:style="{ 'background-image': 'url(' + project.Detail.Hero + ')'}">  
                 <div class="hero-section-text">
-                    <h3 class="large-visible">   
-                        <div class="stroke "></div>
+                    <h1 class="large-visible">   
                         {{project.General.Title}}
-                        <div class="stroke "></div>
-                    </h3>
-                    <h4 class="large-hidden medium-visible">
+                    </h1>
+                    <h2 class="large-hidden medium-visible">
                         {{project.General.Title}}
-                    </h4>
+                    </h2>
                      <div class="text-center">
                         <h5> Client: {{project.Detail.ClientName}}  <br> Year: {{project.Detail.Year}} <br/> Role: {{ project.Detail.Role}}</h5> 
                     </div>
-                    <div class="hero-description medium-visible small-hidden" v-html="project.General.Description"></div>
+                    <div class="hero-description " v-html="project.General.Description"></div>
                 </div>
-            </div>
-
-          
-            <div class="row small-visible medium-hidden text-center text-padding">
-                &nbsp;
-                &nbsp;
-                <div v-if="project.General != null" class="large-12 columns" v-html="project.General.Description"></div>
             </div>
         
             <div v-if="project.Detail != null && project.Detail.Details != null" class="large-visible">
@@ -85,23 +76,8 @@ import axios from "axios"
 
 export default{  
     name : "SingleProjectPage",
-    props: ["projectid"],
-    data(){
-        return {
-            project:""
-        }
-    },
-    mounted(){
-        var pidUrl = "/umbraco/Api/ProjectsApi/GetProject/ssqq?projectId="+ this.projectid + "";
-
-        axios.get(pidUrl).then(response => {
-           console.log("path "+ window.location.origin + window.location.pathname);
-
-           this.project = response.data
-           console.log(response.Data)
-        });
-        
-    },methods:{
+    props: ["project"],
+    methods:{
          track: function(){
             var pathname =  window.location.origin + window.location.pathname;
            page(pathname);

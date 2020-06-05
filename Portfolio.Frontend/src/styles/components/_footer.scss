@@ -47,7 +47,7 @@
   .footer-bg{
     height: 3vh;
     width: 100%;
-    background: url('/static/clouds.svg');
+    background: url('/static/clouds.svg') repeat-x;
   }
   @include breakpoint(small only) {
     .columns {
