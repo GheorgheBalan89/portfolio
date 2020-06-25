@@ -1,0 +1,25 @@
+.content-row{
+    width: 90%;
+    margin: auto;
+    h2{
+        padding: 1em 0;
+        font-weight: 700;
+        font-size: 4em;
+    }
+    .text {
+        padding:  0 4em;
+    }
+    .main-image{
+        width: 100%;
+    }
+    .icon-container{
+        display: flex;
+        justify-content: center;
+      
+        .icon{
+            max-width: 300px;
+            padding-bottom: 2em;
+        }
+    }
+   
+}

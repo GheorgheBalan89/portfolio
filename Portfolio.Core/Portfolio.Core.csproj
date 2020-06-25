@@ -379,6 +379,7 @@
     <Compile Include="ViewModels\Intro\Resume.cs" />
     <Compile Include="ViewModels\Intro\IntroViewModel.cs" />
     <Compile Include="ViewModels\Mvc\PageViewModel.cs" />
+    <Compile Include="ViewModels\Project\ContentRowViewModel.cs" />
     <Compile Include="ViewModels\Project\Detail.cs" />
     <Compile Include="ViewModels\Project\General.cs" />
     <Compile Include="ViewModels\Project\ListDetail.cs" />

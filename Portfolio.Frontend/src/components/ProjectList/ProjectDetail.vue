@@ -7,8 +7,6 @@
               <h4 v-if="isHoverIn != null && isHoverIn" class="activeDescription" key="activeDescription">{{project.General.Teaser}}</h4>
               <h5  v-if="isHoverIn != null && isHoverIn" class="readMore" key="readMore"> Read more</h5>
         </transition-group>
-                  
- <!---->
      </div>
 </template>
 <script>

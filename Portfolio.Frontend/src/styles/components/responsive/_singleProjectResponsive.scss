@@ -59,7 +59,13 @@
     }
   }
 
-  
+  .content-row-responsive{
+      h2{
+          font-size: 2em;
+          font-weight: 700;
+          padding: 1em 0.5em 0;
+      }
+  }
  
   @media screen and  #{breakpoint(medium down)} {
     .hero-section-responsive{

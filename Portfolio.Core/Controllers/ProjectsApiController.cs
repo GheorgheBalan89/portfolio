@@ -77,9 +77,7 @@ namespace Portfolio.Core.Controllers
 
         private ProjectViewModel IPubishedContentToPvm(IPublishedContent cachedProject)
         {
-
             var iContentProject = new Project(cachedProject);
-
             var general = new General(iContentProject.Sort, iContentProject.Title, iContentProject.Teaser, iContentProject.Description.ToHtmlString(), iContentProject.FeaturedImage?.FirstOrDefault().GetCropUrl(600, 413));
             
             var projectDetails = iContentProject.DetailList.Select(x => new ProjectDetailsViewModel()
@@ -90,7 +88,17 @@ namespace Portfolio.Core.Controllers
                     x.GetValue<IPublishedContent>("mediaItem").Url : "",
                 VideoUrl = x.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
             }).ToList();
-            
+
+            var contentRows = iContentProject.Content.Select(y => new ContentRowViewModel()
+            {
+                BigHeading = y.GetValue<string>(nameof(ContentRowViewModel.BigHeading)),
+                SmallHeading = y.GetValue<string>(nameof(ContentRowViewModel.SmallHeading)),
+                Icon = y.GetValue<IPublishedContent>(nameof(ContentRowViewModel.Icon))?.GetCropUrl(),
+                TextColumnLeft = y.GetValue<string>(nameof(ContentRowViewModel.TextColumnLeft)),
+                TextColumnRight = y.GetValue<string>(nameof(ContentRowViewModel.TextColumnRight)),
+                Image = y.GetValue<IPublishedContent>((nameof(ContentRowViewModel.Image))).GetCropUrl()
+            }).ToList();
+
             var detail = new Detail(projectDetails, iContentProject.Hero?.GetCropUrl(4272, 2848), iContentProject.ClientName, iContentProject.Year, iContentProject.Role);
             var permissions = new Permissions(iContentProject.Featured, iContentProject.HideInNavbar);
             var listDetail = new ListDetail(iContentProject.WebListImage?.GetCropUrl(624, 413),
@@ -99,7 +107,7 @@ namespace Portfolio.Core.Controllers
             
            List<SimilarProject> similarProjects = new List<SimilarProject>();
 
-            if (iContentProject.RelatedProject.Count() > 0)
+            if (iContentProject.RelatedProject.Any())
             {
                 similarProjects.AddRange(iContentProject.RelatedProject.
                     Select(related => 
@@ -110,16 +118,16 @@ namespace Portfolio.Core.Controllers
                                                             proj.Title)));
             }
 
-            var pvm = new ProjectViewModel(iContentProject.GetKey(),
+            return new ProjectViewModel(iContentProject.GetKey(),
                 iContentProject.Url, 
                 general,
                 detail,
                 permissions,
                 listDetail,
+                contentRows,
                 similarProjects
-                );
-         
-            return pvm;
+            );
+            
         }
     }
 }

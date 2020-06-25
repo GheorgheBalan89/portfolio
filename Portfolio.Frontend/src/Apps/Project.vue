@@ -30,13 +30,9 @@ export default {
  },
    mounted(){
         var pidUrl = "/umbraco/Api/ProjectsApi/GetProject/ssqq?projectId="+ document.getElementById("pid").value + "";
-
         axios.get(pidUrl).then(response => {
-          //  console.log("path "+ window.location.origin + window.location.pathname);
-           this.project = response.data
-          //  console.log(response.Data)
+              this.project = response.data
         });
-        
     },
  components:{
     NavigationNerija,

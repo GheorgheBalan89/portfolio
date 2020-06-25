@@ -14,13 +14,14 @@
   padding-left: 1em;
 }
 .hero-section {
+  background: url('/static/project_banner.png')  no-repeat;
   background-size: cover;
+  height: 60vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65vh;
-
+  
   .hero-section-text {
     color: $black;
     background-color: $main-color-alpha;
