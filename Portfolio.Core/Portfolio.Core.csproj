@@ -384,7 +384,6 @@
     <Compile Include="ViewModels\Project\General.cs" />
     <Compile Include="ViewModels\Project\ListDetail.cs" />
     <Compile Include="ViewModels\Project\Permissions.cs" />
-    <Compile Include="ViewModels\Project\ProjectDetailsViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectViewModel.cs" />
     <Compile Include="ViewModels\Project\ProjectListViewModel.cs" />
     <Compile Include="ViewModels\Project\SimilarProjects.cs" />

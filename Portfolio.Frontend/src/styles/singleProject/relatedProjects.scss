@@ -1,0 +1,23 @@
+.related-heading{
+    text-transform: uppercase;
+    background-color: $main-color;
+    h4{
+      padding: 1em 0;
+      font-weight: 700;
+      font-size: 1em;
+    }
+}
+
+.related-projects-container{
+   .related-project:hover{
+       cursor: pointer;
+   }
+    .related-project{
+       h3{
+           margin: auto;
+           font-weight: 600;
+           font-size: 1em;
+       }
+   }
+   padding:2em 0 ;
+}

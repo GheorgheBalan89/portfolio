@@ -4,20 +4,41 @@
     h2{
         padding: 1em 0;
         font-weight: 700;
-        font-size: 4em;
+        font-size: 3em;
+        letter-spacing: 7px;
+    }
+    h3{
+        // padding: 1em 0 0 0;
+        font-weight: 700;
+        letter-spacing: 5px;
     }
     .text {
         padding:  0 4em;
     }
-    .main-image{
-        width: 100%;
+    .layout-2{
+        padding: 2em 0;
+        .text-layout-2:first-of-type{
+            padding: 0 2em 0 0;
+        }
+        .text-layout-2{
+            padding: 0 2em;
+        }
     }
-    .icon-container{
+   
+    .main-image-container{
         display: flex;
         justify-content: center;
-      
+        .main-image{
+            max-height: 1080px;
+        }
+    }
+  
+    .icon-container{
+        display: flex;    
         .icon{
-            max-width: 300px;
+            margin-top:-20px;
+            max-height: initial;
+            width: 100%;
             padding-bottom: 2em;
         }
     }

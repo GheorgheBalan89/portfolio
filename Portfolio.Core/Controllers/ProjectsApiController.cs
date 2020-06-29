@@ -64,11 +64,7 @@ namespace Portfolio.Core.Controllers
 
                 if (cachedProjects.Any())
                 {
-                    foreach (var cachedProject in cachedProjects)
-                    {
-                        var pvm = IPubishedContentToPvm(cachedProject);
-                        response.Add(pvm);
-                    }
+                    response.AddRange(cachedProjects.Select(cachedProject => IPubishedContentToPvm(cachedProject)));
                 }
             }
             
@@ -80,15 +76,7 @@ namespace Portfolio.Core.Controllers
             var iContentProject = new Project(cachedProject);
             var general = new General(iContentProject.Sort, iContentProject.Title, iContentProject.Teaser, iContentProject.Description.ToHtmlString(), iContentProject.FeaturedImage?.FirstOrDefault().GetCropUrl(600, 413));
             
-            var projectDetails = iContentProject.DetailList.Select(x => new ProjectDetailsViewModel()
-            {
-                Heading = x.GetValue<string>(nameof(ProjectDetailsViewModel.Heading)),
-                RichText = x.GetValue<string>(nameof(ProjectDetailsViewModel.RichText)),
-                MediaItem = x.GetValue<IPublishedContent>("mediaItem") != null ?
-                    x.GetValue<IPublishedContent>("mediaItem").Url : "",
-                VideoUrl = x.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
-            }).ToList();
-
+        
             var contentRows = iContentProject.Content.Select(y => new ContentRowViewModel()
             {
                 BigHeading = y.GetValue<string>(nameof(ContentRowViewModel.BigHeading)),
@@ -99,7 +87,7 @@ namespace Portfolio.Core.Controllers
                 Image = y.GetValue<IPublishedContent>((nameof(ContentRowViewModel.Image))).GetCropUrl()
             }).ToList();
 
-            var detail = new Detail(projectDetails, iContentProject.Hero?.GetCropUrl(4272, 2848), iContentProject.ClientName, iContentProject.Year, iContentProject.Role);
+            var detail = new Detail( iContentProject.Hero?.GetCropUrl(4272, 2848), iContentProject.ClientName, iContentProject.Year, iContentProject.Role);
             var permissions = new Permissions(iContentProject.Featured, iContentProject.HideInNavbar);
             var listDetail = new ListDetail(iContentProject.WebListImage?.GetCropUrl(624, 413),
                 iContentProject.WebListPlaceholder?.GetCropUrl(624,413),
@@ -115,7 +103,7 @@ namespace Portfolio.Core.Controllers
                         .Select(proj => new SimilarProject(proj.GetKey(), 
                                                             proj.WebListImage?.GetCropUrl(624, 413), 
                                                             proj.MobileListImage?.GetCropUrl(278, 284), 
-                                                            proj.Title)));
+                                                            proj.Title, proj.Url)));
             }
 
             return new ProjectViewModel(iContentProject.GetKey(),
