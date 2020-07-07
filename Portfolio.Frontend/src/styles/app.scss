@@ -55,6 +55,8 @@
 @import "./projectList/rocketAnimation";
 
 @import "./singleProject/project";
+@import "./singleProject/contentRow";
+@import "./singleProject/relatedProjects.scss";
 
 @import "./components/navigation";
 @import "./components/footer";
@@ -65,3 +67,4 @@
 @import "./components/responsive/projectList";
 @import "./components/responsive/footerResponsive";
 @import "./components/responsive/singleProjectResponsive";
+@import "./components/responsive/contentRowResponsive.scss";

@@ -14,28 +14,30 @@
   padding-left: 1em;
 }
 .hero-section {
+  background: url('/static/project_banner.png')  no-repeat;
   background-size: cover;
+  height: 60vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65vh;
-
+  
   .hero-section-text {
     color: $black;
     background-color: $main-color-alpha;
     margin-top: auto;   
     width: 100%;
     h1{
-      padding: 2em 0 0;
-      font-size: 2em;
-        font-weight: bold;
-        text-transform: uppercase;
+      padding: 1em 0 0;
+      font-size: 3em;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 5px;
     }
   }
 
   .hero-description{
-    width: 50%;
+    width: 70%;
     margin: auto;
   
     text-align: center;

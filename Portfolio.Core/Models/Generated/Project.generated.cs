@@ -27,6 +27,9 @@ namespace Portfolio.Core.Models
 		/// <summary>Client Name</summary>
 		string ClientName { get; }
 
+		/// <summary>content</summary>
+		Archetype.Models.ArchetypeModel Content { get; }
+
 		/// <summary>Description</summary>
 		IHtmlString Description { get; }
 
@@ -109,6 +112,18 @@ namespace Portfolio.Core.Models
 
 		/// <summary>Static getter for Client Name</summary>
 		public static string GetClientName(IProject that) { return that.GetPropertyValue<string>("clientName"); }
+
+		///<summary>
+		/// content
+		///</summary>
+		[ImplementPropertyType("content")]
+		public Archetype.Models.ArchetypeModel Content
+		{
+			get { return GetContent(this); }
+		}
+
+		/// <summary>Static getter for content</summary>
+		public static Archetype.Models.ArchetypeModel GetContent(IProject that) { return that.GetPropertyValue<Archetype.Models.ArchetypeModel>("content"); }
 
 		///<summary>
 		/// Description
@@ -267,7 +282,7 @@ namespace Portfolio.Core.Models
 		public static IPublishedContent GetWebListImage(IProject that) { return that.GetPropertyValue<IPublishedContent>("webListImage"); }
 
 		///<summary>
-		/// webListPlaceholder: w: 624 px, h: 423 px
+		/// webListPlaceholder: w: 624 px, h: 413 px
 		///</summary>
 		[ImplementPropertyType("webListPlaceholder")]
 		public IPublishedContent WebListPlaceholder

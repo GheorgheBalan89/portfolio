@@ -55,6 +55,15 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
+		/// content
+		///</summary>
+		[ImplementPropertyType("content")]
+		public Archetype.Models.ArchetypeModel Content
+		{
+			get { return Portfolio.Core.Models.Project.GetContent(this); }
+		}
+
+		///<summary>
 		/// Description
 		///</summary>
 		[ImplementPropertyType("description")]
@@ -172,7 +181,7 @@ namespace Portfolio.Core.Models
 		}
 
 		///<summary>
-		/// webListPlaceholder: w: 624 px, h: 423 px
+		/// webListPlaceholder: w: 624 px, h: 413 px
 		///</summary>
 		[ImplementPropertyType("webListPlaceholder")]
 		public IPublishedContent WebListPlaceholder

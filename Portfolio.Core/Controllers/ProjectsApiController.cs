@@ -64,11 +64,7 @@ namespace Portfolio.Core.Controllers
 
                 if (cachedProjects.Any())
                 {
-                    foreach (var cachedProject in cachedProjects)
-                    {
-                        var pvm = IPubishedContentToPvm(cachedProject);
-                        response.Add(pvm);
-                    }
+                    response.AddRange(cachedProjects.Select(cachedProject => IPubishedContentToPvm(cachedProject)));
                 }
             }
             
@@ -77,21 +73,21 @@ namespace Portfolio.Core.Controllers
 
         private ProjectViewModel IPubishedContentToPvm(IPublishedContent cachedProject)
         {
-
             var iContentProject = new Project(cachedProject);
-
             var general = new General(iContentProject.Sort, iContentProject.Title, iContentProject.Teaser, iContentProject.Description.ToHtmlString(), iContentProject.FeaturedImage?.FirstOrDefault().GetCropUrl(600, 413));
             
-            var projectDetails = iContentProject.DetailList.Select(x => new ProjectDetailsViewModel()
+        
+            var contentRows = iContentProject.Content.Select(y => new ContentRowViewModel()
             {
-                Heading = x.GetValue<string>(nameof(ProjectDetailsViewModel.Heading)),
-                RichText = x.GetValue<string>(nameof(ProjectDetailsViewModel.RichText)),
-                MediaItem = x.GetValue<IPublishedContent>("mediaItem") != null ?
-                    x.GetValue<IPublishedContent>("mediaItem").Url : "",
-                VideoUrl = x.GetValue<string>(nameof(ProjectDetailsViewModel.VideoUrl))
+                BigHeading = y.GetValue<string>(nameof(ContentRowViewModel.BigHeading)),
+                SmallHeading = y.GetValue<string>(nameof(ContentRowViewModel.SmallHeading)),
+                Icon = y.GetValue<IPublishedContent>(nameof(ContentRowViewModel.Icon))?.GetCropUrl(),
+                TextColumnLeft = y.GetValue<string>(nameof(ContentRowViewModel.TextColumnLeft)),
+                TextColumnRight = y.GetValue<string>(nameof(ContentRowViewModel.TextColumnRight)),
+                Image = y.GetValue<IPublishedContent>((nameof(ContentRowViewModel.Image))).GetCropUrl()
             }).ToList();
-            
-            var detail = new Detail(projectDetails, iContentProject.Hero?.GetCropUrl(4272, 2848), iContentProject.ClientName, iContentProject.Year, iContentProject.Role);
+
+            var detail = new Detail( iContentProject.Hero?.GetCropUrl(4272, 2848), iContentProject.ClientName, iContentProject.Year, iContentProject.Role);
             var permissions = new Permissions(iContentProject.Featured, iContentProject.HideInNavbar);
             var listDetail = new ListDetail(iContentProject.WebListImage?.GetCropUrl(624, 413),
                 iContentProject.WebListPlaceholder?.GetCropUrl(624,413),
@@ -99,7 +95,7 @@ namespace Portfolio.Core.Controllers
             
            List<SimilarProject> similarProjects = new List<SimilarProject>();
 
-            if (iContentProject.RelatedProject.Count() > 0)
+            if (iContentProject.RelatedProject.Any())
             {
                 similarProjects.AddRange(iContentProject.RelatedProject.
                     Select(related => 
@@ -107,19 +103,19 @@ namespace Portfolio.Core.Controllers
                         .Select(proj => new SimilarProject(proj.GetKey(), 
                                                             proj.WebListImage?.GetCropUrl(624, 413), 
                                                             proj.MobileListImage?.GetCropUrl(278, 284), 
-                                                            proj.Title)));
+                                                            proj.Title, proj.Url)));
             }
 
-            var pvm = new ProjectViewModel(iContentProject.GetKey(),
+            return new ProjectViewModel(iContentProject.GetKey(),
                 iContentProject.Url, 
                 general,
                 detail,
                 permissions,
                 listDetail,
+                contentRows,
                 similarProjects
-                );
-         
-            return pvm;
+            );
+            
         }
     }
 }
