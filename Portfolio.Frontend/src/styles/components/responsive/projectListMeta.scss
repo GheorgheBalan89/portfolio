@@ -110,6 +110,11 @@
         }
     }
 }
+@media screen and  (max-width:1190px) {
+    .hero-section-meta {
+      height: 60vh;
+    }
+  }
 
 @media screen and  (max-width:758px) {
     .parallax-small {
