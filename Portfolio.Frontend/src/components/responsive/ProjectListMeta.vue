@@ -1,6 +1,6 @@
 <template>
     <div class="projectlist-container">
-        <div class="hero-section-meta medium-visible small-hidden" v-bind:style="{ 'background-image': 'url( /static/parallax-bg.png)'}"> </div>
+        <div class="hero-section-meta medium-visible small-hidden" v-bind:style="{ 'background-image': 'url( /static/parallax-big-responsive.png)'}"> </div>
         <div class="hero-section-text-meta medium-visible small-hidden">
             <h4 class="medium-visible">
                 {{meta.Heading1}}
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <img class="small-visible medium-hidden parallax-small" src="/static/parallax-bg.png" alt="parallax"/>
+        <img class="small-visible medium-hidden parallax-small" src="/static/parallax-big-responsive.png" alt="parallax"/>
          <div class="small-visible medium-hidden text-overlay-small">
             <h4>{{meta.Heading1}}</h4>
             <p>{{meta.Heading2}}</p>

@@ -72,7 +72,7 @@
     width: 100%;
     text-align: center;
     background-color: $main-color-alpha;
-    margin-top: -6em;
+    margin-top: -3em;
     img{
         max-width: 100% !important;
         left: 0 !important;
@@ -110,3 +110,11 @@
         }
     }
 }
+
+@media screen and  (max-width:758px) {
+    .parallax-small {
+      max-height: 35vh;
+      margin-top: 60px;
+    }
+ 
+  }
