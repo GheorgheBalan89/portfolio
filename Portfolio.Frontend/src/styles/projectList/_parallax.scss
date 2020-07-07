@@ -1,11 +1,12 @@
 .mb_parallax_container {
     background-image: url('/static/parallax-bg.png');
-    background-position: center;
+    background-size: contain;
+    background-position: 40% 0%;
     height: 65vh;
     width: 100%;
     background-attachment: fixed;
-    background-size: cover;
     background-repeat: no-repeat;
+    
     .detail-container{
       width: 50%;
       white-space: pre-line;
