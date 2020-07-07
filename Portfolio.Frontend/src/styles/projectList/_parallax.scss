@@ -1,12 +1,12 @@
 .mb_parallax_container {
-    background-image: url('/static/parallax-bg.png');
+    background-image: url('/static/parallax-big.png');
     background-size: contain;
-    background-position: 40% 0%;
-    height: 65vh;
+    background-position: center;
+    height: 80vh;
     width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    
+
     .detail-container{
       width: 50%;
       white-space: pre-line;
@@ -33,5 +33,13 @@
         padding: 1em 0 3em 0;
         line-height: 3em;
     }
+  }
+
+  @media screen and  (max-width:2090px) {
+    .mb_parallax_container {
+      background-position-y: 19%;
+      height: 70vh;
+    }
+ 
   }
   
