@@ -1,7 +1,7 @@
 <template>
     <div>
          <div v-if="project != null">
-            <div v-if="project.Detail != null" class="hero-section-responsive" v-bind:style="{ 'background-image': 'url(' + project.Detail.Hero + ')'}">  
+            <div v-if="project.Detail != null" class="hero-section-responsive">  
                    <div class="hero-section-text">
                         <h1>{{project.General.Title}} </h1>
                     <div class="text-center">

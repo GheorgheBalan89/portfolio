@@ -1,8 +1,15 @@
 .hero-section-responsive{
-    background-size: cover;
-    background-position: center top;
+    background: url("/static/project_banner.png");
+    background-size: contain;
+    background-position: center top 30%;
+    background-clip: border-box;
     height: 44vh;
-    display: flex;
+ 
+    margin-top: 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+  
     .hero-section-text {
         color: $black;
         background-color: $main-color-alpha;
