@@ -1,5 +1,5 @@
 <template>
-<div v-if="relatedProjects != null">
+<div v-if="relatedProjects != null" class="related-projects-wrapper">
      <div class="text-center related-heading">
             <h4>More like this</h4>
          </div>
